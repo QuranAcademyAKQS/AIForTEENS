@@ -1,8 +1,8 @@
-# Qib AI - Demo Guide
+# AI for TEENS - Demo Guide
 
 ## 🚀 Quick Start
 
-The Qib AI education platform is now running successfully! Here's how to access and explore it:
+The AI for TEENS education platform is now running successfully! Here's how to access and explore it:
 
 ### Access the Application
 - **URL**: http://localhost:3000

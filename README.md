@@ -1,4 +1,4 @@
-# Qib AI - Futuristic AI Education with Islamic Values
+# AI for TEENS - Futuristic AI Education with Islamic Values
 
 A comprehensive 5-class curriculum designed to teach Artificial Intelligence to kids aged 13+ while embracing Islamic cultural values and principles.
 

@@ -5,7 +5,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Qib AI - Futuristic AI Education with Islamic Values',
+  title: 'AI for TEENS - Futuristic AI Education with Islamic Values',
   description: 'Learn AI through interactive activities while embracing Islamic cultural values. A 5-class curriculum designed for kids 13+ in Summer Camp.',
   keywords: 'AI education, Islamic values, kids learning, futuristic technology, summer camp',
 }
