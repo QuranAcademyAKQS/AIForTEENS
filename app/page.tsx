@@ -165,12 +165,7 @@ export default function Home() {
               <div className="flex space-x-2">
                 <button
                   onClick={() => setSelectedClass(classItem)}
-                  className={`flex-1 py-2 px-4 rounded-lg transition-colors text-sm ${
-                    classItem.locked 
-                      ? 'bg-gray-700 text-gray-500 cursor-not-allowed' 
-                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-                  }`}
-                  disabled={classItem.locked}
+                  className="flex-1 bg-gray-700 text-gray-300 py-2 px-4 rounded-lg hover:bg-gray-600 transition-colors text-sm"
                 >
                   Learn More
                 </button>
