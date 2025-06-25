@@ -379,17 +379,15 @@ export default function Class1() {
                             {event.year}
                           </div>
                           <div className="flex-1">
-                            <div className="flex items-start space-x-4">
-                              <div className="flex-1">
-                                <h4 className={`font-semibold mb-1 ${presentationMode ? 'text-xl' : 'text-white'}`}>{event.event}</h4>
-                                <p className={`text-gray-300 ${presentationMode ? 'text-lg' : 'text-sm'}`}>{event.significance}</p>
-                              </div>
+                            <div>
+                              <h4 className={`font-semibold mb-1 ${presentationMode ? 'text-xl' : 'text-white'}`}>{event.event}</h4>
+                              <p className={`text-gray-300 ${presentationMode ? 'text-lg' : 'text-sm'}`}>{event.significance}</p>
                               {event.image && (
-                                <div className={`rounded-lg overflow-hidden border-2 border-islamic-gold/30 flex-shrink-0 ${presentationMode ? 'w-48 h-36' : 'w-24 h-18'}`}>
+                                <div className={`rounded-lg overflow-hidden border-2 border-islamic-gold/30 mt-4 w-full`}>
                                   <img 
                                     src={event.image} 
                                     alt={event.imageAlt || event.event}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-40 object-cover"
                                     loading="lazy"
                                   />
                                 </div>
@@ -550,78 +548,6 @@ export default function Class1() {
             animate={{ opacity: 1, y: 0 }}
             className="mt-12 space-y-8"
           >
-            {/* AI History Interactive Timeline */}
-            <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-8 border border-islamic-gold/30">
-              <h2 className={`font-bold text-white mb-6 ${presentationMode ? 'text-4xl' : 'text-2xl'}`}>Interactive AI History Timeline</h2>
-              
-              <div className={`grid gap-6 ${presentationMode ? 'grid-cols-2' : 'md:grid-cols-2'}`}>
-                <div>
-                  <h3 className={`font-semibold text-islamic-gold mb-4 ${presentationMode ? 'text-2xl' : 'text-lg'}`}>Explore AI Milestones</h3>
-                  <div className="space-y-4">
-                    {sections[0].timeline?.map((event, index) => (
-                      <div 
-                        key={index}
-                        className="bg-gray-800/50 p-4 rounded-lg cursor-pointer hover:bg-gray-700/50 transition-colors"
-                        onClick={() => setTimelineEvent(index)}
-                      >
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center space-x-3">
-                            <span className={`text-islamic-gold font-bold ${presentationMode ? 'text-xl' : ''}`}>{event.year}</span>
-                            <span className={`text-gray-300 ${presentationMode ? 'text-lg' : 'text-sm'}`}>{event.event}</span>
-                          </div>
-                          {event.image && (
-                            <div className={`rounded-lg overflow-hidden border-2 border-islamic-gold/30 flex-shrink-0 ${presentationMode ? 'w-48 h-36' : 'w-24 h-18'}`}>
-                              <img 
-                                src={event.image} 
-                                alt={event.imageAlt || event.event}
-                                className="w-full h-full object-cover"
-                                loading="lazy"
-                              />
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                
-                <div>
-                  <h3 className={`font-semibold text-islamic-gold mb-4 ${presentationMode ? 'text-2xl' : 'text-lg'}`}>Historical Context</h3>
-                  <div className="bg-gray-800/50 p-6 rounded-lg">
-                    {sections[0].timeline && (
-                      <div>
-                        <div className="flex items-start space-x-4 mb-4">
-                          <div className="flex-1">
-                            <h4 className={`font-semibold mb-2 ${presentationMode ? 'text-2xl' : 'text-white'}`}>
-                              {sections[0].timeline[timelineEvent].year}: {sections[0].timeline[timelineEvent].event}
-                            </h4>
-                            <p className={`text-gray-300 mb-4 ${presentationMode ? 'text-xl' : ''}`}>
-                              {sections[0].timeline[timelineEvent].significance}
-                            </p>
-                          </div>
-                          {sections[0].timeline[timelineEvent].image && (
-                            <div className={`rounded-lg overflow-hidden border-2 border-islamic-gold/30 flex-shrink-0 ${presentationMode ? 'w-48 h-36' : 'w-24 h-18'}`}>
-                              <img 
-                                src={sections[0].timeline[timelineEvent].image} 
-                                alt={sections[0].timeline[timelineEvent].imageAlt || sections[0].timeline[timelineEvent].event}
-                                className="w-full h-full object-cover"
-                                loading="lazy"
-                              />
-                            </div>
-                          )}
-                        </div>
-                        <div className="bg-gradient-to-r from-islamic-gold/20 to-transparent p-4 rounded-lg border-l-4 border-islamic-gold">
-                          <h5 className={`font-semibold text-islamic-gold mb-2 ${presentationMode ? 'text-lg' : 'text-sm'}`}>Islamic Perspective</h5>
-                          <p className={`text-gray-300 ${presentationMode ? 'text-lg' : 'text-sm'}`}>
-                            This milestone shows how human innovation can serve humanity, reflecting the Islamic value of using knowledge for the benefit of others.
-                          </p>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
 
             {/* Ethics Scenarios */}
             <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-8 border border-islamic-gold/30">

@@ -241,6 +241,52 @@ export default function Class2() {
                     ))}
                   </div>
                 </div>
+
+                {/* Interactive Activity for Teens */}
+                {currentSection === 0 && (
+                  // What is Machine Learning? – Spot the AI!
+                  <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold mt-4">
+                    <h4 className="text-lg font-semibold text-islamic-gold mb-2">Spot the AI!</h4>
+                    <p className="text-gray-300 mb-2">Which of these technologies use Machine Learning? (Select all that apply)</p>
+                    <SpotTheAIActivity />
+                  </div>
+                )}
+                {currentSection === 1 && (
+                  // Types of Machine Learning – Match the Type!
+                  <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold mt-4">
+                    <h4 className="text-lg font-semibold text-islamic-gold mb-2">Match the Type!</h4>
+                    <p className="text-gray-300 mb-2">Match each example to the correct type of Machine Learning.</p>
+                    <MatchMLTypeActivity />
+                  </div>
+                )}
+                {currentSection === 2 && (
+                  // Data and Patterns – Find the Pattern!
+                  <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold mt-4">
+                    <h4 className="text-lg font-semibold text-islamic-gold mb-2">Find the Pattern!</h4>
+                    <FindPatternActivity />
+                  </div>
+                )}
+                {currentSection === 3 && (
+                  // Training and Testing – Train the Model!
+                  <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold mt-4">
+                    <h4 className="text-lg font-semibold text-islamic-gold mb-2">Train the Model!</h4>
+                    <TrainModelActivity />
+                  </div>
+                )}
+                {currentSection === 4 && (
+                  // Ethical Machine Learning – Is it Fair?
+                  <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold mt-4">
+                    <h4 className="text-lg font-semibold text-islamic-gold mb-2">Is it Fair?</h4>
+                    <IsItFairActivity />
+                  </div>
+                )}
+                {currentSection === 5 && (
+                  // Real-World Applications – ML for Good!
+                  <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold mt-4">
+                    <h4 className="text-lg font-semibold text-islamic-gold mb-2">ML for Good!</h4>
+                    <MLForGoodActivity />
+                  </div>
+                )}
               </div>
 
               <div className="flex justify-between mt-8">
@@ -364,48 +410,7 @@ export default function Class2() {
               </div>
             </div>
 
-            {/* Pattern Recognition Game */}
-            <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-8 border border-islamic-gold/30">
-              <h2 className="text-2xl font-bold text-white mb-6">Pattern Recognition Game</h2>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h3 className="text-lg font-semibold text-islamic-gold mb-4">Current Pattern</h3>
-                  <div className="bg-gray-800/50 p-4 rounded-lg mb-4">
-                    <div className="flex space-x-2 mb-4">
-                      {patternData.map((num, index) => (
-                        <div key={index} className="w-12 h-12 bg-gradient-to-br from-islamic-gold to-yellow-500 rounded-lg flex items-center justify-center text-black font-bold">
-                          {num}
-                        </div>
-                      ))}
-                    </div>
-                    <button
-                      onClick={addPatternData}
-                      className="bg-gradient-to-r from-islamic-gold to-yellow-500 text-black font-bold py-2 px-4 rounded-lg hover:from-yellow-400 hover:to-islamic-gold transition-all"
-                    >
-                      Add Number
-                    </button>
-                  </div>
-                </div>
-                
-                <div>
-                  <h3 className="text-lg font-semibold text-islamic-gold mb-4">Your Prediction</h3>
-                  <div className="space-y-4">
-                    <p className="text-gray-300 text-sm">
-                      Look at the pattern and try to predict what number comes next. This is how machines learn to recognize patterns!
-                    </p>
-                    <input
-                      type="number"
-                      placeholder="Enter your prediction"
-                      className="w-full bg-gray-800/50 border border-gray-600 rounded-lg p-3 text-gray-300 placeholder-gray-500 focus:border-islamic-gold focus:outline-none"
-                    />
-                    <button className="w-full bg-gradient-to-r from-islamic-gold to-yellow-500 text-black font-bold py-2 px-4 rounded-lg hover:from-yellow-400 hover:to-islamic-gold transition-all">
-                      Check Prediction
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+
 
             {/* Group Discussion */}
             <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-8 border border-islamic-gold/30">
@@ -539,4 +544,394 @@ export default function Class2() {
       </main>
     </div>
   )
+}
+
+// --- Interactive Activity Components (placeholders) ---
+function SpotTheAIActivity() {
+  const options = [
+    { label: 'Voice Assistant (e.g., Siri)', isAI: true },
+    { label: 'Electric Fan', isAI: false },
+    { label: 'Email Spam Filter', isAI: true },
+    { label: 'Calculator', isAI: false },
+    { label: 'Movie Recommendation System', isAI: true },
+    { label: 'Flashlight', isAI: false },
+    { label: 'Self-driving Car', isAI: true },
+    { label: 'Mechanical Clock', isAI: false },
+  ];
+  const [selected, setSelected] = useState<number[]>([]);
+  const [submitted, setSubmitted] = useState(false);
+  const [score, setScore] = useState(0);
+
+  const handleToggle = (idx: number) => {
+    if (submitted) return;
+    setSelected(selected.includes(idx)
+      ? selected.filter(i => i !== idx)
+      : [...selected, idx]);
+  };
+
+  const handleSubmit = () => {
+    let correct = 0;
+    options.forEach((opt, idx) => {
+      if (opt.isAI && selected.includes(idx)) correct++;
+      if (!opt.isAI && !selected.includes(idx)) correct++;
+    });
+    setScore(correct);
+    setSubmitted(true);
+  };
+
+  return (
+    <div>
+      <div className="grid md:grid-cols-2 gap-3 mb-4">
+        {options.map((opt, idx) => (
+          <button
+            key={idx}
+            type="button"
+            onClick={() => handleToggle(idx)}
+            className={`flex items-center w-full p-3 rounded-lg border transition-colors
+              ${selected.includes(idx)
+                ? 'bg-gradient-to-r from-islamic-gold to-yellow-500 text-black border-islamic-gold'
+                : 'bg-gray-800/50 text-gray-300 border-gray-700 hover:bg-gray-700/50'}
+              ${submitted && ((opt.isAI && selected.includes(idx)) || (!opt.isAI && !selected.includes(idx))) ? 'ring-2 ring-green-400' : ''}
+              ${submitted && ((opt.isAI && !selected.includes(idx)) || (!opt.isAI && selected.includes(idx))) ? 'ring-2 ring-red-400' : ''}
+            `}
+            disabled={submitted}
+          >
+            <span className="ml-2">{opt.label}</span>
+          </button>
+        ))}
+      </div>
+      {!submitted ? (
+        <button
+          onClick={handleSubmit}
+          className="bg-gradient-to-r from-islamic-gold to-yellow-500 text-black font-bold py-2 px-6 rounded-lg hover:from-yellow-400 hover:to-islamic-gold transition-all"
+          disabled={selected.length === 0}
+        >
+          Submit
+        </button>
+      ) : (
+        <div className="mt-3">
+          <span className="text-lg font-semibold text-islamic-gold">You got {score} out of {options.length} correct!</span>
+        </div>
+      )}
+    </div>
+  );
+}
+function MatchMLTypeActivity() {
+  const examples = [
+    { example: 'Image classification (cat vs dog)', answer: 'Supervised' },
+    { example: 'Customer segmentation for marketing', answer: 'Unsupervised' },
+    { example: 'Game playing (e.g., chess AI)', answer: 'Reinforcement' },
+    { example: 'Spam email detection', answer: 'Supervised' },
+    { example: 'Grouping news articles by topic', answer: 'Unsupervised' },
+    { example: 'Robot learning to walk', answer: 'Reinforcement' },
+  ];
+  const types = ['Supervised', 'Unsupervised', 'Reinforcement'];
+  const [selected, setSelected] = useState<string[]>(Array(examples.length).fill(''));
+  const [submitted, setSubmitted] = useState(false);
+  const [score, setScore] = useState(0);
+
+  const handleChange = (idx: number, value: string) => {
+    if (submitted) return;
+    const updated = [...selected];
+    updated[idx] = value;
+    setSelected(updated);
+  };
+
+  const handleSubmit = () => {
+    let correct = 0;
+    examples.forEach((ex, idx) => {
+      if (selected[idx] === ex.answer) correct++;
+    });
+    setScore(correct);
+    setSubmitted(true);
+  };
+
+  return (
+    <div>
+      <div className="space-y-4 mb-4">
+        {examples.map((ex, idx) => (
+          <div key={idx} className="flex flex-col md:flex-row md:items-center md:space-x-4">
+            <span className="text-gray-300 flex-1 mb-2 md:mb-0">{ex.example}</span>
+            <select
+              className={`rounded-lg p-2 border focus:outline-none focus:border-islamic-gold transition-colors
+                ${submitted
+                  ? selected[idx] === ex.answer
+                    ? 'border-green-400 bg-green-50 text-green-800'
+                    : 'border-red-400 bg-red-50 text-red-800'
+                  : 'border-gray-600 bg-gray-800 text-gray-300'}
+              `}
+              value={selected[idx]}
+              onChange={e => handleChange(idx, e.target.value)}
+              disabled={submitted}
+            >
+              <option value="">Select type…</option>
+              {types.map(type => (
+                <option key={type} value={type}>{type}</option>
+              ))}
+            </select>
+          </div>
+        ))}
+      </div>
+      {!submitted ? (
+        <button
+          onClick={handleSubmit}
+          className="bg-gradient-to-r from-islamic-gold to-yellow-500 text-black font-bold py-2 px-6 rounded-lg hover:from-yellow-400 hover:to-islamic-gold transition-all"
+          disabled={selected.some(val => !val)}
+        >
+          Submit
+        </button>
+      ) : (
+        <div className="mt-3">
+          <span className="text-lg font-semibold text-islamic-gold">You got {score} out of {examples.length} correct!</span>
+        </div>
+      )}
+    </div>
+  );
+}
+function FindPatternActivity() {
+  // Example patterns: arithmetic, geometric, Fibonacci, etc.
+  const patterns = [
+    { seq: [2, 4, 6, 8], answer: 10, hint: 'Add 2 each time.' },
+    { seq: [3, 6, 12, 24], answer: 48, hint: 'Multiply by 2.' },
+    { seq: [1, 1, 2, 3, 5], answer: 8, hint: 'Fibonacci sequence.' },
+    { seq: [10, 7, 4, 1], answer: -2, hint: 'Subtract 3 each time.' },
+    { seq: [5, 10, 20, 40], answer: 80, hint: 'Multiply by 2.' },
+  ];
+  const [patternIdx, setPatternIdx] = useState(0);
+  const [guess, setGuess] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+  const [correct, setCorrect] = useState(false);
+
+  const current = patterns[patternIdx];
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setCorrect(Number(guess) === current.answer);
+    setSubmitted(true);
+  };
+
+  const handleNext = () => {
+    setPatternIdx((patternIdx + 1) % patterns.length);
+    setGuess('');
+    setSubmitted(false);
+    setCorrect(false);
+  };
+
+  return (
+    <div>
+      <div className="mb-4">
+        <span className="text-gray-300">What comes next in this sequence?</span>
+        <div className="flex space-x-2 mt-2">
+          {current.seq.map((num, idx) => (
+            <div key={idx} className="w-10 h-10 bg-gradient-to-br from-islamic-gold to-yellow-500 rounded-lg flex items-center justify-center text-black font-bold">
+              {num}
+            </div>
+          ))}
+        </div>
+      </div>
+      <form onSubmit={handleSubmit} className="flex flex-col md:flex-row md:items-center md:space-x-4">
+        <input
+          type="number"
+          value={guess}
+          onChange={e => setGuess(e.target.value)}
+          className="rounded-lg p-2 border border-gray-600 bg-gray-800 text-gray-300 focus:border-islamic-gold focus:outline-none mb-2 md:mb-0"
+          placeholder="Your guess"
+          disabled={submitted}
+        />
+        <button
+          type="submit"
+          className="bg-gradient-to-r from-islamic-gold to-yellow-500 text-black font-bold py-2 px-6 rounded-lg hover:from-yellow-400 hover:to-islamic-gold transition-all"
+          disabled={submitted || !guess}
+        >
+          Submit
+        </button>
+        <button
+          type="button"
+          onClick={handleNext}
+          className="ml-0 md:ml-2 mt-2 md:mt-0 bg-gray-700 text-gray-300 font-bold py-2 px-4 rounded-lg hover:bg-gray-600 transition-all"
+        >
+          Try Another
+        </button>
+      </form>
+      {submitted && (
+        <div className="mt-3">
+          {correct ? (
+            <span className="text-green-400 font-semibold">Correct! 🎉</span>
+          ) : (
+            <span className="text-red-400 font-semibold">Not quite. Hint: {current.hint}</span>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+function TrainModelActivity() {
+  const [trainingSteps, setTrainingSteps] = useState(0);
+  const [tested, setTested] = useState(false);
+  const [result, setResult] = useState('');
+  const requiredSteps = 5;
+
+  const handleTrain = () => {
+    if (trainingSteps < requiredSteps) {
+      setTrainingSteps(trainingSteps + 1);
+    }
+    setTested(false);
+    setResult('');
+  };
+
+  const handleTest = () => {
+    setTested(true);
+    if (trainingSteps >= requiredSteps) {
+      setResult('Success! The model performs well on new data. 🎉');
+    } else {
+      setResult('Model needs more training to perform well. Try more training steps!');
+    }
+  };
+
+  const progressPercent = Math.min((trainingSteps / requiredSteps) * 100, 100);
+
+  return (
+    <div>
+      <div className="mb-4">
+        <span className="text-gray-300">Simulate training a model by clicking "Train". When you think the model is ready, click "Test"!</span>
+        <div className="w-full bg-gray-700 rounded-full h-3 mt-4">
+          <div
+            className="bg-gradient-to-r from-islamic-gold to-yellow-500 h-3 rounded-full transition-all"
+            style={{ width: `${progressPercent}%` }}
+          />
+        </div>
+        <div className="text-sm text-gray-400 mt-2">Training steps: {trainingSteps} / {requiredSteps}</div>
+      </div>
+      <div className="flex space-x-4 mb-4">
+        <button
+          onClick={handleTrain}
+          className="bg-gradient-to-r from-islamic-gold to-yellow-500 text-black font-bold py-2 px-6 rounded-lg hover:from-yellow-400 hover:to-islamic-gold transition-all"
+          disabled={trainingSteps >= requiredSteps}
+        >
+          Train
+        </button>
+        <button
+          onClick={handleTest}
+          className="bg-gray-700 text-gray-300 font-bold py-2 px-6 rounded-lg hover:bg-gray-600 transition-all"
+          disabled={trainingSteps === 0}
+        >
+          Test
+        </button>
+        <button
+          onClick={() => { setTrainingSteps(0); setTested(false); setResult(''); }}
+          className="bg-gray-800 text-gray-400 font-bold py-2 px-4 rounded-lg hover:bg-gray-700 transition-all"
+        >
+          Reset
+        </button>
+      </div>
+      {tested && (
+        <div className="mt-3">
+          <span className={result.startsWith('Success') ? 'text-green-400 font-semibold' : 'text-red-400 font-semibold'}>{result}</span>
+        </div>
+      )}
+    </div>
+  );
+}
+function IsItFairActivity() {
+  const scenarios = [
+    {
+      text: 'A job application AI always prefers candidates from one city, even if others are equally qualified.',
+      answer: 'Biased',
+      explanation: 'Preferring one city is unfair and likely reflects bias in the data.'
+    },
+    {
+      text: 'A medical diagnosis AI is tested on many different groups and works equally well for all.',
+      answer: 'Fair',
+      explanation: 'Testing on diverse groups and equal performance means the system is fair.'
+    },
+    {
+      text: 'A loan approval AI only uses financial history and ignores gender or race.',
+      answer: 'Fair',
+      explanation: 'Ignoring irrelevant personal info and focusing on financial data is fair.'
+    },
+    {
+      text: 'A facial recognition system works well for adults but poorly for children.',
+      answer: 'Biased',
+      explanation: 'If it works poorly for some groups, it is biased and needs improvement.'
+    },
+    {
+      text: 'A school grading AI gives lower scores to essays written by students with non-Western names.',
+      answer: 'Biased',
+      explanation: 'This is a clear sign of bias and unfairness.'
+    },
+  ];
+  const [selected, setSelected] = useState<string[]>(Array(scenarios.length).fill(''));
+  const [submitted, setSubmitted] = useState(false);
+  const [score, setScore] = useState(0);
+
+  const handleSelect = (idx: number, value: string) => {
+    if (submitted) return;
+    const updated = [...selected];
+    updated[idx] = value;
+    setSelected(updated);
+  };
+
+  const handleSubmit = () => {
+    let correct = 0;
+    scenarios.forEach((sc, idx) => {
+      if (selected[idx] === sc.answer) correct++;
+    });
+    setScore(correct);
+    setSubmitted(true);
+  };
+
+  return (
+    <div>
+      <div className="space-y-4 mb-4">
+        {scenarios.map((sc, idx) => (
+          <div key={idx} className="bg-gray-800/50 p-4 rounded-lg">
+            <span className="text-gray-300">{sc.text}</span>
+            <div className="mt-2 flex space-x-4">
+              {['Fair', 'Biased'].map(opt => (
+                <button
+                  key={opt}
+                  type="button"
+                  onClick={() => handleSelect(idx, opt)}
+                  className={`py-1 px-4 rounded-lg border font-semibold transition-colors
+                    ${selected[idx] === opt
+                      ? 'bg-gradient-to-r from-islamic-gold to-yellow-500 text-black border-islamic-gold'
+                      : 'bg-gray-700 text-gray-300 border-gray-600 hover:bg-gray-600'}
+                    ${submitted && selected[idx] === sc.answer && selected[idx] === opt ? 'ring-2 ring-green-400' : ''}
+                    ${submitted && selected[idx] && selected[idx] !== sc.answer && selected[idx] === opt ? 'ring-2 ring-red-400' : ''}
+                  `}
+                  disabled={submitted}
+                >
+                  {opt}
+                </button>
+              ))}
+            </div>
+            {submitted && (
+              <div className="mt-2 text-sm">
+                <span className={selected[idx] === sc.answer ? 'text-green-400' : 'text-red-400'}>
+                  {selected[idx] === sc.answer ? 'Correct!' : 'Not quite.'}
+                </span>
+                <span className="ml-2 text-gray-400">{sc.explanation}</span>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+      {!submitted ? (
+        <button
+          onClick={handleSubmit}
+          className="bg-gradient-to-r from-islamic-gold to-yellow-500 text-black font-bold py-2 px-6 rounded-lg hover:from-yellow-400 hover:to-islamic-gold transition-all"
+          disabled={selected.some(val => !val)}
+        >
+          Submit
+        </button>
+      ) : (
+        <div className="mt-3">
+          <span className="text-lg font-semibold text-islamic-gold">You got {score} out of {scenarios.length} correct!</span>
+        </div>
+      )}
+    </div>
+  );
+}
+function MLForGoodActivity() {
+  return <div className="text-gray-400">[Interactive: ML for Good! Activity coming soon]</div>;
 } 
