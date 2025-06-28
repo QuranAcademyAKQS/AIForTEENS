@@ -1552,3 +1552,19 @@ function UserRolesActivity() {
     </div>
   );
 } 
+
+function TrainModelActivity() {
+  return <div className="text-gray-400">[Interactive: Train the Model! Activity coming soon]</div>;
+}
+
+function IsItFairActivity() {
+  return <div className="text-gray-400">[Interactive: Is it Fair? Activity coming soon]</div>;
+}
+
+function MLForGoodActivity() {
+  return <div className="text-gray-400">[Interactive: ML for Good! Activity coming soon]</div>;
+}
+
+function WhoAmIActivity() {
+  return <div className="text-gray-400">[Interactive: Who Am I in the AI World? Activity coming soon]</div>;
+}
