@@ -985,10 +985,10 @@ function MatchMLTypeActivity() {
                 }`}
               >
                 <div className="flex items-center space-x-2">
-                  <span className={selected[idx] === ex.answer ? 'text-green-400' : 'text-red-400'}>
+                  <span className={`${selected[idx] === ex.answer ? 'text-green-400' : 'text-red-400'} text-2xl`}>
                     {selected[idx] === ex.answer ? '✅ Correct!' : '❌ Incorrect'}
                   </span>
-                  <span className="text-gray-300 text-sm">
+                  <span className={`${selected[idx] === ex.answer ? 'text-green-400' : 'text-red-400'} font-semibold text-lg`}>
                     Correct answer: {getTypeInfo(ex.answer)?.icon} {ex.answer}
                   </span>
                 </div>
@@ -1351,10 +1351,10 @@ function FindPatternActivity() {
             }`}
           >
             <div className="flex items-center space-x-2 mb-2">
-              <span className={correct ? 'text-green-400' : 'text-red-400'} className="text-2xl">
+              <span className={`${correct ? 'text-green-400' : 'text-red-400'} text-2xl`}>
                 {correct ? '🎉' : '❌'}
               </span>
-              <span className={correct ? 'text-green-400' : 'text-red-400'} className="font-semibold text-lg">
+              <span className={`${correct ? 'text-green-400' : 'text-red-400'} font-semibold text-lg`}>
                 {correct ? 'Correct!' : 'Not quite right.'}
               </span>
             </div>
