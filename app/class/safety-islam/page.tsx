@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Shield, 
@@ -22,7 +22,40 @@ import {
   EyeOff,
   Smartphone,
   Wifi,
-  UserCheck
+  UserCheck,
+  Home,
+  Car,
+  Cross,
+  Leaf,
+  Zap,
+  MessageCircle,
+  Settings,
+  Clock,
+  Target,
+  TrendingUp,
+  HelpCircle,
+  Info,
+  AlertCircle,
+  ThumbsUp,
+  ThumbsDown,
+  Phone,
+  Mail,
+  MapPin,
+  Calendar,
+  User,
+  Key,
+  Database,
+  Network,
+  Cloud,
+  Monitor,
+  Tablet,
+  Headphones,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Gift,
+  HeartHandshake
 } from 'lucide-react';
 
 export default function SafetyIslamClass() {
@@ -78,11 +111,11 @@ export default function SafetyIslamClass() {
         }
       ],
       principles: [
-        "Always wear appropriate safety gear",
-        "Follow traffic rules and road safety",
-        "Maintain good hygiene and health practices",
-        "Avoid dangerous activities and substances",
-        "Help others in emergency situations"
+        { text: "Always wear appropriate safety gear", icon: Shield },
+        { text: "Follow traffic rules and road safety", icon: Car },
+        { text: "Maintain good hygiene and health practices", icon: Cross },
+        { text: "Avoid dangerous activities and substances", icon: AlertTriangle },
+        { text: "Help others in emergency situations", icon: HeartHandshake }
       ]
     },
     digital: {
@@ -110,11 +143,11 @@ export default function SafetyIslamClass() {
         }
       ],
       principles: [
-        "Protect your personal information online",
-        "Be respectful in digital communications",
-        "Verify information before sharing",
-        "Limit screen time and take breaks",
-        "Use technology for beneficial purposes"
+        { text: "Protect your personal information online", icon: Key },
+        { text: "Be respectful in digital communications", icon: MessageCircle },
+        { text: "Verify information before sharing", icon: Info },
+        { text: "Limit screen time and take breaks", icon: Clock },
+        { text: "Use technology for beneficial purposes", icon: TrendingUp }
       ]
     },
     social: {
@@ -142,11 +175,11 @@ export default function SafetyIslamClass() {
         }
       ],
       principles: [
-        "Choose good company and friends",
-        "Respect boundaries and personal space",
-        "Communicate openly and honestly",
-        "Avoid gossip and backbiting",
-        "Stand up against bullying and injustice"
+        { text: "Choose good company and friends", icon: Users },
+        { text: "Respect boundaries and personal space", icon: User },
+        { text: "Communicate openly and honestly", icon: MessageCircle },
+        { text: "Avoid gossip and backbiting", icon: AlertCircle },
+        { text: "Stand up against bullying and injustice", icon: Shield }
       ]
     },
     spiritual: {
@@ -174,11 +207,11 @@ export default function SafetyIslamClass() {
         }
       ],
       principles: [
-        "Maintain regular prayers and worship",
-        "Recite Quran and dhikr daily",
-        "Seek knowledge from reliable sources",
-        "Avoid harmful influences and environments",
-        "Strengthen your faith through good deeds"
+        { text: "Maintain regular prayers and worship", icon: Clock },
+        { text: "Recite Quran and dhikr daily", icon: BookOpen },
+        { text: "Seek knowledge from reliable sources", icon: Target },
+        { text: "Avoid harmful influences and environments", icon: AlertTriangle },
+        { text: "Strengthen your faith through good deeds", icon: Heart }
       ]
     },
     environmental: {
@@ -206,11 +239,11 @@ export default function SafetyIslamClass() {
         }
       ],
       principles: [
-        "Reduce waste and recycle",
-        "Conserve water and energy",
-        "Keep your surroundings clean",
-        "Plant trees and care for nature",
-        "Use eco-friendly products"
+        { text: "Reduce waste and recycle", icon: Leaf },
+        { text: "Conserve water and energy", icon: Zap },
+        { text: "Keep your surroundings clean", icon: Cross },
+        { text: "Plant trees and care for nature", icon: Globe },
+        { text: "Use eco-friendly products", icon: Gift }
       ]
     }
   };
@@ -219,6 +252,7 @@ export default function SafetyIslamClass() {
     {
       id: 'q1',
       question: 'What does the Quran say about protecting human life?',
+      icon: Heart,
       options: [
         'It\'s optional',
         'It\'s as if you saved all of humanity',
@@ -231,6 +265,7 @@ export default function SafetyIslamClass() {
     {
       id: 'q2',
       question: 'How should we behave online according to Islamic teachings?',
+      icon: Smartphone,
       options: [
         'Share everything',
         'Speak good or remain silent',
@@ -243,6 +278,7 @@ export default function SafetyIslamClass() {
     {
       id: 'q3',
       question: 'What is the Islamic principle about relationships?',
+      icon: Users,
       options: [
         'Love for yourself what you love for others',
         'Only care about family',
@@ -255,6 +291,7 @@ export default function SafetyIslamClass() {
     {
       id: 'q4',
       question: 'How should we treat the environment?',
+      icon: Globe,
       options: [
         'Use it however we want',
         'Cause corruption after it\'s set right',
@@ -267,6 +304,7 @@ export default function SafetyIslamClass() {
     {
       id: 'q5',
       question: 'What provides spiritual safety?',
+      icon: Brain,
       options: [
         'Avoiding all religious activities',
         'Regular remembrance of Allah',
@@ -306,6 +344,7 @@ export default function SafetyIslamClass() {
       {
         id: 1,
         title: "Digital Safety",
+        icon: Smartphone,
         scenario: "You receive a message from an unknown number asking for your personal information. What should you do?",
         options: [
           "Share your information since they might need help",
@@ -320,6 +359,7 @@ export default function SafetyIslamClass() {
       {
         id: 2,
         title: "Physical Safety",
+        icon: Shield,
         scenario: "You're walking home and notice someone following you. What's the safest Islamic approach?",
         options: [
           "Confront them directly",
@@ -334,6 +374,7 @@ export default function SafetyIslamClass() {
       {
         id: 3,
         title: "Social Safety",
+        icon: Users,
         scenario: "Your friends are planning to do something that goes against Islamic values. What should you do?",
         options: [
           "Join them to avoid being left out",
@@ -348,6 +389,7 @@ export default function SafetyIslamClass() {
       {
         id: 4,
         title: "Environmental Safety",
+        icon: Globe,
         scenario: "You see someone littering in a public park. What's the Islamic response?",
         options: [
           "Ignore it since it's not your problem",
@@ -362,6 +404,7 @@ export default function SafetyIslamClass() {
       {
         id: 5,
         title: "Spiritual Safety",
+        icon: Brain,
         scenario: "You're feeling stressed and overwhelmed. What's the best Islamic approach?",
         options: [
           "Ignore your feelings",
@@ -434,7 +477,10 @@ export default function SafetyIslamClass() {
 
           <div className="space-y-6">
             <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 p-6 rounded-xl border border-blue-500/50">
-              <h3 className="text-xl font-semibold text-blue-400 mb-2">{scenarios[currentScenario].title}</h3>
+              <h3 className="text-xl font-semibold text-blue-400 mb-2 flex items-center">
+                {React.createElement(scenarios[currentScenario].icon, { className: "w-5 h-5 mr-2" })}
+                {scenarios[currentScenario].title}
+              </h3>
               <p className="text-gray-300 text-lg">{scenarios[currentScenario].scenario}</p>
             </div>
 
@@ -535,6 +581,7 @@ export default function SafetyIslamClass() {
     const safetyCategories = {
       physical: {
         title: "Physical Safety",
+        icon: Shield,
         items: [
           "Always wear appropriate safety gear",
           "Follow traffic rules and road safety",
@@ -545,6 +592,7 @@ export default function SafetyIslamClass() {
       },
       digital: {
         title: "Digital Safety",
+        icon: Smartphone,
         items: [
           "Protect your personal information online",
           "Be respectful in digital communications",
@@ -555,6 +603,7 @@ export default function SafetyIslamClass() {
       },
       social: {
         title: "Social Safety",
+        icon: Users,
         items: [
           "Choose good company and friends",
           "Respect boundaries and personal space",
@@ -565,6 +614,7 @@ export default function SafetyIslamClass() {
       },
       spiritual: {
         title: "Spiritual Safety",
+        icon: Brain,
         items: [
           "Maintain regular prayers and worship",
           "Recite Quran and dhikr daily",
@@ -575,6 +625,7 @@ export default function SafetyIslamClass() {
       },
       environmental: {
         title: "Environmental Safety",
+        icon: Globe,
         items: [
           "Reduce waste and recycle",
           "Conserve water and energy",
@@ -647,7 +698,10 @@ export default function SafetyIslamClass() {
                   animate={{ opacity: 1, x: 0 }}
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 rounded-xl border border-gray-700"
                 >
-                  <h3 className="text-xl font-semibold text-white mb-4">{category.title}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
+                    {React.createElement(category.icon, { className: "w-5 h-5 mr-2" })}
+                    {category.title}
+                  </h3>
                   <div className="space-y-3">
                     {category.items.map((item, idx) => {
                       const key = `${categoryKey}-${item}`;
@@ -742,7 +796,10 @@ export default function SafetyIslamClass() {
                   whileHover={{ scale: 1.05 }}
                   className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-islamic-gold transition-all"
                 >
-                  <h3 className="text-xl font-semibold text-white mb-3">{topic.title}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3 flex items-center">
+                    {React.createElement(sections.find(s => s.id === key)?.icon || Shield, { className: "w-5 h-5 mr-2 text-islamic-gold" })}
+                    {topic.title}
+                  </h3>
                   <p className="text-gray-300 text-sm mb-4">
                     Learn about {topic.title.toLowerCase()} through Quranic verses, Hadith, and practical principles.
                   </p>
@@ -760,25 +817,37 @@ export default function SafetyIslamClass() {
               <h3 className="text-xl font-semibold text-white mb-3">Why Safety Matters in Islam</h3>
               <div className="grid md:grid-cols-2 gap-4 text-sm">
                 <div>
-                  <h4 className="text-green-400 font-semibold mb-2">Our Bodies are Trusts</h4>
+                  <h4 className="text-green-400 font-semibold mb-2 flex items-center">
+                    <Heart className="w-4 h-4 mr-2" />
+                    Our Bodies are Trusts
+                  </h4>
                   <p className="text-gray-300">
                     Allah has entrusted us with our bodies and health. We must protect these gifts.
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-blue-400 font-semibold mb-2">Community Responsibility</h4>
+                  <h4 className="text-blue-400 font-semibold mb-2 flex items-center">
+                    <Users className="w-4 h-4 mr-2" />
+                    Community Responsibility
+                  </h4>
                   <p className="text-gray-300">
                     We are responsible for the safety and well-being of our community.
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-purple-400 font-semibold mb-2">Environmental Stewardship</h4>
+                  <h4 className="text-purple-400 font-semibold mb-2 flex items-center">
+                    <Globe className="w-4 h-4 mr-2" />
+                    Environmental Stewardship
+                  </h4>
                   <p className="text-gray-300">
                     We are khalifah (stewards) of the earth and must protect Allah's creation.
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-orange-400 font-semibold mb-2">Spiritual Protection</h4>
+                  <h4 className="text-orange-400 font-semibold mb-2 flex items-center">
+                    <Brain className="w-4 h-4 mr-2" />
+                    Spiritual Protection
+                  </h4>
                   <p className="text-gray-300">
                     Safety practices help protect our souls and strengthen our faith.
                   </p>
@@ -809,7 +878,10 @@ export default function SafetyIslamClass() {
                 whileHover={{ scale: 1.02 }}
                 className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 p-6 rounded-xl border border-blue-500/50"
               >
-                <h3 className="text-xl font-semibold text-white mb-3">Safety Scenario Game</h3>
+                <h3 className="text-xl font-semibold text-white mb-3 flex items-center">
+                  <Play className="w-5 h-5 mr-2 text-blue-400" />
+                  Safety Scenario Game
+                </h3>
                 <p className="text-gray-300 mb-4">
                   Practice making safe decisions in different situations
                 </p>
@@ -826,7 +898,10 @@ export default function SafetyIslamClass() {
                 whileHover={{ scale: 1.02 }}
                 className="bg-gradient-to-br from-green-900/30 to-teal-900/30 p-6 rounded-xl border border-green-500/50"
               >
-                <h3 className="text-xl font-semibold text-white mb-3">Safety Checklist</h3>
+                <h3 className="text-xl font-semibold text-white mb-3 flex items-center">
+                  <CheckCircle className="w-5 h-5 mr-2 text-green-400" />
+                  Safety Checklist
+                </h3>
                 <p className="text-gray-300 mb-4">
                   Create your personal safety checklist based on Islamic principles
                 </p>
@@ -876,7 +951,8 @@ export default function SafetyIslamClass() {
                     transition={{ delay: idx * 0.1 }}
                     className="bg-gray-800/50 p-6 rounded-xl border border-gray-700"
                   >
-                    <h3 className="text-lg font-semibold text-white mb-4">
+                    <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+                      <q.icon className="w-5 h-5 mr-3 text-islamic-gold" />
                       Question {idx + 1}: {q.question}
                     </h3>
                     <div className="space-y-3">
@@ -1036,8 +1112,8 @@ export default function SafetyIslamClass() {
                       transition={{ delay: idx * 0.1 }}
                       className="flex items-center space-x-3 bg-gray-800/50 p-3 rounded-lg"
                     >
-                      <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />
-                      <span className="text-gray-300">{principle}</span>
+                      <principle.icon className="w-5 h-5 text-purple-400 flex-shrink-0" />
+                      <span className="text-gray-300">{principle.text}</span>
                     </motion.div>
                   ))}
                 </div>
