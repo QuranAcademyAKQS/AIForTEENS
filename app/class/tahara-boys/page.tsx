@@ -80,28 +80,28 @@ export default function TaharaBoysClass() {
                 <BookOpen className="inline w-5 h-5 mr-2 text-blue-400" />
                 <span className="italic">"Cleanliness is half of faith." (Sahih Muslim)</span>
               </div>
-              <div className="text-right text-lg font-arabic text-blue-700">النظافة من الإيمان</div>
+                              <div className="text-right text-lg hadith-text text-blue-700">النظافة من الإيمان</div>
             </div>
             <div className="bg-green-50 p-3 rounded-lg text-green-800">
               <div className="flex items-center mb-2">
                 <BookOpen className="inline w-5 h-5 mr-2 text-green-400" />
                 <span className="italic">"Allah is Pure and loves purity, He is Clean and loves cleanliness." (Sahih Muslim)</span>
               </div>
-              <div className="text-right text-lg font-arabic text-green-700">إن الله طيب يحب الطيب، نظيف يحب النظافة</div>
+                              <div className="text-right text-lg hadith-text text-green-700">إن الله طيب يحب الطيب، نظيف يحب النظافة</div>
             </div>
             <div className="bg-yellow-50 p-3 rounded-lg text-yellow-800">
               <div className="flex items-center mb-2">
                 <BookOpen className="inline w-5 h-5 mr-2 text-yellow-400" />
                 <span className="italic">"Remove harm from the road, for it is a charity." (Sahih Bukhari)</span>
               </div>
-              <div className="text-right text-lg font-arabic text-yellow-700">إماطة الأذى عن الطريق صدقة</div>
+                              <div className="text-right text-lg hadith-text text-yellow-700">إماطة الأذى عن الطريق صدقة</div>
             </div>
             <div className="bg-blue-100 p-3 rounded-lg text-blue-900">
               <div className="flex items-center mb-2">
                 <BookOpen className="inline w-5 h-5 mr-2 text-blue-500" />
                 <span className="italic">"Whoever performs ablution well, his sins will come out from his body, even from under his nails." (Sahih Muslim)</span>
               </div>
-              <div className="text-right text-lg font-arabic text-blue-700">من توضأ فأحسن الوضوء خرجت خطاياه من جسده حتى تخرج من تحت أظفاره</div>
+                              <div className="text-right text-lg hadith-text text-blue-700">من توضأ فأحسن الوضوء خرجت خطاياه من جسده حتى تخرج من تحت أظفاره</div>
             </div>
           </div>
         </motion.section>

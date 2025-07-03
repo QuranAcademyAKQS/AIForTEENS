@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Brain, Building2, Lightbulb, Users, Globe, Star, ArrowRight, Play, Lock } from 'lucide-react'
+import { Brain, Building2, Lightbulb, Users, Globe, Star, ArrowRight, Play, Lock, Shield, Droplets } from 'lucide-react'
 import Link from 'next/link'
 
 interface ClassData {
@@ -105,8 +105,8 @@ export default function Home() {
             <span className="text-islamic-gold"> AI for TEENS</span>
           </h1>
           <p className="text-xl text-gray-300 mb-2">Futuristic AI Education for Teenagers with Islamic Values</p>
-          <p className="text-lg text-islamic-gold font-arabic">أعوذُ باللهِ منَ الشيطانِ الرَّجيمِ</p>
-          <p className="text-lg text-islamic-gold font-arabic">بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ</p>
+          <p className="text-lg text-islamic-gold quranic-text">أعوذُ باللهِ منَ الشيطانِ الرَّجيمِ</p>
+          <p className="text-lg text-islamic-gold quranic-text">بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ</p>
         </div>
       </motion.header>
 
@@ -272,6 +272,152 @@ export default function Home() {
             </motion.div>
           </motion.div>
         )}
+
+        {/* Special Classes Section */}
+        <motion.section 
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+          className="mb-12"
+        >
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Special Classes
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore specialized topics that combine Islamic teachings with important life skills and knowledge
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Islamic Safety Class */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              whileHover={{ scale: 1.05, y: -10 }}
+              className="bg-gradient-to-br from-green-900/80 to-emerald-800/80 backdrop-blur-sm rounded-2xl p-6 border border-green-500/30 hover:border-green-500/60 transition-all duration-300"
+            >
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-500 to-emerald-400 flex items-center justify-center text-white mb-4 mx-auto">
+                <Shield className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-white">
+                Safety in Islam
+              </h3>
+              <p className="mb-4 text-gray-300">Comprehensive Islamic Safety Guide</p>
+              <div className="flex items-center justify-between mb-4">
+                <span className="font-semibold text-green-400">2 Hours</span>
+                <ArrowRight className="w-5 h-5 text-green-400" />
+              </div>
+              
+              <div className="space-y-3 mb-4">
+                <div className="flex items-center text-sm text-gray-300">
+                  <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                  Physical Safety
+                </div>
+                <div className="flex items-center text-sm text-gray-300">
+                  <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                  Digital Safety
+                </div>
+                <div className="flex items-center text-sm text-gray-300">
+                  <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                  Spiritual Protection
+                </div>
+              </div>
+              
+              <Link href="/class/safety-islam" className="block">
+                <button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold py-2 px-4 rounded-lg hover:from-green-400 hover:to-emerald-400 transition-all text-sm">
+                  Start Class
+                </button>
+              </Link>
+            </motion.div>
+
+            {/* Tahara Boys Class */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7 }}
+              whileHover={{ scale: 1.05, y: -10 }}
+              className="bg-gradient-to-br from-blue-900/80 to-cyan-800/80 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30 hover:border-blue-500/60 transition-all duration-300"
+            >
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white mb-4 mx-auto">
+                <Droplets className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-white">
+                Tahara for Boys
+              </h3>
+              <p className="mb-4 text-gray-300">Purification & Islamic Hygiene</p>
+              <div className="flex items-center justify-between mb-4">
+                <span className="font-semibold text-blue-400">1.5 Hours</span>
+                <ArrowRight className="w-5 h-5 text-blue-400" />
+              </div>
+              
+              <div className="space-y-3 mb-4">
+                <div className="flex items-center text-sm text-gray-300">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                  Wudu Steps
+                </div>
+                <div className="flex items-center text-sm text-gray-300">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                  Islamic Hygiene
+                </div>
+                <div className="flex items-center text-sm text-gray-300">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                  Interactive Game
+                </div>
+              </div>
+              
+              <Link href="/class/tahara-boys" className="block">
+                <button className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold py-2 px-4 rounded-lg hover:from-blue-400 hover:to-cyan-400 transition-all text-sm">
+                  Start Class
+                </button>
+              </Link>
+            </motion.div>
+
+            {/* Coming Soon Special Class */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+              className="bg-gradient-to-br from-purple-900/80 to-violet-800/80 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30 opacity-60"
+            >
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-violet-400 flex items-center justify-center text-white mb-4 mx-auto relative">
+                <Star className="w-8 h-8" />
+                <div className="absolute inset-0 bg-black/50 rounded-full flex items-center justify-center">
+                  <Lock className="w-6 h-6 text-white" />
+                </div>
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-gray-500">
+                More Special Classes
+              </h3>
+              <p className="mb-4 text-gray-500">Coming Soon</p>
+              <div className="flex items-center justify-between mb-4">
+                <span className="font-semibold text-gray-500">TBA</span>
+                <ArrowRight className="w-5 h-5 text-gray-500" />
+              </div>
+              
+              <div className="space-y-3 mb-4">
+                <div className="flex items-center text-sm text-gray-500">
+                  <div className="w-2 h-2 bg-gray-500 rounded-full mr-3"></div>
+                  Islamic Finance
+                </div>
+                <div className="flex items-center text-sm text-gray-500">
+                  <div className="w-2 h-2 bg-gray-500 rounded-full mr-3"></div>
+                  Islamic History
+                </div>
+                <div className="flex items-center text-sm text-gray-500">
+                  <div className="w-2 h-2 bg-gray-500 rounded-full mr-3"></div>
+                  Arabic Language
+                </div>
+              </div>
+              
+              <button className="w-full bg-gray-700 text-gray-500 py-2 px-4 rounded-lg cursor-not-allowed text-sm flex items-center justify-center">
+                <Lock className="w-4 h-4 mr-2" />
+                Coming Soon
+              </button>
+            </motion.div>
+          </div>
+        </motion.section>
 
         {/* Footer */}
         <motion.footer 
