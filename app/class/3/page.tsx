@@ -482,11 +482,11 @@ export default function Class3() {
         {!showResults ? (
           <div className="space-y-6">
             <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 p-6 rounded-xl border border-blue-500/50">
-              <h3 className="text-xl font-semibold text-blue-400 mb-2">{activities[currentActivity].title}</h3>
-              <p className="text-gray-300 mb-4">{activities[currentActivity].description}</p>
+              <h3 className="text-xl font-semibold text-blue-400 mb-2">{activities[currentActivity]?.title}</h3>
+              <p className="text-gray-300 mb-4">{activities[currentActivity]?.description}</p>
               <div className="bg-gray-800/50 p-4 rounded-lg">
-                <h4 className="text-white font-semibold mb-2">{activities[currentActivity].task}</h4>
-                {currentActivity === 0 && (
+                <h4 className="text-white font-semibold mb-2">{activities[currentActivity]?.task}</h4>
+                {currentActivity === 0 && activities[currentActivity]?.images && (
                   <div className="grid grid-cols-3 gap-4 mt-4">
                     {activities[currentActivity].images.map((image, idx) => (
                       <div key={idx} className="text-4xl text-center p-4 bg-gray-700 rounded-lg">
@@ -495,7 +495,7 @@ export default function Class3() {
                     ))}
                   </div>
                 )}
-                {currentActivity === 1 && (
+                {currentActivity === 1 && activities[currentActivity]?.pattern && (
                   <div className="flex space-x-4 mt-4">
                     {activities[currentActivity].pattern.map((item, idx) => (
                       <div key={idx} className="text-3xl p-4 bg-gray-700 rounded-lg">
@@ -504,7 +504,7 @@ export default function Class3() {
                     ))}
                   </div>
                 )}
-                {currentActivity === 2 && (
+                {currentActivity === 2 && activities[currentActivity]?.examples && (
                   <div className="space-y-2 mt-4">
                     {activities[currentActivity].examples.map((example, idx) => (
                       <div key={idx} className="flex justify-between p-2 bg-gray-700 rounded">
@@ -516,7 +516,7 @@ export default function Class3() {
                 )}
               </div>
               <div className="mt-4 bg-gradient-to-r from-islamic-gold/20 to-transparent p-3 rounded-lg border-l-4 border-islamic-gold">
-                <p className="text-sm text-gray-300">{activities[currentActivity].islamicContext}</p>
+                <p className="text-sm text-gray-300">{activities[currentActivity]?.islamicContext}</p>
               </div>
             </div>
 
