@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Brain, Users, MessageCircle, Cpu, Play, CheckCircle, ArrowLeft, Target, Eye, Network, Zap, Lightbulb, BookOpen, Heart, Globe, Activity, Database, TrendingUp, Code, GitBranch, XCircle } from 'lucide-react'
+import { Brain, Users, MessageCircle, Cpu, Play, CheckCircle, ArrowLeft, Target, Eye, Network, Zap, Lightbulb, BookOpen, Heart, Globe, Activity, Database, TrendingUp, Code, GitBranch, XCircle, Layers } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Class4() {
@@ -63,11 +63,25 @@ export default function Class4() {
       examples: ["Algorithmic bias", "Privacy protection", "Explainable AI", "Human oversight"]
     },
     {
+      title: "Transformer Neural Networks",
+      content: "Transformer neural networks are a revolutionary architecture that changed how AI processes language. Unlike traditional neural networks that process information sequentially, transformers can look at all parts of a sentence at once using 'attention mechanisms.' This allows them to understand context and relationships between words much better, making them perfect for language tasks like translation, summarization, and conversation.",
+      islamicContext: "The Quran emphasizes the importance of understanding context and meaning: 'We have sent it down as an Arabic Quran so that you may understand' (12:2). Transformers embody this principle by paying attention to the full context of language, helping us better understand and communicate meaning.",
+      activities: ["Attention Mechanism Explorer", "Context Understanding Game", "Transformer Architecture Visualization", "Language Processing Simulation"],
+      examples: ["Self-attention", "Multi-head attention", "Positional encoding", "Encoder-decoder architecture", "Context windows"]
+    },
+    {
       title: "How ChatGPT Works",
       content: "ChatGPT is a large language model that uses transformer neural networks to understand and generate human-like text. It was trained on vast amounts of text data from books, websites, and conversations, learning patterns in language to respond intelligently to questions and prompts.",
       islamicContext: "The Quran teaches us to 'Read in the name of your Lord who created' (96:1). ChatGPT represents the culmination of human knowledge sharing and learning, helping us access and understand information more easily. However, we must use it responsibly and verify information from reliable sources.",
       activities: ["ChatGPT Simulation", "Prompt Engineering", "Bias Detection", "Ethical Discussion"],
       examples: ["Text generation", "Question answering", "Language translation", "Code assistance", "Creative writing"]
+    },
+    {
+      title: "Building Your Own ChatGPT",
+      content: "Creating your own language model involves several key steps: data collection (gathering text from books, websites, conversations), preprocessing (cleaning and formatting the data), model architecture (designing the transformer network), training (teaching the model on your data), fine-tuning (specializing for specific tasks), and deployment (making it available for use). While building a full-scale ChatGPT requires significant resources, you can start with smaller models and learn the process step by step.",
+      islamicContext: "The Prophet (ﷺ) said 'The best of people are those who are most beneficial to people.' When building AI systems, we should focus on creating tools that help others, solve real problems, and contribute positively to society. Our creations should reflect Islamic values of service, knowledge sharing, and ethical responsibility.",
+      activities: ["Model Building Simulator", "Data Collection Exercise", "Training Process Explorer", "Ethical AI Design"],
+      examples: ["Data preprocessing", "Model architecture design", "Training loops", "Fine-tuning", "Deployment strategies", "API development"]
     }
   ]
 
@@ -176,7 +190,58 @@ export default function Class4() {
       question: "What is convergence in neural networks?",
       options: ["When the network stops working", "When the network stops improving significantly, indicating it has learned", "When the network gets smaller", "When the network changes color"],
       correct: "When the network stops improving significantly, indicating it has learned"
-    }
+    },
+    {
+      question: "What makes transformer neural networks different from traditional neural networks?",
+      options: ["They are smaller", "They can look at all parts of a sentence at once using attention mechanisms", "They are faster", "They use less memory"],
+      correct: "They can look at all parts of a sentence at once using attention mechanisms"
+    },
+    {
+      question: "What is the key innovation of transformer neural networks?",
+      options: ["Self-attention mechanism", "More layers", "Bigger size", "Different colors"],
+      correct: "Self-attention mechanism"
+    },
+    {
+      question: "What does the attention mechanism in transformers do?",
+      options: ["Makes them faster", "Allows each word to pay attention to all other words in the sentence", "Reduces their size", "Changes their color"],
+      correct: "Allows each word to pay attention to all other words in the sentence"
+    },
+    {
+      question: "What type of neural network does ChatGPT use?",
+      options: ["Convolutional neural networks", "Transformer neural networks", "Recurrent neural networks", "Simple neural networks"],
+      correct: "Transformer neural networks"
+    },
+    {
+      question: "How do transformers understand context better than traditional neural networks?",
+      options: ["By being bigger", "By processing words sequentially", "By using attention mechanisms to look at all words simultaneously", "By using more memory"],
+      correct: "By using attention mechanisms to look at all words simultaneously"
+    },
+    {
+      question: "What is the first step in building your own language model?",
+      options: ["Training the model", "Data collection", "Deploying the model", "Writing code"],
+      correct: "Data collection"
+    },
+    {
+      question: "What is fine-tuning in language model development?",
+      options: ["Making the model smaller", "Specializing the model for specific tasks", "Deleting the model", "Changing the model's name"],
+      correct: "Specializing the model for specific tasks"
+    },
+    {
+      question: "What is a major challenge in building large language models?",
+      options: ["They are too small", "They require significant computational resources", "They are too simple", "They don't need data"],
+      correct: "They require significant computational resources"
+    },
+    {
+      question: "What should you consider when building AI systems according to Islamic values?",
+      options: ["Only technical aspects", "How the system can help others and solve real problems", "Only making money", "Only speed"],
+      correct: "How the system can help others and solve real problems"
+    },
+    {
+      question: "What is the purpose of model architecture in building language models?",
+      options: ["To make them look pretty", "To design the structure of the neural network", "To change their color", "To make them smaller"],
+      correct: "To design the structure of the neural network"
+    },
+
   ]
 
   const neuralExperiments = [
@@ -390,11 +455,26 @@ export default function Class4() {
                 )}
                 {currentSection === 7 && (
                   <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold mt-4">
+                    <h4 className="text-lg font-semibold text-islamic-gold mb-2">Transformer Architecture Explorer</h4>
+                    <p className="text-gray-300 mb-4">Explore how transformer neural networks process language using attention mechanisms.</p>
+                    <TransformerExplorer />
+                  </div>
+                )}
+                {currentSection === 8 && (
+                  <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold mt-4">
                     <h4 className="text-lg font-semibold text-islamic-gold mb-2">ChatGPT Simulation</h4>
                     <p className="text-gray-300 mb-4">Experience how ChatGPT works through this interactive simulation.</p>
                     <ChatGPTSimulation />
                   </div>
                 )}
+                {currentSection === 9 && (
+                  <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold mt-4">
+                    <h4 className="text-lg font-semibold text-islamic-gold mb-2">AI Model Builder</h4>
+                    <p className="text-gray-300 mb-4">Learn how to build your own language model step by step.</p>
+                    <AIModelBuilder />
+                  </div>
+                )}
+
               </div>
 
               <div className="flex justify-between mt-8">
@@ -1083,6 +1163,523 @@ function MLvsNNComparison() {
     </div>
   )
 }
+
+function TransformerExplorer() {
+  const [currentStep, setCurrentStep] = useState(0)
+  const [attentionWeights, setAttentionWeights] = useState<{[key: string]: number}>({})
+  const [sentence, setSentence] = useState("The cat sat on the mat")
+  const [selectedWord, setSelectedWord] = useState("")
+  const [contextWindow, setContextWindow] = useState<string[]>([])
+
+  const words = sentence.split(" ")
+  
+  const attentionMechanism = (focusWord: string) => {
+    const weights: {[key: string]: number} = {}
+    words.forEach(word => {
+      // Simulate attention weights based on word relationships
+      if (word === focusWord) {
+        weights[word] = 1.0
+      } else if (word.toLowerCase() === focusWord.toLowerCase()) {
+        weights[word] = 0.8
+      } else if (word.length === focusWord.length) {
+        weights[word] = 0.6
+      } else {
+        weights[word] = 0.2 + Math.random() * 0.3
+      }
+    })
+    setAttentionWeights(weights)
+    setSelectedWord(focusWord)
+  }
+
+  const addToContext = (word: string) => {
+    if (!contextWindow.includes(word)) {
+      setContextWindow([...contextWindow, word])
+    }
+  }
+
+  const clearContext = () => {
+    setContextWindow([])
+    setAttentionWeights({})
+    setSelectedWord("")
+  }
+
+  return (
+    <div className="space-y-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Sentence Visualization */}
+        <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-600">
+          <h4 className="text-lg font-semibold text-islamic-gold mb-4">Sentence Processing</h4>
+          <div className="mb-4">
+            <label className="block text-gray-300 mb-2">Input Sentence:</label>
+            <input
+              type="text"
+              value={sentence}
+              onChange={(e) => setSentence(e.target.value)}
+              className="w-full p-2 bg-gray-700 text-white rounded border border-gray-600"
+              placeholder="Enter a sentence..."
+            />
+          </div>
+          
+          <div className="flex flex-wrap gap-2 mb-4">
+            {words.map((word, index) => (
+              <button
+                key={index}
+                onClick={() => attentionMechanism(word)}
+                className={`px-3 py-2 rounded-lg transition-all ${
+                  selectedWord === word 
+                    ? 'bg-gradient-to-r from-islamic-gold to-yellow-500 text-black font-semibold' 
+                    : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                }`}
+              >
+                {word}
+              </button>
+            ))}
+          </div>
+
+          {selectedWord && (
+            <div className="bg-gray-700/50 p-4 rounded-lg">
+              <h5 className="text-islamic-gold font-semibold mb-2">Attention Weights for "{selectedWord}":</h5>
+              <div className="space-y-2">
+                {Object.entries(attentionWeights).map(([word, weight]) => (
+                  <div key={word} className="flex items-center justify-between">
+                    <span className="text-gray-300">{word}</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-20 bg-gray-600 rounded-full h-2">
+                        <div 
+                          className="bg-gradient-to-r from-islamic-gold to-yellow-500 h-2 rounded-full transition-all"
+                          style={{width: `${weight * 100}%`}}
+                        ></div>
+                      </div>
+                      <span className="text-gray-400 text-sm">{(weight * 100).toFixed(0)}%</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Context Window */}
+        <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-600">
+          <h4 className="text-lg font-semibold text-islamic-gold mb-4">Context Window</h4>
+          <p className="text-gray-300 mb-4 text-sm">
+            Transformers can look at multiple words at once, building context and understanding relationships.
+          </p>
+          
+          <div className="mb-4">
+            <h5 className="text-gray-300 mb-2">Add words to context:</h5>
+            <div className="flex flex-wrap gap-2 mb-4">
+              {words.map((word, index) => (
+                <button
+                  key={index}
+                  onClick={() => addToContext(word)}
+                  disabled={contextWindow.includes(word)}
+                  className={`px-2 py-1 rounded text-sm transition-all ${
+                    contextWindow.includes(word)
+                      ? 'bg-gray-600 text-gray-500 cursor-not-allowed'
+                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                  }`}
+                >
+                  {word}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="mb-4">
+            <h5 className="text-gray-300 mb-2">Current Context:</h5>
+            <div className="bg-gray-700/50 p-3 rounded-lg min-h-[60px]">
+              {contextWindow.length > 0 ? (
+                <div className="flex flex-wrap gap-2">
+                  {contextWindow.map((word, index) => (
+                    <span key={index} className="px-2 py-1 bg-gradient-to-r from-islamic-gold/20 to-yellow-500/20 text-islamic-gold rounded border border-islamic-gold/30">
+                      {word}
+                    </span>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-gray-500 text-sm">No words in context yet. Click words above to add them.</p>
+              )}
+            </div>
+          </div>
+
+          <button
+            onClick={clearContext}
+            className="w-full bg-gray-700 text-gray-300 py-2 rounded-lg hover:bg-gray-600 transition-colors"
+          >
+            Clear Context
+          </button>
+        </div>
+      </div>
+
+      {/* Transformer Architecture */}
+      <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-600">
+        <h4 className="text-lg font-semibold text-islamic-gold mb-4">Transformer Architecture</h4>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="text-center p-4 bg-gray-700/50 rounded-lg">
+            <div className="w-12 h-12 bg-gradient-to-r from-islamic-gold to-yellow-500 rounded-lg mx-auto mb-2 flex items-center justify-center">
+              <Eye className="w-6 h-6 text-black" />
+            </div>
+            <h5 className="text-white font-semibold mb-2">Self-Attention</h5>
+            <p className="text-gray-300 text-sm">Each word pays attention to all other words in the sentence</p>
+          </div>
+          
+          <div className="text-center p-4 bg-gray-700/50 rounded-lg">
+            <div className="w-12 h-12 bg-gradient-to-r from-islamic-gold to-yellow-500 rounded-lg mx-auto mb-2 flex items-center justify-center">
+              <Layers className="w-6 h-6 text-black" />
+            </div>
+            <h5 className="text-white font-semibold mb-2">Multi-Head</h5>
+            <p className="text-gray-300 text-sm">Multiple attention mechanisms work in parallel</p>
+          </div>
+          
+          <div className="text-center p-4 bg-gray-700/50 rounded-lg">
+            <div className="w-12 h-12 bg-gradient-to-r from-islamic-gold to-yellow-500 rounded-lg mx-auto mb-2 flex items-center justify-center">
+              <Network className="w-6 h-6 text-black" />
+            </div>
+            <h5 className="text-white font-semibold mb-2">Feed Forward</h5>
+            <p className="text-gray-300 text-sm">Processes information through neural network layers</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Islamic Context */}
+      <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-4 rounded-lg border-l-4 border-islamic-gold">
+        <h4 className="text-lg font-semibold text-islamic-gold mb-2">Islamic Perspective</h4>
+        <p className="text-gray-300 text-sm">
+          Just as the Quran emphasizes understanding context and meaning, transformer neural networks excel at 
+          understanding the full context of language. This technology helps us better communicate and understand 
+          each other, reflecting the Islamic value of clear communication and mutual understanding.
+        </p>
+      </div>
+    </div>
+  )
+}
+
+function AIModelBuilder() {
+  const [currentPhase, setCurrentPhase] = useState(0)
+  const [modelData, setModelData] = useState<{[key: string]: any}>({
+    dataSize: 0,
+    modelLayers: 0,
+    trainingProgress: 0,
+    accuracy: 0,
+    ethicalScore: 0
+  })
+  const [selectedDataset, setSelectedDataset] = useState("")
+  const [modelType, setModelType] = useState("")
+  const [trainingStatus, setTrainingStatus] = useState("idle")
+
+  const phases = [
+    {
+      title: "Data Collection",
+      description: "Gather and prepare your training data",
+      steps: ["Collect text data", "Clean and format", "Split into training/validation sets"],
+      datasets: ["Books and articles", "Conversations", "Code repositories", "News articles", "Academic papers"]
+    },
+    {
+      title: "Model Architecture",
+      description: "Design your transformer neural network",
+      steps: ["Choose model size", "Configure layers", "Set attention heads", "Define vocabulary"],
+      architectures: ["Small (10M parameters)", "Medium (100M parameters)", "Large (1B+ parameters)", "Custom design"]
+    },
+    {
+      title: "Training Process",
+      description: "Train your model on the collected data",
+      steps: ["Initialize weights", "Run training loops", "Monitor loss", "Validate performance"],
+      trainingOptions: ["Basic training", "Advanced optimization", "Distributed training", "Transfer learning"]
+    },
+    {
+      title: "Fine-tuning",
+      description: "Specialize your model for specific tasks",
+      steps: ["Select target task", "Prepare task-specific data", "Adjust learning rate", "Evaluate performance"],
+      tasks: ["Question answering", "Text summarization", "Language translation", "Code generation", "Creative writing"]
+    },
+    {
+      title: "Deployment",
+      description: "Make your model available for use",
+      steps: ["Optimize for inference", "Create API", "Set up monitoring", "Deploy to cloud"],
+      deploymentOptions: ["Local server", "Cloud platform", "Edge device", "Mobile app"]
+    }
+  ]
+
+  const startTraining = () => {
+    setTrainingStatus("training")
+    let progress = 0
+    const interval = setInterval(() => {
+      progress += Math.random() * 10
+      if (progress >= 100) {
+        progress = 100
+        setTrainingStatus("completed")
+        clearInterval(interval)
+      }
+      setModelData(prev => ({
+        ...prev,
+        trainingProgress: Math.min(progress, 100),
+        accuracy: Math.min(progress * 0.8, 80)
+      }))
+    }, 500)
+  }
+
+  const selectDataset = (dataset: string) => {
+    setSelectedDataset(dataset)
+    setModelData(prev => ({
+      ...prev,
+      dataSize: Math.floor(Math.random() * 1000000) + 100000
+    }))
+  }
+
+  const selectModelType = (type: string) => {
+    setModelType(type)
+    const layerMap: {[key: string]: number} = {
+      "Small (10M parameters)": 6,
+      "Medium (100M parameters)": 12,
+      "Large (1B+ parameters)": 24,
+      "Custom design": 18
+    }
+    setModelData(prev => ({
+      ...prev,
+      modelLayers: layerMap[type] || 12
+    }))
+  }
+
+  const evaluateEthics = () => {
+    const ethicalScore = Math.floor(Math.random() * 30) + 70 // 70-100 range
+    setModelData(prev => ({
+      ...prev,
+      ethicalScore
+    }))
+  }
+
+  return (
+    <div className="space-y-6">
+      {/* Phase Navigation */}
+      <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-600">
+        <h4 className="text-lg font-semibold text-islamic-gold mb-4">Model Building Phases</h4>
+        <div className="flex flex-wrap gap-2">
+          {phases.map((phase, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentPhase(index)}
+              className={`px-3 py-2 rounded-lg text-sm transition-all ${
+                currentPhase === index
+                  ? 'bg-gradient-to-r from-islamic-gold to-yellow-500 text-black font-semibold'
+                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+              }`}
+            >
+              {index + 1}. {phase.title}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Current Phase Details */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-600">
+          <h4 className="text-lg font-semibold text-islamic-gold mb-4">{phases[currentPhase].title}</h4>
+          <p className="text-gray-300 mb-4">{phases[currentPhase].description}</p>
+          
+          <div className="mb-4">
+            <h5 className="text-gray-300 mb-2">Steps:</h5>
+            <ul className="space-y-1">
+              {phases[currentPhase].steps.map((step, index) => (
+                <li key={index} className="text-gray-300 text-sm flex items-center">
+                  <span className="w-5 h-5 bg-islamic-gold text-black rounded-full flex items-center justify-center text-xs mr-2">
+                    {index + 1}
+                  </span>
+                  {step}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+                     {/* Phase-specific options */}
+           {currentPhase === 0 && phases[currentPhase]?.datasets && (
+             <div>
+               <h5 className="text-gray-300 mb-2">Select Dataset Type:</h5>
+               <div className="grid grid-cols-1 gap-2">
+                 {phases[currentPhase].datasets.map((dataset, index) => (
+                   <button
+                     key={index}
+                     onClick={() => selectDataset(dataset)}
+                     className={`p-2 rounded text-sm transition-all ${
+                       selectedDataset === dataset
+                         ? 'bg-gradient-to-r from-islamic-gold/20 to-yellow-500/20 text-islamic-gold border border-islamic-gold/30'
+                         : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                     }`}
+                   >
+                     {dataset}
+                   </button>
+                 ))}
+               </div>
+             </div>
+           )}
+
+           {currentPhase === 1 && phases[currentPhase]?.architectures && (
+             <div>
+               <h5 className="text-gray-300 mb-2">Choose Model Architecture:</h5>
+               <div className="grid grid-cols-1 gap-2">
+                 {phases[currentPhase].architectures.map((arch, index) => (
+                   <button
+                     key={index}
+                     onClick={() => selectModelType(arch)}
+                     className={`p-2 rounded text-sm transition-all ${
+                       modelType === arch
+                         ? 'bg-gradient-to-r from-islamic-gold/20 to-yellow-500/20 text-islamic-gold border border-islamic-gold/30'
+                         : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                     }`}
+                   >
+                     {arch}
+                   </button>
+                 ))}
+               </div>
+             </div>
+           )}
+
+           {currentPhase === 2 && phases[currentPhase]?.trainingOptions && (
+             <div>
+               <h5 className="text-gray-300 mb-2">Training Options:</h5>
+               <div className="grid grid-cols-1 gap-2">
+                 {phases[currentPhase].trainingOptions.map((option, index) => (
+                   <button
+                     key={index}
+                     className="p-2 rounded text-sm bg-gray-700 text-gray-300 hover:bg-gray-600 transition-all"
+                   >
+                     {option}
+                   </button>
+                 ))}
+               </div>
+              <button
+                onClick={startTraining}
+                disabled={trainingStatus === "training"}
+                className="mt-4 w-full bg-gradient-to-r from-islamic-gold to-yellow-500 text-black font-semibold py-2 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:from-yellow-400 hover:to-islamic-gold transition-all"
+              >
+                {trainingStatus === "training" ? "Training..." : "Start Training"}
+              </button>
+            </div>
+          )}
+        </div>
+
+        {/* Model Status */}
+        <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-600">
+          <h4 className="text-lg font-semibold text-islamic-gold mb-4">Model Status</h4>
+          
+          <div className="space-y-4">
+            <div>
+              <div className="flex justify-between text-sm mb-1">
+                <span className="text-gray-300">Data Size</span>
+                <span className="text-gray-400">{modelData.dataSize.toLocaleString()} tokens</span>
+              </div>
+              <div className="w-full bg-gray-600 rounded-full h-2">
+                <div 
+                  className="bg-gradient-to-r from-islamic-gold to-yellow-500 h-2 rounded-full transition-all"
+                  style={{width: `${Math.min(modelData.dataSize / 10000, 100)}%`}}
+                ></div>
+              </div>
+            </div>
+
+            <div>
+              <div className="flex justify-between text-sm mb-1">
+                <span className="text-gray-300">Model Layers</span>
+                <span className="text-gray-400">{modelData.modelLayers}</span>
+              </div>
+              <div className="w-full bg-gray-600 rounded-full h-2">
+                <div 
+                  className="bg-gradient-to-r from-islamic-gold to-yellow-500 h-2 rounded-full transition-all"
+                  style={{width: `${(modelData.modelLayers / 24) * 100}%`}}
+                ></div>
+              </div>
+            </div>
+
+            <div>
+              <div className="flex justify-between text-sm mb-1">
+                <span className="text-gray-300">Training Progress</span>
+                <span className="text-gray-400">{modelData.trainingProgress.toFixed(1)}%</span>
+              </div>
+              <div className="w-full bg-gray-600 rounded-full h-2">
+                <div 
+                  className="bg-gradient-to-r from-islamic-gold to-yellow-500 h-2 rounded-full transition-all"
+                  style={{width: `${modelData.trainingProgress}%`}}
+                ></div>
+              </div>
+            </div>
+
+            <div>
+              <div className="flex justify-between text-sm mb-1">
+                <span className="text-gray-300">Accuracy</span>
+                <span className="text-gray-400">{modelData.accuracy.toFixed(1)}%</span>
+              </div>
+              <div className="w-full bg-gray-600 rounded-full h-2">
+                <div 
+                  className="bg-gradient-to-r from-islamic-gold to-yellow-500 h-2 rounded-full transition-all"
+                  style={{width: `${modelData.accuracy}%`}}
+                ></div>
+              </div>
+            </div>
+
+            <div>
+              <div className="flex justify-between text-sm mb-1">
+                <span className="text-gray-300">Ethical Score</span>
+                <span className="text-gray-400">{modelData.ethicalScore}%</span>
+              </div>
+              <div className="w-full bg-gray-600 rounded-full h-2">
+                <div 
+                  className="bg-gradient-to-r from-islamic-gold to-yellow-500 h-2 rounded-full transition-all"
+                  style={{width: `${modelData.ethicalScore}%`}}
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            onClick={evaluateEthics}
+            className="mt-4 w-full bg-gray-700 text-gray-300 py-2 rounded-lg hover:bg-gray-600 transition-colors"
+          >
+            Evaluate Ethics
+          </button>
+        </div>
+      </div>
+
+      {/* Real-world Considerations */}
+      <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-600">
+        <h4 className="text-lg font-semibold text-islamic-gold mb-4">Real-world Considerations</h4>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h5 className="text-green-400 font-semibold mb-2">What You Can Do:</h5>
+            <ul className="text-sm text-gray-300 space-y-1">
+              <li>• Start with small models and learn the basics</li>
+              <li>• Use pre-trained models and fine-tune them</li>
+              <li>• Focus on specific tasks rather than general AI</li>
+              <li>• Collaborate with others and share knowledge</li>
+              <li>• Consider ethical implications from the start</li>
+            </ul>
+          </div>
+          <div>
+            <h5 className="text-red-400 font-semibold mb-2">Challenges:</h5>
+            <ul className="text-sm text-gray-300 space-y-1">
+              <li>• Requires significant computational resources</li>
+              <li>• Needs large amounts of quality training data</li>
+              <li>• Training can take weeks or months</li>
+              <li>• Requires expertise in machine learning</li>
+              <li>• Ethical considerations and bias mitigation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Islamic Perspective */}
+      <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-4 rounded-lg border-l-4 border-islamic-gold">
+        <h4 className="text-lg font-semibold text-islamic-gold mb-2">Islamic Perspective</h4>
+        <p className="text-gray-300 text-sm">
+          When building AI systems, remember the Islamic principle of serving others. Focus on creating tools that help people, 
+          solve real problems, and contribute positively to society. Consider the ethical implications of your work and ensure 
+          your AI systems reflect values of justice, fairness, and responsibility. The Prophet (ﷺ) taught us that the best of 
+          people are those who are most beneficial to people - let this guide your AI development.
+        </p>
+      </div>
+    </div>
+  )
+}
+
+
 
 function ChatGPTSimulation() {
   const [userInput, setUserInput] = useState('')
