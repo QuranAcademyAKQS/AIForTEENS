@@ -61,6 +61,13 @@ export default function Class4() {
       islamicContext: "Islam encourages innovation and progress that serves humanity. As we advance neural network technology, we must remember our responsibility to use it wisely and for the benefit of all people.",
       activities: ["Future Visioning", "Innovation Discussion", "Responsible Development"],
       examples: ["Neuromorphic computing", "Quantum neural networks", "Brain-computer interfaces", "Sustainable AI"]
+    },
+    {
+      title: "How ChatGPT Works",
+      content: "ChatGPT is a large language model that uses transformer neural networks to understand and generate human-like text. It was trained on vast amounts of text data from books, websites, and conversations, learning patterns in language to respond intelligently to questions and prompts.",
+      islamicContext: "The Quran teaches us to 'Read in the name of your Lord who created' (96:1). ChatGPT represents the culmination of human knowledge sharing and learning, helping us access and understand information more easily. However, we must use it responsibly and verify information from reliable sources.",
+      activities: ["ChatGPT Simulation", "Prompt Engineering", "Bias Detection", "Ethical Discussion"],
+      examples: ["Text generation", "Question answering", "Language translation", "Code assistance", "Creative writing"]
     }
   ]
 
@@ -104,6 +111,26 @@ export default function Class4() {
       question: "What should we remember when developing neural networks?",
       options: ["Only technical aspects", "Ethical considerations and Islamic values", "Only speed", "Only cost"],
       correct: "Ethical considerations and Islamic values"
+    },
+    {
+      question: "What type of neural network does ChatGPT use?",
+      options: ["Convolutional neural networks", "Transformer neural networks", "Recurrent neural networks", "Simple neural networks"],
+      correct: "Transformer neural networks"
+    },
+    {
+      question: "How does ChatGPT understand and respond to text?",
+      options: ["By memorizing responses", "By learning patterns from vast amounts of text data", "By asking humans", "By following strict rules"],
+      correct: "By learning patterns from vast amounts of text data"
+    },
+    {
+      question: "What Islamic principle does ChatGPT's knowledge sharing represent?",
+      options: ["Individualism", "Seeking and sharing knowledge", "Competition", "Isolation"],
+      correct: "Seeking and sharing knowledge"
+    },
+    {
+      question: "Why should we verify information from ChatGPT?",
+      options: ["It's always wrong", "It can make mistakes and we should verify from reliable sources", "It's too slow", "It's too expensive"],
+      correct: "It can make mistakes and we should verify from reliable sources"
     }
   ]
 
@@ -306,6 +333,13 @@ export default function Class4() {
                     <h4 className="text-lg font-semibold text-islamic-gold mb-2">Future Vision</h4>
                     <p className="text-gray-300 mb-4">Explore the future of neural networks and AI.</p>
                     <FutureVision />
+                  </div>
+                )}
+                {currentSection === 7 && (
+                  <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold mt-4">
+                    <h4 className="text-lg font-semibold text-islamic-gold mb-2">ChatGPT Simulation</h4>
+                    <p className="text-gray-300 mb-4">Experience how ChatGPT works through this interactive simulation.</p>
+                    <ChatGPTSimulation />
                   </div>
                 )}
               </div>
@@ -774,6 +808,140 @@ function FutureVision() {
         <div className="bg-gradient-to-r from-islamic-gold/20 to-transparent p-3 rounded-lg border-l-4 border-islamic-gold">
           <h5 className="text-islamic-gold font-semibold text-sm mb-1">Potential Impact</h5>
           <p className="text-gray-300 text-sm">{futures[selectedFuture].impact}</p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function ChatGPTSimulation() {
+  const [userInput, setUserInput] = useState('')
+  const [chatHistory, setChatHistory] = useState<Array<{role: string, content: string}>>([])
+  const [isProcessing, setIsProcessing] = useState(false)
+  const [currentStep, setCurrentStep] = useState(0)
+  
+  const processingSteps = [
+    "Analyzing your input...",
+    "Understanding context...",
+    "Generating response...",
+    "Applying language patterns...",
+    "Finalizing answer..."
+  ]
+
+  const sampleResponses = {
+    "hello": "Hello! I'm a simulation of ChatGPT. How can I help you learn about neural networks today?",
+    "how do neural networks work": "Neural networks work by processing information through interconnected nodes (neurons) that learn patterns from data. Each connection has a weight that adjusts as the network learns, similar to how our brains strengthen connections through learning.",
+    "what is machine learning": "Machine learning is a type of AI that learns from data to make predictions and decisions. Instead of following strict rules, it finds patterns in information and improves over time.",
+    "explain islamic values in ai": "Islamic values in AI emphasize using technology to serve humanity, ensuring fairness and justice, protecting privacy, and being accountable for our creations. We should use AI to help people and solve real problems while treating everyone with dignity and respect.",
+    "help": "I can help you understand neural networks, machine learning, AI applications, and how these technologies relate to Islamic values. Just ask me a question!"
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!userInput.trim()) return
+
+    const userMessage = { role: 'user', content: userInput }
+    setChatHistory([...chatHistory, userMessage])
+    setIsProcessing(true)
+    setCurrentStep(0)
+
+    // Simulate processing
+    const interval = setInterval(() => {
+      setCurrentStep(prev => {
+        if (prev < processingSteps.length - 1) {
+          return prev + 1
+        } else {
+          clearInterval(interval)
+          setIsProcessing(false)
+          
+          // Generate response
+          const lowerInput = userInput.toLowerCase()
+          let response = "I'm a simulation of ChatGPT. I can help you learn about neural networks, AI, and Islamic perspectives on technology. Try asking me about how neural networks work, machine learning, or Islamic values in AI."
+          
+          for (const [key, value] of Object.entries(sampleResponses)) {
+            if (lowerInput.includes(key)) {
+              response = value
+              break
+            }
+          }
+          
+          const aiMessage = { role: 'assistant', content: response }
+          setChatHistory(prev => [...prev, aiMessage])
+          setUserInput('')
+          return prev
+        }
+      })
+    }, 800)
+  }
+
+  return (
+    <div className="space-y-4">
+      {/* Processing Visualization */}
+      {isProcessing && (
+        <div className="bg-gray-800/50 p-4 rounded-lg">
+          <h4 className="text-islamic-gold font-semibold mb-3">ChatGPT Processing</h4>
+          <div className="space-y-2">
+            {processingSteps.map((step, index) => (
+              <div key={index} className="flex items-center">
+                <div className={`w-3 h-3 rounded-full mr-3 ${
+                  index <= currentStep ? 'bg-islamic-gold' : 'bg-gray-600'
+                }`} />
+                <span className={`text-sm ${
+                  index <= currentStep ? 'text-gray-300' : 'text-gray-500'
+                }`}>
+                  {step}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Chat Interface */}
+      <div className="bg-gray-800/50 p-4 rounded-lg">
+        <h4 className="text-islamic-gold font-semibold mb-3">Chat Interface</h4>
+        <div className="space-y-3 mb-4 max-h-60 overflow-y-auto">
+          {chatHistory.map((message, index) => (
+            <div key={index} className={`p-3 rounded-lg ${
+              message.role === 'user' 
+                ? 'bg-islamic-gold/20 ml-8' 
+                : 'bg-gray-700/50 mr-8'
+            }`}>
+              <div className="text-xs text-gray-400 mb-1">
+                {message.role === 'user' ? 'You' : 'ChatGPT'}
+              </div>
+              <div className="text-gray-300 text-sm">{message.content}</div>
+            </div>
+          ))}
+        </div>
+        
+        <form onSubmit={handleSubmit} className="flex gap-2">
+          <input
+            type="text"
+            value={userInput}
+            onChange={(e) => setUserInput(e.target.value)}
+            placeholder="Ask me about neural networks, AI, or Islamic values..."
+            className="flex-1 bg-gray-700 text-gray-300 px-3 py-2 rounded-lg border border-gray-600 focus:border-islamic-gold focus:outline-none"
+            disabled={isProcessing}
+          />
+          <button
+            type="submit"
+            disabled={isProcessing || !userInput.trim()}
+            className="px-4 py-2 bg-gradient-to-r from-islamic-gold to-yellow-500 text-black font-semibold rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:from-yellow-400 hover:to-islamic-gold transition-all"
+          >
+            Send
+          </button>
+        </form>
+      </div>
+
+      {/* Tips */}
+      <div className="bg-gradient-to-r from-islamic-gold/20 to-transparent p-4 rounded-lg border-l-4 border-islamic-gold">
+        <h5 className="text-islamic-gold font-semibold text-sm mb-2">Try asking:</h5>
+        <div className="space-y-1 text-sm text-gray-300">
+          <div>• "How do neural networks work?"</div>
+          <div>• "What is machine learning?"</div>
+          <div>• "Explain Islamic values in AI"</div>
+          <div>• "Hello"</div>
         </div>
       </div>
     </div>
