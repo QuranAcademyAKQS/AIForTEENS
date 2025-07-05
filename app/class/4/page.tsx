@@ -63,6 +63,13 @@ export default function Class4() {
       examples: ["Neuromorphic computing", "Quantum neural networks", "Brain-computer interfaces", "Sustainable AI"]
     },
     {
+      title: "Neural Networks vs Machine Learning",
+      content: "Machine Learning is a broad field that includes many different methods for teaching computers to learn from data. Neural Networks are a specific type of machine learning inspired by how human brains work, using interconnected nodes (neurons) to process information. While all neural networks are machine learning, not all machine learning uses neural networks.",
+      islamicContext: "The Quran teaches us to 'reflect on the creation of the heavens and the earth' (3:191). Understanding different approaches to learning helps us appreciate the diversity of Allah's creation and the various ways we can solve problems and gain knowledge.",
+      activities: ["Comparison Analysis", "Method Exploration", "Real-world Examples", "Islamic Perspective Discussion"],
+      examples: ["Decision trees", "Support vector machines", "Neural networks", "Clustering algorithms", "Reinforcement learning"]
+    },
+    {
       title: "How ChatGPT Works",
       content: "ChatGPT is a large language model that uses transformer neural networks to understand and generate human-like text. It was trained on vast amounts of text data from books, websites, and conversations, learning patterns in language to respond intelligently to questions and prompts.",
       islamicContext: "The Quran teaches us to 'Read in the name of your Lord who created' (96:1). ChatGPT represents the culmination of human knowledge sharing and learning, helping us access and understand information more easily. However, we must use it responsibly and verify information from reliable sources.",
@@ -131,6 +138,26 @@ export default function Class4() {
       question: "Why should we verify information from ChatGPT?",
       options: ["It's always wrong", "It can make mistakes and we should verify from reliable sources", "It's too slow", "It's too expensive"],
       correct: "It can make mistakes and we should verify from reliable sources"
+    },
+    {
+      question: "What is the relationship between neural networks and machine learning?",
+      options: ["They are completely different", "All neural networks are machine learning, but not all machine learning uses neural networks", "They are the same thing", "Neural networks are not machine learning"],
+      correct: "All neural networks are machine learning, but not all machine learning uses neural networks"
+    },
+    {
+      question: "What are neural networks inspired by?",
+      options: ["Computer circuits", "Human brain", "Mathematical equations", "Programming languages"],
+      correct: "Human brain"
+    },
+    {
+      question: "Which of these is NOT a type of machine learning?",
+      options: ["Decision trees", "Neural networks", "Word processing", "Clustering algorithms"],
+      correct: "Word processing"
+    },
+    {
+      question: "What Islamic principle does understanding different learning methods reflect?",
+      options: ["Individualism", "Appreciating diversity in Allah's creation", "Competition", "Isolation"],
+      correct: "Appreciating diversity in Allah's creation"
     }
   ]
 
@@ -336,6 +363,13 @@ export default function Class4() {
                   </div>
                 )}
                 {currentSection === 7 && (
+                  <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold mt-4">
+                    <h4 className="text-lg font-semibold text-islamic-gold mb-2">Machine Learning vs Neural Networks</h4>
+                    <p className="text-gray-300 mb-4">Compare different machine learning methods and understand their relationships.</p>
+                    <MLvsNNComparison />
+                  </div>
+                )}
+                {currentSection === 8 && (
                   <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold mt-4">
                     <h4 className="text-lg font-semibold text-islamic-gold mb-2">ChatGPT Simulation</h4>
                     <p className="text-gray-300 mb-4">Experience how ChatGPT works through this interactive simulation.</p>
@@ -810,6 +844,123 @@ function FutureVision() {
           <p className="text-gray-300 text-sm">{futures[selectedFuture].impact}</p>
         </div>
       </div>
+    </div>
+  )
+}
+
+function MLvsNNComparison() {
+  const [selectedMethod, setSelectedMethod] = useState("")
+  const [showDetails, setShowDetails] = useState(false)
+
+  const methods = {
+    "Neural Networks": {
+      description: "Inspired by human brain, uses interconnected neurons",
+      pros: ["Can learn complex patterns", "Good for image/speech recognition", "Can handle large datasets"],
+      cons: ["Requires lots of data", "Can be a 'black box'", "Computationally expensive"],
+      examples: ["ChatGPT", "Image recognition", "Self-driving cars"]
+    },
+    "Decision Trees": {
+      description: "Tree-like model of decisions and consequences",
+      pros: ["Easy to understand", "Works with small datasets", "No data scaling needed"],
+      cons: ["Can overfit", "May not capture complex relationships", "Sensitive to data changes"],
+      examples: ["Medical diagnosis", "Credit scoring", "Game AI"]
+    },
+    "Support Vector Machines": {
+      description: "Finds the best boundary between different classes",
+      pros: ["Effective in high dimensions", "Memory efficient", "Versatile"],
+      cons: ["Sensitive to feature scaling", "Can be slow with large datasets", "Requires careful parameter tuning"],
+      examples: ["Text classification", "Image classification", "Bioinformatics"]
+    },
+    "Clustering": {
+      description: "Groups similar data points together",
+      pros: ["No labels needed", "Reveals hidden patterns", "Simple to understand"],
+      cons: ["May not find meaningful groups", "Sensitive to distance metrics", "Requires choosing number of clusters"],
+      examples: ["Customer segmentation", "Image compression", "Document organization"]
+    }
+  }
+
+  return (
+    <div className="bg-gradient-to-br from-gray-800/50 to-gray-700/50 rounded-xl p-6 border border-islamic-gold/30">
+      <h3 className="text-xl font-bold text-white mb-4 flex items-center">
+        <GitBranch className="w-5 h-5 mr-2 text-islamic-gold" />
+        Machine Learning Methods Comparison
+      </h3>
+      
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        {Object.keys(methods).map((method) => (
+          <button
+            key={method}
+            onClick={() => {
+              setSelectedMethod(method)
+              setShowDetails(true)
+            }}
+            className={`p-3 rounded-lg border transition-all ${
+              selectedMethod === method
+                ? "border-islamic-gold bg-islamic-gold/20 text-white"
+                : "border-gray-600 bg-gray-700/50 text-gray-300 hover:border-islamic-gold/50"
+            }`}
+          >
+            <div className="text-sm font-medium">{method}</div>
+          </button>
+        ))}
+      </div>
+
+      {showDetails && selectedMethod && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-gray-800/70 rounded-lg p-6 border border-islamic-gold/20"
+        >
+          <h4 className="text-lg font-bold text-islamic-gold mb-3">{selectedMethod}</h4>
+          <p className="text-gray-300 mb-4">{methods[selectedMethod as keyof typeof methods].description}</p>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            <div>
+              <h5 className="text-green-400 font-semibold mb-2 flex items-center">
+                <CheckCircle className="w-4 h-4 mr-1" />
+                Advantages
+              </h5>
+              <ul className="text-sm text-gray-300 space-y-1">
+                {methods[selectedMethod as keyof typeof methods].pros.map((pro, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-green-400 mr-2">•</span>
+                    {pro}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div>
+              <h5 className="text-red-400 font-semibold mb-2 flex items-center">
+                <XCircle className="w-4 h-4 mr-1" />
+                Limitations
+              </h5>
+              <ul className="text-sm text-gray-300 space-y-1">
+                {methods[selectedMethod as keyof typeof methods].cons.map((con, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-red-400 mr-2">•</span>
+                    {con}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          
+          <div className="mt-4">
+            <h5 className="text-blue-400 font-semibold mb-2 flex items-center">
+              <Lightbulb className="w-4 h-4 mr-1" />
+              Real-world Examples
+            </h5>
+            <div className="flex flex-wrap gap-2">
+              {methods[selectedMethod as keyof typeof methods].examples.map((example, index) => (
+                <span key={index} className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">
+                  {example}
+                </span>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      )}
     </div>
   )
 }
