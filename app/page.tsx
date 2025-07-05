@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Brain, Building2, Lightbulb, Users, Globe, Star, ArrowRight, Play, Lock, Shield, Droplets } from 'lucide-react'
+import { Brain, Building2, Lightbulb, Users, Globe, Star, ArrowRight, Play, Lock, Shield, Droplets, Code, Gamepad2 } from 'lucide-react'
 import Link from 'next/link'
 
 interface ClassData {
@@ -45,6 +45,18 @@ const classes: ClassData[] = [
   },
   {
     id: 3,
+    title: "AI Programming with Scratch & Machine Learning for Kids",
+    subtitle: "Coding AI with Blocks & Visual Learning",
+    duration: "1 Hour",
+    topics: ["Scratch programming", "Machine learning for kids", "Visual AI concepts", "Block-based coding"],
+    activities: ["Scratch AI Projects", "ML for Kids.co.uk activities", "Visual Pattern Recognition", "Interactive AI Games"],
+    islamicContext: "Learning to create and understand AI through visual programming, reflecting Allah's guidance in making complex things simple",
+    icon: <Code className="w-8 h-8" />,
+    color: "from-orange-500 to-red-500",
+    locked: false
+  },
+  {
+    id: 4,
     title: "Neural Networks & Community Learning",
     subtitle: "Networks that Connect Like Ummah",
     duration: "1 Hour",
@@ -56,7 +68,7 @@ const classes: ClassData[] = [
     locked: false
   },
   {
-    id: 4,
+    id: 5,
     title: "AI Applications & Global Impact",
     subtitle: "Technology for the Betterment of Humanity",
     duration: "1 Hour",
@@ -65,18 +77,6 @@ const classes: ClassData[] = [
     islamicContext: "Using AI to solve global challenges while upholding Islamic values of compassion and justice",
     icon: <Globe className="w-8 h-8" />,
     color: "from-islamic-purple to-violet-400",
-    locked: true
-  },
-  {
-    id: 5,
-    title: "Future of AI & Islamic Innovation",
-    subtitle: "Building the Future with Faith",
-    duration: "1 Hour",
-    topics: ["Future AI trends", "Islamic innovation", "Career paths in AI"],
-    activities: ["Future Vision Workshop", "Innovation Challenge", "Career Exploration"],
-    islamicContext: "Preparing for a future where AI and Islamic values work together for human betterment",
-    icon: <Star className="w-8 h-8" />,
-    color: "from-futuristic-neon to-cyan-300",
     locked: true
   }
 ]
