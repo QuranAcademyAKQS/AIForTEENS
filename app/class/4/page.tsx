@@ -63,13 +63,6 @@ export default function Class4() {
       examples: ["Algorithmic bias", "Privacy protection", "Explainable AI", "Human oversight"]
     },
     {
-      title: "Future of Neural Networks",
-      content: "The future of neural networks includes more efficient learning, better interpretability, and integration with other AI technologies. We must ensure these advances benefit all of humanity and align with Islamic values of compassion and service.",
-      islamicContext: "Islam encourages innovation and progress that serves humanity. As we advance neural network technology, we must remember our responsibility to use it wisely and for the benefit of all people.",
-      activities: ["Future Visioning", "Innovation Discussion", "Responsible Development"],
-      examples: ["Neuromorphic computing", "Quantum neural networks", "Brain-computer interfaces", "Sustainable AI"]
-    },
-    {
       title: "How ChatGPT Works",
       content: "ChatGPT is a large language model that uses transformer neural networks to understand and generate human-like text. It was trained on vast amounts of text data from books, websites, and conversations, learning patterns in language to respond intelligently to questions and prompts.",
       islamicContext: "The Quran teaches us to 'Read in the name of your Lord who created' (96:1). ChatGPT represents the culmination of human knowledge sharing and learning, helping us access and understand information more easily. However, we must use it responsibly and verify information from reliable sources.",
@@ -397,13 +390,6 @@ export default function Class4() {
                 )}
                 {currentSection === 7 && (
                   <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold mt-4">
-                    <h4 className="text-lg font-semibold text-islamic-gold mb-2">Future Vision</h4>
-                    <p className="text-gray-300 mb-4">Explore the future of neural networks and AI.</p>
-                    <FutureVision />
-                  </div>
-                )}
-                {currentSection === 8 && (
-                  <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold mt-4">
                     <h4 className="text-lg font-semibold text-islamic-gold mb-2">ChatGPT Simulation</h4>
                     <p className="text-gray-300 mb-4">Experience how ChatGPT works through this interactive simulation.</p>
                     <ChatGPTSimulation />
@@ -688,7 +674,7 @@ function TeenEpochExample() {
     "Memorizing Quran verses", 
     "Learning to cook a new recipe",
     "Practicing basketball shots",
-    "Learning to play guitar",
+    "Learning to play",
     "Studying for a math test",
     "Learning Arabic calligraphy",
     "Practicing soccer skills",
@@ -979,45 +965,7 @@ function EthicalNeuralNetworks() {
   )
 }
 
-function FutureVision() {
-  const [selectedFuture, setSelectedFuture] = useState('efficiency')
-  
-  const futures: { [key: string]: { name: string; description: string; impact: string } } = {
-    efficiency: { name: "More Efficient Learning", description: "Neural networks that learn faster with less data", impact: "Reduced computational costs and environmental impact" },
-    interpretability: { name: "Better Interpretability", description: "AI systems that can explain their decisions", impact: "Increased trust and accountability" },
-    integration: { name: "Human-AI Integration", description: "Seamless collaboration between humans and AI", impact: "Enhanced human capabilities and productivity" },
-    sustainability: { name: "Sustainable AI", description: "Environmentally friendly neural networks", impact: "Reduced carbon footprint and resource usage" }
-  }
 
-  return (
-    <div className="space-y-4">
-      <div className="grid grid-cols-2 gap-2 mb-4">
-        {Object.keys(futures).map((future) => (
-          <button
-            key={future}
-            onClick={() => setSelectedFuture(future)}
-            className={`p-3 rounded-lg transition-colors ${
-              selectedFuture === future
-                ? 'bg-gradient-to-r from-islamic-gold to-yellow-500 text-black'
-                : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-            }`}
-          >
-            <div className="text-sm font-semibold">{futures[future].name}</div>
-          </button>
-        ))}
-      </div>
-      
-      <div className="bg-gray-800/50 p-4 rounded-lg">
-        <h4 className="text-islamic-gold font-semibold mb-2">{futures[selectedFuture].name}</h4>
-        <p className="text-gray-300 text-sm mb-3">{futures[selectedFuture].description}</p>
-        <div className="bg-gradient-to-r from-islamic-gold/20 to-transparent p-3 rounded-lg border-l-4 border-islamic-gold">
-          <h5 className="text-islamic-gold font-semibold text-sm mb-1">Potential Impact</h5>
-          <p className="text-gray-300 text-sm">{futures[selectedFuture].impact}</p>
-        </div>
-      </div>
-    </div>
-  )
-}
 
 function MLvsNNComparison() {
   const [selectedMethod, setSelectedMethod] = useState("")
