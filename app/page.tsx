@@ -41,7 +41,7 @@ const classes: ClassData[] = [
     islamicContext: "Understanding how Allah's creation follows patterns that we can learn from and replicate",
     icon: <Lightbulb className="w-8 h-8" />,
     color: "from-islamic-green to-emerald-400",
-    locked: true
+    locked: false
   },
   {
     id: 3,
@@ -53,7 +53,7 @@ const classes: ClassData[] = [
     islamicContext: "Understanding how neural networks work like communities, similar to the concept of Ummah",
     icon: <Users className="w-8 h-8" />,
     color: "from-islamic-blue to-cyan-400",
-    locked: true
+    locked: false
   },
   {
     id: 4,
