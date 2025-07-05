@@ -942,7 +942,7 @@ function ApplicationExplorer() {
 function EthicalNeuralNetworks() {
   const [selectedIssue, setSelectedIssue] = useState('bias')
   
-  const issues = {
+  const issues: { [key: string]: { name: string; description: string; solution: string } } = {
     bias: { name: "Algorithmic Bias", description: "Neural networks can inherit biases from training data", solution: "Use diverse, representative training data" },
     privacy: { name: "Privacy Concerns", description: "AI systems may collect and process personal data", solution: "Implement strong privacy protections" },
     transparency: { name: "Lack of Transparency", description: "Neural networks can be 'black boxes'", solution: "Develop explainable AI techniques" },
@@ -982,7 +982,7 @@ function EthicalNeuralNetworks() {
 function FutureVision() {
   const [selectedFuture, setSelectedFuture] = useState('efficiency')
   
-  const futures = {
+  const futures: { [key: string]: { name: string; description: string; impact: string } } = {
     efficiency: { name: "More Efficient Learning", description: "Neural networks that learn faster with less data", impact: "Reduced computational costs and environmental impact" },
     interpretability: { name: "Better Interpretability", description: "AI systems that can explain their decisions", impact: "Increased trust and accountability" },
     integration: { name: "Human-AI Integration", description: "Seamless collaboration between humans and AI", impact: "Enhanced human capabilities and productivity" },
