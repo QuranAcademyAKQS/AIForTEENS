@@ -353,10 +353,18 @@ export default function Class4() {
                   </div>
                 )}
                 {currentSection === 2 && (
-                  <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold mt-4">
-                    <h4 className="text-lg font-semibold text-islamic-gold mb-2">Learning Process Simulation</h4>
-                    <p className="text-gray-300 mb-4">Watch how neural networks learn through backpropagation.</p>
-                    <LearningProcessSimulation />
+                  <div className="space-y-6">
+                    <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold">
+                      <h4 className="text-lg font-semibold text-islamic-gold mb-2">Learning Process Simulation</h4>
+                      <p className="text-gray-300 mb-4">Watch how neural networks learn through backpropagation.</p>
+                      <LearningProcessSimulation />
+                    </div>
+                    
+                    <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold">
+                      <h4 className="text-lg font-semibold text-islamic-gold mb-2">Teen Learning Journey - Understanding Epochs</h4>
+                      <p className="text-gray-300 mb-4">Experience how epochs work through relatable learning scenarios!</p>
+                      <TeenEpochExample />
+                    </div>
                   </div>
                 )}
                 {currentSection === 3 && (
@@ -669,10 +677,148 @@ function LearningProcessSimulation() {
   )
 }
 
+function TeenEpochExample() {
+  const [currentEpoch, setCurrentEpoch] = useState(0)
+  const [learningProgress, setLearningProgress] = useState(0)
+  const [currentTask, setCurrentTask] = useState('')
+  const [completedTasks, setCompletedTasks] = useState<string[]>([])
+  
+  const learningTasks = [
+    "Learning to ride a bike",
+    "Memorizing Quran verses", 
+    "Learning to cook a new recipe",
+    "Practicing basketball shots",
+    "Learning to play guitar",
+    "Studying for a math test",
+    "Learning Arabic calligraphy",
+    "Practicing soccer skills",
+    "Memorizing hadith",
+    "Learning to code"
+  ]
+  
+  const epochDescriptions = [
+    "First try - lots of mistakes, but you're starting to understand!",
+    "Second attempt - you remember some things from before",
+    "Third time - getting better, fewer mistakes",
+    "Fourth round - you're building confidence",
+    "Fifth try - you're getting the hang of it!",
+    "Sixth attempt - really improving now",
+    "Seventh round - almost there!",
+    "Eighth try - you're doing great!",
+    "Ninth attempt - almost perfect!",
+    "Tenth round - you've mastered it! 🎉"
+  ]
+  
+  const startNewEpoch = () => {
+    if (currentEpoch < 10) {
+      setCurrentEpoch(currentEpoch + 1)
+      setLearningProgress(Math.min(100, learningProgress + Math.random() * 15 + 5))
+      
+      // Add a new task for this epoch
+      const newTask = learningTasks[currentEpoch]
+      setCurrentTask(newTask)
+      setCompletedTasks([...completedTasks, newTask])
+    }
+  }
+  
+  const resetLearning = () => {
+    setCurrentEpoch(0)
+    setLearningProgress(0)
+    setCurrentTask('')
+    setCompletedTasks([])
+  }
+
+  return (
+    <div className="space-y-6">
+      <div className="bg-gradient-to-br from-gray-800/50 to-gray-700/50 rounded-xl p-6 border border-islamic-gold/30">
+        <h3 className="text-xl font-bold text-white mb-4 flex items-center">
+          <BookOpen className="w-5 h-5 mr-2 text-islamic-gold" />
+          Teen Learning Journey - Understanding Epochs
+        </h3>
+        
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="space-y-4">
+            <div className="bg-gray-800/50 p-4 rounded-lg">
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-gray-300 font-semibold">Learning Epoch: {currentEpoch}/10</span>
+                <span className="text-islamic-gold font-bold text-lg">{learningProgress.toFixed(0)}%</span>
+              </div>
+              <div className="w-full bg-gray-700 rounded-full h-3">
+                <motion.div 
+                  className="bg-gradient-to-r from-islamic-gold to-yellow-500 h-3 rounded-full"
+                  initial={{ width: 0 }}
+                  animate={{ width: `${learningProgress}%` }}
+                />
+              </div>
+            </div>
+            
+            <div className="bg-gray-800/50 p-4 rounded-lg">
+              <h4 className="text-islamic-gold font-semibold mb-2">Current Learning Task:</h4>
+              <p className="text-gray-300 text-lg font-medium">{currentTask || "Click 'Start Learning' to begin!"}</p>
+            </div>
+            
+            <div className="bg-gray-800/50 p-4 rounded-lg">
+              <h4 className="text-islamic-gold font-semibold mb-2">What's Happening:</h4>
+              <p className="text-gray-300 text-sm">{epochDescriptions[currentEpoch] || "Ready to start your learning journey!"}</p>
+            </div>
+          </div>
+          
+          <div className="space-y-4">
+            <div className="bg-gray-800/50 p-4 rounded-lg">
+              <h4 className="text-islamic-gold font-semibold mb-3">Completed Learning Tasks:</h4>
+              <div className="space-y-2 max-h-40 overflow-y-auto">
+                {completedTasks.map((task, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    className="flex items-center space-x-2 bg-gray-700/50 p-2 rounded"
+                  >
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    <span className="text-gray-300 text-sm">{task}</span>
+                  </motion.div>
+                ))}
+                {completedTasks.length === 0 && (
+                  <p className="text-gray-500 text-sm italic">No tasks completed yet. Start learning!</p>
+                )}
+              </div>
+            </div>
+            
+            <div className="bg-gradient-to-r from-islamic-gold/20 to-transparent p-4 rounded-lg border-l-4 border-islamic-gold">
+              <h4 className="text-islamic-gold font-semibold mb-2">💡 How This Relates to Neural Networks:</h4>
+              <p className="text-gray-300 text-sm">
+                Just like you learn through repetition and practice, neural networks learn through multiple epochs. 
+                Each epoch is like studying the same material again - you get better each time!
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div className="flex space-x-4 mt-6">
+          <button
+            onClick={startNewEpoch}
+            disabled={currentEpoch >= 10}
+            className="px-6 py-3 bg-gradient-to-r from-islamic-gold to-yellow-500 text-black font-semibold rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:from-yellow-400 hover:to-islamic-gold transition-all"
+          >
+            {currentEpoch >= 10 ? '🎉 Learning Complete!' : '📚 Start Next Epoch'}
+          </button>
+          
+          <button
+            onClick={resetLearning}
+            className="px-6 py-3 bg-gray-700 text-gray-300 font-semibold rounded-lg hover:bg-gray-600 transition-all"
+          >
+            🔄 Reset Learning
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 function LayerArchitectureExplorer() {
   const [selectedArchitecture, setSelectedArchitecture] = useState('simple')
   
-  const architectures = {
+  const architectures: { [key: string]: { layers: number; description: string } } = {
     simple: { layers: 2, description: "Basic neural network with input and output layers" },
     deep: { layers: 5, description: "Deep neural network with multiple hidden layers" },
     wide: { layers: 3, description: "Wide neural network with many neurons per layer" }
@@ -759,7 +905,7 @@ function CommunityLearningSimulation() {
 function ApplicationExplorer() {
   const [selectedApp, setSelectedApp] = useState('medical')
   
-  const applications = {
+  const applications: { [key: string]: { name: string; description: string; icon: string } } = {
     medical: { name: "Medical Diagnosis", description: "AI systems that help doctors diagnose diseases from medical images", icon: "🏥" },
     autonomous: { name: "Autonomous Vehicles", description: "Self-driving cars that use neural networks for navigation", icon: "🚗" },
     language: { name: "Language Translation", description: "Real-time translation between different languages", icon: "🌐" },
