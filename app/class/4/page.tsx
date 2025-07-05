@@ -21,6 +21,13 @@ export default function Class4() {
       examples: ["Image recognition", "Speech processing", "Language translation", "Game playing"]
     },
     {
+      title: "Neural Networks vs Machine Learning",
+      content: "Machine Learning is a broad field that includes many different methods for teaching computers to learn from data. Neural Networks are a specific type of machine learning inspired by how human brains work, using interconnected nodes (neurons) to process information. While all neural networks are machine learning, not all machine learning uses neural networks.",
+      islamicContext: "The Quran teaches us to 'reflect on the creation of the heavens and the earth' (3:191). Understanding different approaches to learning helps us appreciate the diversity of Allah's creation and the various ways we can solve problems and gain knowledge.",
+      activities: ["Comparison Analysis", "Method Exploration", "Real-world Examples", "Islamic Perspective Discussion"],
+      examples: ["Decision trees", "Support vector machines", "Neural networks", "Clustering algorithms", "Reinforcement learning"]
+    },
+    {
       title: "How Neural Networks Learn",
       content: "Neural networks learn through a process called backpropagation. They make predictions, compare them to correct answers, and adjust their connections to reduce errors. This iterative process continues until the network can make accurate predictions on new data.",
       islamicContext: "Learning and improvement are continuous processes in Islam. The Prophet (ﷺ) said 'Seek knowledge from the cradle to the grave.' Neural networks demonstrate this principle of lifelong learning and self-improvement.",
@@ -61,13 +68,6 @@ export default function Class4() {
       islamicContext: "Islam encourages innovation and progress that serves humanity. As we advance neural network technology, we must remember our responsibility to use it wisely and for the benefit of all people.",
       activities: ["Future Visioning", "Innovation Discussion", "Responsible Development"],
       examples: ["Neuromorphic computing", "Quantum neural networks", "Brain-computer interfaces", "Sustainable AI"]
-    },
-    {
-      title: "Neural Networks vs Machine Learning",
-      content: "Machine Learning is a broad field that includes many different methods for teaching computers to learn from data. Neural Networks are a specific type of machine learning inspired by how human brains work, using interconnected nodes (neurons) to process information. While all neural networks are machine learning, not all machine learning uses neural networks.",
-      islamicContext: "The Quran teaches us to 'reflect on the creation of the heavens and the earth' (3:191). Understanding different approaches to learning helps us appreciate the diversity of Allah's creation and the various ways we can solve problems and gain knowledge.",
-      activities: ["Comparison Analysis", "Method Exploration", "Real-world Examples", "Islamic Perspective Discussion"],
-      examples: ["Decision trees", "Support vector machines", "Neural networks", "Clustering algorithms", "Reinforcement learning"]
     },
     {
       title: "How ChatGPT Works",
@@ -322,51 +322,51 @@ export default function Class4() {
                 )}
                 {currentSection === 1 && (
                   <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold mt-4">
+                    <h4 className="text-lg font-semibold text-islamic-gold mb-2">Machine Learning vs Neural Networks</h4>
+                    <p className="text-gray-300 mb-4">Compare different machine learning methods and understand their relationships.</p>
+                    <MLvsNNComparison />
+                  </div>
+                )}
+                {currentSection === 2 && (
+                  <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold mt-4">
                     <h4 className="text-lg font-semibold text-islamic-gold mb-2">Learning Process Simulation</h4>
                     <p className="text-gray-300 mb-4">Watch how neural networks learn through backpropagation.</p>
                     <LearningProcessSimulation />
                   </div>
                 )}
-                {currentSection === 2 && (
+                {currentSection === 3 && (
                   <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold mt-4">
                     <h4 className="text-lg font-semibold text-islamic-gold mb-2">Layer Architecture Explorer</h4>
                     <p className="text-gray-300 mb-4">Explore different neural network architectures and their layers.</p>
                     <LayerArchitectureExplorer />
                   </div>
                 )}
-                {currentSection === 3 && (
+                {currentSection === 4 && (
                   <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold mt-4">
                     <h4 className="text-lg font-semibold text-islamic-gold mb-2">Community Learning Simulation</h4>
                     <p className="text-gray-300 mb-4">Experience how multiple AI systems can learn together.</p>
                     <CommunityLearningSimulation />
                   </div>
                 )}
-                {currentSection === 4 && (
+                {currentSection === 5 && (
                   <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold mt-4">
                     <h4 className="text-lg font-semibold text-islamic-gold mb-2">Application Explorer</h4>
                     <p className="text-gray-300 mb-4">Explore real-world applications of neural networks.</p>
                     <ApplicationExplorer />
                   </div>
                 )}
-                {currentSection === 5 && (
+                {currentSection === 6 && (
                   <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold mt-4">
                     <h4 className="text-lg font-semibold text-islamic-gold mb-2">Ethical Neural Networks</h4>
                     <p className="text-gray-300 mb-4">Discuss ethical considerations in neural network development.</p>
                     <EthicalNeuralNetworks />
                   </div>
                 )}
-                {currentSection === 6 && (
+                {currentSection === 7 && (
                   <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold mt-4">
                     <h4 className="text-lg font-semibold text-islamic-gold mb-2">Future Vision</h4>
                     <p className="text-gray-300 mb-4">Explore the future of neural networks and AI.</p>
                     <FutureVision />
-                  </div>
-                )}
-                {currentSection === 7 && (
-                  <div className="bg-gradient-to-r from-islamic-gold/10 to-transparent p-6 rounded-lg border-l-4 border-islamic-gold mt-4">
-                    <h4 className="text-lg font-semibold text-islamic-gold mb-2">Machine Learning vs Neural Networks</h4>
-                    <p className="text-gray-300 mb-4">Compare different machine learning methods and understand their relationships.</p>
-                    <MLvsNNComparison />
                   </div>
                 )}
                 {currentSection === 8 && (
