@@ -29,10 +29,10 @@ export default function Class4() {
     },
     {
       title: "How Neural Networks Learn",
-      content: "Neural networks learn through a process called backpropagation. They make predictions, compare them to correct answers, and adjust their connections to reduce errors. This iterative process continues until the network can make accurate predictions on new data.",
-      islamicContext: "Learning and improvement are continuous processes in Islam. The Prophet (ﷺ) said 'Seek knowledge from the cradle to the grave.' Neural networks demonstrate this principle of lifelong learning and self-improvement.",
-      activities: ["Training Simulation", "Error Analysis", "Learning Visualization"],
-      examples: ["Gradient descent", "Loss functions", "Weight updates", "Convergence"]
+      content: "Neural networks learn through a sophisticated process called backpropagation. This involves several key components working together: Backpropagation calculates how much each connection contributed to the error and adjusts them accordingly. Gradient descent is the optimization algorithm that finds the best path to minimize errors by following the steepest descent. Loss functions measure how far off the network's predictions are from the correct answers. Weight updates adjust the strength of connections based on their contribution to errors. Convergence occurs when the network stops improving significantly, indicating it has learned the patterns in the data.",
+      islamicContext: "Learning and improvement are continuous processes in Islam. The Prophet (ﷺ) said 'Seek knowledge from the cradle to the grave.' Neural networks demonstrate this principle of lifelong learning and self-improvement. Just as we learn from our mistakes and strive to do better, neural networks continuously refine their understanding through error correction and adaptation.",
+      activities: ["Training Simulation", "Error Analysis", "Learning Visualization", "Gradient Descent Explorer", "Loss Function Analysis"],
+      examples: ["Backpropagation algorithm", "Gradient descent optimization", "Loss functions (MSE, Cross-entropy)", "Weight update rules", "Convergence criteria"]
     },
     {
       title: "Layers and Architecture",
@@ -158,6 +158,31 @@ export default function Class4() {
       question: "What Islamic principle does understanding different learning methods reflect?",
       options: ["Individualism", "Appreciating diversity in Allah's creation", "Competition", "Isolation"],
       correct: "Appreciating diversity in Allah's creation"
+    },
+    {
+      question: "What is backpropagation in neural networks?",
+      options: ["A type of neural network", "A method to calculate how much each connection contributed to errors", "A programming language", "A hardware component"],
+      correct: "A method to calculate how much each connection contributed to errors"
+    },
+    {
+      question: "What does gradient descent do?",
+      options: ["Creates new neural networks", "Finds the best path to minimize errors by following steepest descent", "Adds more layers to the network", "Changes the network's name"],
+      correct: "Finds the best path to minimize errors by following steepest descent"
+    },
+    {
+      question: "What is the purpose of loss functions?",
+      options: ["To make the network faster", "To measure how far off predictions are from correct answers", "To change the network's color", "To add more neurons"],
+      correct: "To measure how far off predictions are from correct answers"
+    },
+    {
+      question: "What happens during weight updates?",
+      options: ["The network gets bigger", "The strength of connections is adjusted based on their contribution to errors", "The network changes its name", "The network stops working"],
+      correct: "The strength of connections is adjusted based on their contribution to errors"
+    },
+    {
+      question: "What is convergence in neural networks?",
+      options: ["When the network stops working", "When the network stops improving significantly, indicating it has learned", "When the network gets smaller", "When the network changes color"],
+      correct: "When the network stops improving significantly, indicating it has learned"
     }
   ]
 
