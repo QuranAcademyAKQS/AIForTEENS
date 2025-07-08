@@ -69,15 +69,15 @@ const classes: ClassData[] = [
   },
   {
     id: 5,
-    title: "AI Applications & Global Impact",
-    subtitle: "Technology for the Betterment of Humanity",
+    title: "Prompt Engineering",
+    subtitle: "Mastering AI Communication Skills",
     duration: "1 Hour",
-    topics: ["AI applications", "Global challenges", "Islamic solutions"],
-    activities: ["AI Application Design", "Global Problem Solving", "Innovation Workshop"],
-    islamicContext: "Using AI to solve global challenges while upholding Islamic values of compassion and justice",
+    topics: ["What is prompt engineering?", "Effective prompting techniques", "AI communication best practices", "Ethical prompt design"],
+    activities: ["Prompt Writing Workshop", "AI Conversation Practice", "Ethical Prompt Design", "Interactive AI Chat"],
+    islamicContext: "Learning to communicate effectively with AI reflects the Islamic value of clear, truthful communication and using knowledge responsibly",
     icon: <Globe className="w-8 h-8" />,
     color: "from-islamic-purple to-violet-400",
-    locked: true
+    locked: false
   }
 ]
 
