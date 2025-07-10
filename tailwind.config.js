@@ -51,6 +51,7 @@ module.exports = {
       fontFamily: {
         'arabic': ['Scheherazade New', 'Noto Naskh Arabic', 'Amiri', 'serif'],
         'arabic-quran': ['Scheherazade New', 'serif'],
+        'arabic-hadith': ['Noto Naskh Arabic', 'Scheherazade New', 'serif'],
         'arabic-naskh': ['Noto Naskh Arabic', 'serif'],
         'arabic-kufi': ['Reem Kufi', 'sans-serif'],
         'futuristic': ['Orbitron', 'monospace'],

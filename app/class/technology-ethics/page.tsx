@@ -22,14 +22,16 @@ export default function TechnologyEthicsClass() {
       examples: ["Medical technology saving lives", "Educational apps for learning", "Communication tools connecting families", "Agricultural technology feeding communities"],
       hadith: [
         {
-          text: "Seeking knowledge is obligatory for every Muslim",
-          reference: "Sahih Ibn Majah",
-          context: "This includes technological knowledge"
+          arabic: "الْغِيبَةُ ذِكْرُكَ أَخَاكَ بِمَا يَكْرَهُ",
+          text: "Backbiting is mentioning about your brother what he dislikes",
+          reference: "Sahih Muslim",
+          context: "This applies to social media posts and comments"
         },
         {
-          text: "The best of people are those who are most beneficial to people",
+          arabic: "الْغِيبَةُ ذِكْرُكَ أَخَاكَ بِمَا يَكْرَهُ",
+          text: "Backbiting is mentioning about your brother what he dislikes",
           reference: "Sahih Bukhari",
-          context: "Technology should benefit humanity"
+          context: "This applies to social media posts and comments"
         }
       ],
       quran: [
@@ -49,9 +51,10 @@ export default function TechnologyEthicsClass() {
       examples: ["Being honest in online reviews", "Respecting privacy settings", "Avoiding cyberbullying", "Sharing beneficial content"],
       hadith: [
         {
-          text: "Whoever believes in Allah and the Last Day, let him speak good or remain silent",
-          reference: "Sahih Bukhari",
-          context: "This applies to all forms of communication, including social media"
+          arabic: "الْغِيبَةُ ذِكْرُكَ أَخَاكَ بِمَا يَكْرَهُ",
+          text: "Backbiting is mentioning about your brother what he dislikes",
+          reference: "Sahih Muslim",
+          context: "This applies to social media posts and comments"
         }
       ],
       quran: [
@@ -71,9 +74,10 @@ export default function TechnologyEthicsClass() {
       examples: ["Sharing Islamic reminders", "Connecting with family abroad", "Promoting community events", "Avoiding gossip and rumors"],
       hadith: [
         {
-          text: "Backbiting is mentioning about your brother what he dislikes",
-          reference: "Sahih Muslim",
-          context: "This applies to social media posts and comments"
+          arabic: "مَنْ كَانَ يُؤْمِنُ بِاللَّهِ وَالْيَوْمِ الآخِرِ فَلْيَقُلْ خَيْرًا أَوْ لِيَصْمُتْ",
+          text: "Whoever believes in Allah and the Last Day, let him speak good or remain silent",
+          reference: "Sahih Bukhari",
+          context: "This applies to all forms of communication, including social media"
         }
       ],
       quran: [
@@ -93,6 +97,7 @@ export default function TechnologyEthicsClass() {
       examples: ["Using strong passwords", "Not sharing others' personal information", "Respecting privacy settings", "Being careful with location sharing"],
       hadith: [
         {
+          arabic: "مَنْ اطَّلَعَ فِي بَيْتِ قَوْمٍ بِغَيْرِ إِذْنِهِمْ فَقَدْ حَلَّ لَهُمْ أَنْ يَفْقَئُوا عَيْنَهُ",
           text: "Whoever peeps into someone's house without permission, it is as if he has entered it",
           reference: "Sahih Bukhari",
           context: "This principle applies to digital privacy"
@@ -115,6 +120,7 @@ export default function TechnologyEthicsClass() {
       examples: ["Setting prayer time reminders", "Limiting screen time", "Family tech-free time", "Using apps for Islamic learning"],
       hadith: [
         {
+          arabic: "خَيْرُ الأُمُورِ أَوْسَاطُهَا",
           text: "The best of things is the middle course",
           reference: "Sahih Bukhari",
           context: "This applies to our use of technology"
@@ -137,6 +143,7 @@ export default function TechnologyEthicsClass() {
       examples: ["Quran apps with translations", "Islamic lecture platforms", "Online Arabic learning", "Islamic history documentaries"],
       hadith: [
         {
+          arabic: "مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ",
           text: "Whoever takes a path in search of knowledge, Allah will make easy for him a path to Paradise",
           reference: "Sahih Muslim",
           context: "Using technology to seek Islamic knowledge is blessed"
@@ -159,6 +166,7 @@ export default function TechnologyEthicsClass() {
       examples: ["Sharing Islamic reminders", "Creating educational content", "Responding to misconceptions politely", "Showing Islamic values through actions"],
       hadith: [
         {
+          arabic: "بَلِّغُوا عَنِّي وَلَوْ آيَةً",
           text: "Convey from me, even if it is one verse",
           reference: "Sahih Bukhari",
           context: "We can use technology to convey Islamic knowledge"
@@ -181,11 +189,13 @@ export default function TechnologyEthicsClass() {
       examples: ["Afghanistan's resistance against superpowers", "Prophet Muhammad's victories with limited resources", "Islamic conquests through faith and strategy", "Modern examples of faith overcoming technology"],
       hadith: [
         {
+          arabic: "إِنَّ اللَّهَ لَيُؤَيِّدُ هَذِهِ الأُمَّةَ بِضَعِيفِهَا بِدَعْوَتِهِمْ وَصَلاتِهِمْ وَإِخْلاَصِهِمْ",
           text: "Allah helps this Ummah with the weak among them through their supplications, prayers, and sincerity",
           reference: "Sahih An-Nasa'i",
           context: "Victory comes through faith and sincerity, not material superiority"
         },
         {
+          arabic: "سَتُنْصَرُونَ وَتُرْزَقُونَ حَتَّى لاَ يَكُونَ أَحَدٌ أَشَدَّ مِنْكُمْ بُطْشًا وَلاَ أَحَدٌ أَشَدَّ مِنْكُمْ حِرْصًا عَلَى مَا آمُرُكُمْ بِهِ وَحَذَرًا مِمَّا أَنْهَاكُمْ عَنْهُ مِنِّي",
           text: "The Prophet (PBUH) said: 'You will be aided and provided for, so that none of you will be more courageous in doing what I command you to do, and more careful in refraining from what I forbid you, than I am'",
           reference: "Sahih Bukhari",
           context: "Success comes from following Islamic principles, not material resources"
@@ -220,16 +230,19 @@ export default function TechnologyEthicsClass() {
       examples: ["Deepfake technology and deception", "AI-generated content manipulation", "Virtual reality and false realities", "Social media echo chambers"],
       hadith: [
         {
+          arabic: "يَأْتِي الدَّجَّالُ وَمَعَهُ مِثْلُ الْجَنَّةِ وَالنَّارِ فَالَّتِي يَقُولُ إِنَّهَا جَنَّةٌ هِيَ النَّارُ",
           text: "Dajjal will come with something like Paradise and Hell, and what he calls Paradise will actually be Hell",
           reference: "Sahih Bukhari",
           context: "Dajjal will use technology to create false appearances"
         },
         {
+          arabic: "مَنْ سَمِعَ بِالدَّجَّالِ فَلْيَتَعَوَّذْ بِاللَّهِ مِنْهُ فَإِنَّ الرَّجُلَ يَأْتِيهِ وَهُوَ يَحْسَبُ أَنَّهُ مُؤْمِنٌ فَيَتَّبِعُهُ مِمَّا يَبْعَثُ بِهِ مِنَ الشُّبُهَاتِ",
           text: "Whoever hears of Dajjal, let him keep away from him, for by Allah, a man will come to him thinking he is a believer, but he will follow him because of the doubts he will raise",
           reference: "Abu Dawud",
           context: "We must be prepared and knowledgeable to avoid deception"
         },
         {
+          arabic: "قَالَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: إِنِّي حَدَّثْتُكُمْ عَنِ الدَّجَّالِ حَتَّى خَشِيتُ أَنْ لاَ تَعْقِلُوا إِنَّ مَسِيحَ الدَّجَّالِ رَجُلٌ قَصِيرٌ أَفْجَعُ جَعْدٌ أَعْوَرُ عَيْنُهُ مَطْمُوسَةٌ لاَ بَارِزَةٌ وَلاَ حَاجِرَةٌ",
           text: "The Prophet (PBUH) said: 'I have told you so much about Dajjal that I fear you may not understand. Dajjal will be a short man, pigeon-toed, with curly hair, one-eyed, with his eye neither prominent nor sunken'",
           reference: "Sahih Muslim",
           context: "Detailed description helps us recognize deception"
@@ -264,6 +277,7 @@ export default function TechnologyEthicsClass() {
       examples: ["Islamic study groups online", "Virtual prayer reminders", "Community support networks", "Islamic event coordination"],
       hadith: [
         {
+          arabic: "مَثَلُ الْمُؤْمِنِينَ فِي تَوَادِّهِمْ وَتَرَاحُمِهِمْ وَتَعَاطُفِهِمْ مَثَلُ الْجَسَدِ إِذَا اشْتَكَى مِنْهُ عُضْوٌ تَدَاعَى لَهُ سَائِرُ الْجَسَدِ بِالسَّهَرِ وَالْحُمَّى",
           text: "The believers are like one body; if one part of it hurts, the whole body hurts",
           reference: "Sahih Muslim",
           context: "Technology can help maintain this unity"
@@ -702,7 +716,7 @@ export default function TechnologyEthicsClass() {
                     <div className="space-y-4">
                       {sections[currentSection].hadith.map((hadith, index) => (
                         <div key={index} className="bg-gradient-to-r from-blue-400/20 to-transparent p-4 rounded-lg border-l-4 border-blue-400">
-                          <p className={`text-blue-300 mb-2 font-arabic-hadith text-right ${presentationMode ? 'text-xl' : 'text-lg'}`}>{hadith.text}</p>
+                          <p className={`text-blue-300 mb-2 font-arabic-hadith text-right ${presentationMode ? 'text-xl' : 'text-lg'}`}>{hadith.arabic}</p>
                           <p className={`text-gray-300 mb-2 ${presentationMode ? 'text-lg' : ''}`}>"{hadith.text}"</p>
                           <p className={`text-blue-400 text-sm ${presentationMode ? 'text-base' : ''}`}>- {hadith.reference}</p>
                           <p className={`text-gray-400 text-sm mt-2 ${presentationMode ? 'text-base' : ''}`}>{hadith.context}</p>
