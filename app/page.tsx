@@ -20,18 +20,6 @@ interface ClassData {
 
 const classes: ClassData[] = [
   {
-    id: 6,
-    title: 'Technology Ethics & Islamic Values',
-    subtitle: 'Right Use of Technology from Islamic Perspective',
-    duration: '30 min',
-    topics: ["Digital ethics", "Social media conduct", "Privacy protection", "Technology addiction", "Islamic learning apps", "Digital dawah"],
-    activities: ["Digital Ethics Scenarios", "Social Media Audit", "Privacy Workshop", "Islamic App Exploration"],
-    islamicContext: "Learning to use technology responsibly while upholding Islamic values and principles",
-    icon: <Cpu className="w-8 h-8" />,
-    color: "from-blue-500 to-indigo-400",
-    locked: false
-  },
-  {
     id: 1,
     title: "Introduction to AI & Islamic Ethics",
     subtitle: "Understanding AI through Islamic Values",
@@ -187,7 +175,7 @@ export default function Home() {
                     Locked
                   </button>
                 ) : (
-                  <Link href={`/class/${classItem.id}`} className="flex-1">
+                  <Link href={classItem.id === 6 ? "/class/technology-ethics" : `/class/${classItem.id}`} className="flex-1">
                     <button className="w-full bg-gradient-to-r from-islamic-gold to-yellow-500 text-black font-bold py-2 px-4 rounded-lg hover:from-yellow-400 hover:to-islamic-gold transition-all text-sm">
                       Start Class
                     </button>
@@ -273,7 +261,7 @@ export default function Home() {
                     Class {selectedClass.id} Coming Soon
                   </button>
                 ) : (
-                  <Link href={`/class/${selectedClass.id}`}>
+                  <Link href={selectedClass.id === 6 ? "/class/technology-ethics" : `/class/${selectedClass.id}`}>
                     <button className="bg-gradient-to-r from-islamic-gold to-yellow-500 text-black font-bold py-3 px-8 rounded-full hover:from-yellow-400 hover:to-islamic-gold transition-all duration-300 flex items-center">
                       <Play className="w-5 h-5 mr-2" />
                       Start Class {selectedClass.id}
@@ -302,11 +290,53 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Islamic Safety Class */}
+            {/* Technology Ethics Class */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
+              whileHover={{ scale: 1.05, y: -10 }}
+              className="bg-gradient-to-br from-slate-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30 hover:border-blue-500/60 transition-all duration-300"
+            >
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-indigo-400 flex items-center justify-center text-white mb-4 mx-auto">
+                <Cpu className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-white">
+                Technology Ethics & Islamic Values
+              </h3>
+              <p className="mb-4 text-gray-300">Right Use of Technology from Islamic Perspective</p>
+              <div className="flex items-center justify-between mb-4">
+                <span className="font-semibold text-blue-400">30 min</span>
+                <ArrowRight className="w-5 h-5 text-blue-400" />
+              </div>
+              
+              <div className="space-y-3 mb-4">
+                <div className="flex items-center text-sm text-gray-300">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                  Digital Ethics
+                </div>
+                <div className="flex items-center text-sm text-gray-300">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                  Social Media Conduct
+                </div>
+                <div className="flex items-center text-sm text-gray-300">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                  Privacy Protection
+                </div>
+              </div>
+              
+              <Link href="/class/technology-ethics" className="block">
+                <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold py-2 px-4 rounded-lg hover:from-blue-400 hover:to-indigo-400 transition-all text-sm">
+                  Start Class
+                </button>
+              </Link>
+            </motion.div>
+
+            {/* Islamic Safety Class */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7 }}
               whileHover={{ scale: 1.05, y: -10 }}
               className="bg-gradient-to-br from-green-900/80 to-emerald-800/80 backdrop-blur-sm rounded-2xl p-6 border border-green-500/30 hover:border-green-500/60 transition-all duration-300"
             >
@@ -348,7 +378,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 }}
+              transition={{ delay: 0.8 }}
               whileHover={{ scale: 1.05, y: -10 }}
               className="bg-gradient-to-br from-blue-900/80 to-cyan-800/80 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30 hover:border-blue-500/60 transition-all duration-300"
             >
@@ -390,7 +420,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 }}
+              transition={{ delay: 0.9 }}
               className="bg-gradient-to-br from-purple-900/80 to-violet-800/80 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30 opacity-60"
             >
               <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-violet-400 flex items-center justify-center text-white mb-4 mx-auto relative">
