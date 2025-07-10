@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Brain, Building2, Lightbulb, Users, Globe, Star, ArrowRight, Play, Lock, Shield, Droplets, Code, Gamepad2, BookOpen, Cpu } from 'lucide-react'
+import { Brain, Building2, Lightbulb, Users, Globe, Star, ArrowRight, Play, Lock, Shield, Droplets, Code, Gamepad2 } from 'lucide-react'
 import Link from 'next/link'
 
 interface ClassData {
@@ -19,18 +19,6 @@ interface ClassData {
 }
 
 const classes: ClassData[] = [
-  {
-    id: 6,
-    title: 'Technology Ethics & Islamic Values',
-    subtitle: 'Right Use of Technology from Islamic Perspective',
-    duration: '30 min',
-    topics: ["Digital ethics", "Social media conduct", "Privacy protection", "Technology addiction", "Islamic learning apps", "Digital dawah"],
-    activities: ["Digital Ethics Scenarios", "Social Media Audit", "Privacy Workshop", "Islamic App Exploration"],
-    islamicContext: "Learning to use technology responsibly while upholding Islamic values and principles",
-    icon: <Cpu className="w-8 h-8" />,
-    color: "from-blue-500 to-indigo-400",
-    locked: false
-  },
   {
     id: 1,
     title: "Introduction to AI & Islamic Ethics",
