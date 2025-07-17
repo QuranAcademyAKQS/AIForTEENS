@@ -4,22 +4,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Orbitron:wght@400;700;900&family=Scheherazade+New:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
 
-/* Al Mushaf Font for Quranic Text */
-@font-face {
-  font-family: 'Al Mushaf';
-  src: url('https://fonts.qurancomplex.gov.sa/Al_Mushaf.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Al Mushaf';
-  src: url('https://fonts.qurancomplex.gov.sa/Al_Mushaf_Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
+/* Quranic Arabic Font - Using Amiri from Google Fonts (CORS-safe) */
+/* Amiri is an excellent font for Quranic text and is widely used */
 
 /* Fallback: KFGQPC Uthman Taha Naskh */
 @font-face {
@@ -113,7 +99,7 @@ body {
 
 /* Quranic text styles for Ayah and Hadith */
 .quranic-ayah {
-  font-family: 'Al Mushaf', 'KFGQPC Uthman Taha Naskh', 'Scheherazade New', 'Noto Naskh Arabic', serif;
+  font-family: 'Amiri', 'Scheherazade New', 'Noto Naskh Arabic', serif;
   font-size: 2rem; /* was 1.6rem */
   line-height: 2.5;
   text-align: right;
@@ -125,7 +111,7 @@ body {
 }
 
 .quranic-hadith {
-  font-family: 'Al Mushaf', 'KFGQPC Uthman Taha Naskh', 'Noto Naskh Arabic', 'Scheherazade New', serif;
+  font-family: 'Amiri', 'Noto Naskh Arabic', 'Scheherazade New', serif;
   font-size: 1.7rem; /* was 1.4rem */
   line-height: 2.2;
   text-align: right;
