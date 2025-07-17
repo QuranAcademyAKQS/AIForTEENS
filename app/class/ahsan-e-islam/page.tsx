@@ -982,6 +982,37 @@ export default function AhsanEIslamPage() {
                     <span className="font-urdu urdu-text">تفصیل</span>
                   </h3>
                   <div className="space-y-3">
+                    {selectedItem.id === 'worship' && (
+                      <div className="bg-amber-50 border-r-4 border-amber-500 p-4 rounded-lg mb-4">
+                        <div className="text-right">
+                          <span className="text-sm text-amber-600 font-semibold">1.1.1.</span>
+                          <p className="font-urdu text-amber-800 leading-relaxed urdu-text mt-1">
+                            عبادات جو اللہ کے حقوق ہیں، یعنی فرائض و واجبات کی شعوری پابندی اور حرام و مکروہات سے اجتناب۔
+                          </p>
+                        </div>
+                      </div>
+                    )}
+                    {selectedItem.id === 'dealings' && (
+                      <div className="bg-blue-50 border-r-4 border-blue-500 p-4 rounded-lg mb-4">
+                        <div className="text-right">
+                          <span className="text-sm text-blue-600 font-semibold">1.1.2.</span>
+                          <div className="w-2 h-2 bg-blue-500 rounded-full inline-block ml-2"></div>
+                          <p className="font-urdu text-blue-800 leading-relaxed urdu-text mt-1">
+                            معاملات جو بیک وقت حدود الله و حقوق العباد ہیں
+                          </p>
+                        </div>
+                      </div>
+                    )}
+                    {selectedItem.id === 'halal-earnings' && (
+                      <div className="bg-green-50 border-r-4 border-green-500 p-4 rounded-lg mb-4">
+                        <div className="text-right">
+                          <span className="text-sm text-green-600 font-semibold">1.1.2.1</span>
+                          <p className="font-urdu text-green-800 leading-relaxed urdu-text mt-1">
+                            اپنی معاش کے حوالے سے حلال و طیب پر اکتفاء و قناعت کرنا۔
+                          </p>
+                        </div>
+                      </div>
+                    )}
                     <p className="font-urdu text-gray-600 leading-relaxed urdu-text">{selectedItem.urduDescription}</p>
                   </div>
                 </div>
