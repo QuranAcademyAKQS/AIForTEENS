@@ -709,7 +709,7 @@ export default function AhsanEIslamPage() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between gap-8">
             {/* Left side - Message of Tanzeem-e-Islami */}
-            <div className="text-right text-xs opacity-80 w-56 flex-shrink-0 px-2">
+            <div className="text-right text-xs opacity-80 w-52 flex-shrink-0 px-1">
               <div className="font-urdu urdu-text mb-1">تنظیم اسلامی کا پیغام</div>
               <div className="mb-1">Message of Tanzeem-e-Islami</div>
               <div className="font-urdu urdu-text mb-1">بانی تنظیم : ڈاکٹر اسرار احمد</div>
@@ -725,7 +725,7 @@ export default function AhsanEIslamPage() {
             </div>
             
             {/* Right side - System of Khilafat-e-Rashida */}
-            <div className="text-left text-xs opacity-80 w-56 flex-shrink-0 px-2">
+            <div className="text-left text-xs opacity-80 w-52 flex-shrink-0 px-1">
               <div className="font-urdu urdu-text mb-1">خلافت راشدہ کا نظام</div>
               <div className="mb-1">System of Khilafat-e-Rashida</div>
               <div className="font-urdu urdu-text mb-1">امیر تنظیم : شجاع الدین شیخ</div>
