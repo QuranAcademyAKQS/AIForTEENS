@@ -721,7 +721,8 @@ export default function AhsanEIslamPage() {
               <h1 className="text-4xl font-bold mb-2 font-urdu urdu-title">
                 تنظیم اسلامی میں احسان اسلام کے تقاضے
               </h1>
-              <p className="text-xl opacity-90">Demands of Ehsan-e-Islam in Tanzeem-e-Islami</p>
+              <p className="text-xl opacity-90 mb-1">Demands of Ehsan-e-Islam in Tanzeem-e-Islami</p>
+              <p className="text-lg font-urdu urdu-text opacity-80">اسلام ایمان احسان</p>
             </div>
             
             {/* Right side - System of Khilafat-e-Rashida */}
