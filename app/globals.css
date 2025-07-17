@@ -76,6 +76,48 @@ body {
   text-orientation: mixed;
 }
 
+/* Urdu font styles */
+.font-urdu {
+  font-family: 'Noto Naskh Arabic', 'Scheherazade New', 'Amiri', serif;
+  font-weight: 500;
+  line-height: 2;
+}
+
+/* RTL support */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .flex {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .gap-2 > * + * {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+[dir="rtl"] .gap-3 > * + * {
+  margin-right: 0.75rem;
+  margin-left: 0;
+}
+
+[dir="rtl"] .gap-4 > * + * {
+  margin-right: 1rem;
+  margin-left: 0;
+}
+
+[dir="rtl"] .gap-6 > * + * {
+  margin-right: 1.5rem;
+  margin-left: 0;
+}
+
+[dir="rtl"] .gap-8 > * + * {
+  margin-right: 2rem;
+  margin-left: 0;
+}
+
 .quranic-text {
   font-family: 'Scheherazade New', serif;
   font-size: 1.25rem;

@@ -78,6 +78,18 @@ const classes: ClassData[] = [
     icon: <Globe className="w-8 h-8" />,
     color: "from-islamic-purple to-violet-400",
     locked: false
+  },
+  {
+    id: 6,
+    title: "Ahsan e Islam",
+    subtitle: "Interactive Islamic Framework",
+    duration: "Interactive",
+    topics: ["Islamic Organization", "Individual Goals", "Daily Practices", "Oversight Systems"],
+    activities: ["Interactive Chart", "Islamic Values", "Daily Goals", "Accountability"],
+    islamicContext: "Comprehensive framework for Islamic organization and individual development based on Ehsan-e-Islam principles",
+    icon: <BookOpen className="w-8 h-8" />,
+    color: "from-emerald-600 to-teal-600",
+    locked: false
   }
 ]
 
@@ -175,7 +187,7 @@ export default function Home() {
                     Locked
                   </button>
                 ) : (
-                  <Link href={classItem.id === 6 ? "/class/technology-ethics" : `/class/${classItem.id}`} className="flex-1">
+                  <Link href={classItem.id === 6 ? "/class/ahsan-e-islam" : `/class/${classItem.id}`} className="flex-1">
                     <button className="w-full bg-gradient-to-r from-islamic-gold to-yellow-500 text-black font-bold py-2 px-4 rounded-lg hover:from-yellow-400 hover:to-islamic-gold transition-all text-sm">
                       Start Class
                     </button>
