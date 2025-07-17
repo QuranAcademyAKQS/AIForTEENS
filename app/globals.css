@@ -4,6 +4,23 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Orbitron:wght@400;700;900&family=Scheherazade+New:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
 
+/* Quranic Arabic Font - KFGQPC Uthman Taha Naskh */
+@font-face {
+  font-family: 'KFGQPC Uthman Taha Naskh';
+  src: url('https://fonts.qurancomplex.gov.sa/KFGQPC_Uthman_Taha_Naskh_Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KFGQPC Uthman Taha Naskh';
+  src: url('https://fonts.qurancomplex.gov.sa/KFGQPC_Uthman_Taha_Naskh_Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -74,6 +91,40 @@ body {
   font-family: 'Scheherazade New', 'Noto Naskh Arabic', 'Amiri', serif;
   writing-mode: horizontal-tb;
   text-orientation: mixed;
+}
+
+/* Quranic text styles for Ayah and Hadith */
+.quranic-ayah {
+  font-family: 'KFGQPC Uthman Taha Naskh', 'Scheherazade New', 'Noto Naskh Arabic', serif;
+  font-size: 1.6rem;
+  line-height: 2.5;
+  text-align: right;
+  direction: rtl;
+  font-weight: normal;
+  color: #1a5f7a;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.quranic-hadith {
+  font-family: 'KFGQPC Uthman Taha Naskh', 'Noto Naskh Arabic', 'Scheherazade New', serif;
+  font-size: 1.4rem;
+  line-height: 2.2;
+  text-align: right;
+  direction: rtl;
+  font-weight: normal;
+  color: #2d5a3d;
+  letter-spacing: 0.8px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.quranic-translation {
+  font-family: 'Amiri', 'Noto Naskh Arabic', serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #374151;
+  font-style: italic;
+  margin-top: 0.5rem;
 }
 
 /* Urdu font styles */

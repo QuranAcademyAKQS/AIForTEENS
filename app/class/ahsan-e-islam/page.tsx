@@ -9,6 +9,11 @@ interface ChartItem {
   title: string;
   urduTitle?: string;
   description?: string;
+  urduDescription?: string;
+  ayah?: string;
+  ayahUrdu?: string;
+  hadees?: string;
+  hadeesUrdu?: string;
   children?: ChartItem[];
   color: string;
   icon?: React.ReactNode;
@@ -19,6 +24,12 @@ const chartData: ChartItem[] = [
     id: 'sharia',
     title: 'Adherence to Sharia',
     urduTitle: 'پابندی شریعت',
+    description: 'Continuous Struggle (Jihad) for Adherence to Sharia - This encompasses all aspects of Islamic law and practice, including acts of worship, social interactions, and personal conduct. It requires conscious effort to fulfill religious obligations while avoiding forbidden actions.',
+    urduDescription: 'شریعت کی پابندی کے لیے مسلسل جدوجہد (جہاد) - یہ اسلامی قانون اور عمل کے تمام پہلوؤں کو شامل کرتا ہے، جس میں عبادات، سماجی تعلقات اور ذاتی رویہ شامل ہیں۔ اس کے لیے مذہبی فرائض کی ادائیگی اور ممنوعہ اعمال سے بچنے کے لیے شعوری کوشش درکار ہے۔',
+    ayah: `يَا أَيُّهَا الَّذِينَ آمَنُوا ادْخُلُوا فِي السِّلْمِ كَافَّةً وَلَا تَتَّبِعُوا خُطُوَاتِ الشَّيْطَانِ ۚ إِنَّهُ لَكُمْ عَدُوٌّ مُّبِينٌ - "O you who have believed, enter into Islam completely [and perfectly] and do not follow the footsteps of Satan. Indeed, he is to you a clear enemy." (Quran 2:208)`,
+    ayahUrdu: `اے ایمان والو! اسلام میں پورے کے پورے داخل ہو جاؤ اور شیطان کے قدموں کی پیروی نہ کرو۔ بےشک وہ تمہارا کھلا دشمن ہے۔`,
+    hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "مَنْ أَطَاعَنِي فَقَدْ أَطَاعَ اللَّهَ، وَمَنْ عَصَانِي فَقَدْ عَصَى اللَّهَ" - "Whoever obeys me has obeyed Allah, and whoever disobeys me has disobeyed Allah." (Bukhari and Muslim)`,
+    hadeesUrdu: `جو میری اطاعت کرے گا اس نے اللہ کی اطاعت کی، اور جو میری نافرمانی کرے گا اس نے اللہ کی نافرمانی کی۔`,
     color: 'bg-blue-500',
     icon: <Shield className="w-5 h-5" />,
     children: [
@@ -26,18 +37,28 @@ const chartData: ChartItem[] = [
         id: 'worship',
         title: 'Worship / Rights of Allah',
         urduTitle: 'عبادات / حقوق الله',
+        description: 'Acts of Worship (Ibadat) which are Rights of Allah (Huqooq Allah), meaning conscious observance of performing obligations (Faraiz) and duties (Wajibat) and abstaining from forbidden (Haram) and disliked (Makroohaat) things.',
+        urduDescription: 'عبادات (حقوق اللہ) - اللہ کے حقوق کی ادائیگی، جس میں فرائض و واجبات کی شعوری پابندی اور حرام و مکروہات سے اجتناب شامل ہے۔',
+        ayah: `وَمَا خَلَقْتُ الْجِنَّ وَالْإِنسَ إِلَّا لِيَعْبُدُونِ - "And I did not create the jinn and mankind except to worship Me." (Quran 51:56)`,
+        hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّ اللَّهَ قَالَ: مَنْ عَادَى لِي وَلِيًّا فَقَدْ آذَنْتُهُ بِالْحَرْبِ، وَمَا تَقَرَّبَ إِلَيَّ عَبْدِي بِشَيْءٍ أَحَبَّ إِلَيَّ مِمَّا افْتَرَضْتُ عَلَيْهِ" - "Allah said: 'Whoever shows enmity to a friend of Mine, I will declare war against him. My servant does not draw near to Me with anything more beloved to Me than the religious duties I have obligated upon him.'" (Bukhari)`,
         color: 'bg-blue-400',
         children: [
           {
             id: 'obligations',
             title: 'Fulfillment of Obligations and Duties',
             urduTitle: 'فرائض و واجبات کی ادائیگی',
+            description: 'Conscious observance of performing obligations (Faraiz) and duties (Wajibat) as prescribed by Islamic law. This includes daily prayers, fasting, zakat, and other mandatory religious practices.',
+            ayah: `حَافِظُوا عَلَى الصَّلَوَاتِ وَالصَّلَاةِ الْوُسْطَىٰ وَقُومُوا لِلَّهِ قَانِتِينَ - "Maintain with care the [obligatory] prayers and [in particular] the middle prayer and stand before Allah, devoutly obedient." (Quran 2:238)`,
+            hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّ أَوَّلَ مَا يُحَاسَبُ بِهِ الْعَبْدُ يَوْمَ الْقِيَامَةِ مِنْ عَمَلِهِ صَلَاتُهُ، فَإِنْ صَلُحَتْ فَقَدْ أَفْلَحَ وَأَنْجَحَ، وَإِنْ فَسَدَتْ فَقَدْ خَابَ وَخَسِرَ" - "The first thing for which a person will be brought to account on the Day of Resurrection will be his prayer. If it is complete, he will be successful and prosper, and if it is incomplete, he will fail and lose." (Abu Dawud, Tirmidhi)`,
             color: 'bg-blue-300'
           },
           {
             id: 'avoidance',
             title: 'Avoidance of Forbidden and Disliked Things',
             urduTitle: 'حرام و مکروہات سے اجتناب',
+            description: 'Conscious abstention from forbidden (Haram) and disliked (Makroohaat) things as defined by Islamic law. This includes avoiding prohibited foods, actions, and behaviors.',
+            ayah: `وَلَا تَقْرَبُوا الْفَوَاحِشَ مَا ظَهَرَ مِنْهَا وَمَا بَطَنَ - "And do not approach immoralities - what is apparent of them and what is concealed." (Quran 6:151)`,
+            hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّ اللَّهَ حَرَّمَ الْخَمْرَ وَثَمَنَهَا، وَحَرَّمَ الْمَيْتَةَ وَثَمَنَهَا، وَحَرَّمَ الْخِنْزِيرَ وَثَمَنَهُ" - "Allah has forbidden wine and its price, dead meat and its price, and pork and its price." (Abu Dawud)`,
             color: 'bg-blue-300'
           }
         ]
@@ -46,24 +67,35 @@ const chartData: ChartItem[] = [
         id: 'dealings',
         title: 'Dealings / Rights of Servants',
         urduTitle: 'معاملات / حقوق العباد',
+        description: 'Dealings/Transactions (Muamalat) which are simultaneously Limits of Allah (Hudood Allah) and Rights of Servants (Huqooq ul Ibad). This includes proper social conduct, financial dealings, and interpersonal relationships.',
+        urduDescription: 'معاملات (حقوق العباد) - اللہ کی حدود اور بندوں کے حقوق، جس میں سماجی تعلقات، مالی معاملات اور انسانی روابط شامل ہیں۔',
+        ayah: `إِنَّ اللَّهَ يَأْمُرُ بِالْعَدْلِ وَالْإِحْسَانِ وَإِيتَاءِ ذِي الْقُرْبَىٰ وَيَنْهَىٰ عَنِ الْفَحْشَاءِ وَالْمُنكَرِ وَالْبَغْيِ ۚ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ - "Indeed, Allah orders justice and good conduct and giving to relatives and forbids immorality and bad conduct and oppression. He admonishes you that perhaps you will be reminded." (Quran 16:90)`,
+        hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "مَنْ كَانَتْ لَهُ مَظْلَمَةٌ لِأَخِيهِ مِنْ عِرْضِهِ أَوْ شَيْءٍ فَلْيَتَحَلَّلْهُ مِنْهُ الْيَوْمَ قَبْلَ أَنْ لَا يَكُونَ دِينَارٌ وَلَا دِرْهَمٌ" - "Whoever has wronged his brother with regard to his honor or anything else, let him seek his forgiveness today, before there will be no dinar or dirham." (Bukhari)`,
         color: 'bg-blue-400',
         children: [
           {
             id: 'halal-earnings',
             title: 'Contentment with Halal and Pure Earnings',
             urduTitle: 'معاش میں حلال و طیب پر اکتفا',
+            description: 'Regarding one\'s livelihood, to be content and suffice with what is lawful (Halal) and pure (Tayyib). This ensures that one\'s income and sustenance come from permissible sources.',
+                    ayah: `يَا أَيُّهَا النَّاسُ كُلُوا مِمَّا فِي الْأَرْضِ حَلَالًا طَيِّبًا وَلَا تَتَّبِعُوا خُطُوَاتِ الشَّيْطَانِ ۚ إِنَّهُ لَكُمْ عَدُوٌّ مُّبِينٌ - "O mankind, eat from whatever is on earth [that is] lawful and good and do not follow the footsteps of Satan. Indeed, he is to you a clear enemy." (Quran 2:168)`,
+        hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّ اللَّهَ طَيِّبٌ لَا يَقْبَلُ إِلَّا طَيِّبًا، وَإِنَّ اللَّهَ أَمَرَ الْمُؤْمِنِينَ بِمَا أَمَرَ بِهِ الْمُرْسَلِينَ" - "Allah is pure and accepts only what is pure. Allah has commanded the believers to do what He commanded the messengers." (Muslim)`,
             color: 'bg-blue-300'
           },
           {
             id: 'social-veil',
             title: 'Islamic Veil in Social Interaction',
             urduTitle: 'معاشرت میں شرعی پرده',
+            description: 'In the context of one\'s social life, observing Islamic veil (Shar\'i Pardah) outside and at home, and abstaining from non-mahram (unrelated individuals) and mixed gatherings.',
             color: 'bg-blue-300'
           },
           {
             id: 'service',
             title: 'Service to Creation',
             urduTitle: 'خدمت خلق',
+            description: 'In one\'s life, regarding mutual dealings, giving special attention to fulfilling rights (Adaigi Huqooq), fulfilling promises (Eifa-e-Ahad), returning trusts (Ada-e-Amanat), and serving creation (Khidmat-e-Khalq).',
+                    ayah: `إِنَّ اللَّهَ يَأْمُرُكُمْ أَن تُؤَدُّوا الْأَمَانَاتِ إِلَىٰ أَهْلِهَا وَإِذَا حَكَمْتُم بَيْنَ النَّاسِ أَن تَحْكُمُوا بِالْعَدْلِ - "Indeed, Allah commands you to render trusts to whom they are due and when you judge between people to judge with justice." (Quran 4:58)`,
+        hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "مَنْ كَانَتْ لَهُ مَظْلَمَةٌ لِأَخِيهِ مِنْ عِرْضِهِ أَوْ شَيْءٍ فَلْيَتَحَلَّلْهُ مِنْهُ الْيَوْمَ قَبْلَ أَنْ لَا يَكُونَ دِينَارٌ وَلَا دِرْهَمٌ" - "Whoever has wronged his brother with regard to his honor or anything else, let him seek his forgiveness today, before there will be no dinar or dirham." (Bukhari)`,
             color: 'bg-blue-300'
           }
         ]
@@ -74,6 +106,10 @@ const chartData: ChartItem[] = [
     id: 'ethics',
     title: 'Ethics and Objectives',
     urduTitle: 'اخلاقیات و اهداف',
+    description: 'The moral and ethical framework that guides individual behavior and character development. This includes following the example of Prophet Muhammad ﷺ, rejecting false ideologies, maintaining sincerity in religious practice, and prioritizing relationships based on Islamic principles.',
+    urduDescription: 'اخلاقیات و اهداف - فرد کے رویہ اور کردار کی نشوونما کا اخلاقی فریم ورک، جس میں رسول اللہ ﷺ کی پیروی، باطل نظریات کا رد، مذہبی عمل میں خلوص اور اسلامی اصولوں پر مبنی تعلقات شامل ہیں۔',
+    ayah: `لَقَدْ كَانَ لَكُمْ فِي رَسُولِ اللَّهِ أُسْوَةٌ حَسَنَةٌ لِّمَن كَانَ يَرْجُو اللَّهَ وَالْيَوْمَ الْآخِرَ وَذَكَرَ اللَّهَ كَثِيرًا - "There has certainly been for you in the Messenger of Allah an excellent pattern for anyone whose hope is in Allah and the Last Day and [who] remembers Allah often." (Quran 33:21)`,
+    hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّمَا بُعِثْتُ لِأُتَمِّمَ مَكَارِمَ الْأَخْلَاقِ" - "I was sent to perfect good character." (Ahmad, Al-Hakim)`,
     color: 'bg-green-500',
     icon: <Heart className="w-5 h-5" />,
     children: [
@@ -115,6 +151,10 @@ const chartData: ChartItem[] = [
     id: 'dawah',
     title: 'Call to Religion / Da\'wah',
     urduTitle: 'دعوت دین',
+    description: 'The responsibility to invite others to Islam and guide them towards righteous behavior. This includes enjoining good (Amr bil Ma\'ruf) and forbidding evil (Nahi anil Munkar) through various means - by hand, tongue, and heart. It encompasses both individual and collective spheres of influence.',
+    urduDescription: 'دعوت دین - دوسروں کو اسلام کی طرف بلانے اور نیک رویہ کی طرف رہنمائی کرنے کی ذمہ داری، جس میں امر بالمعروف اور نہی عن المنکر شامل ہے۔',
+    ayah: `كُنتُمْ خَيْرَ أُمَّةٍ أُخْرِجَتْ لِلنَّاسِ تَأْمُرُونَ بِالْمَعْرُوفِ وَتَنْهَوْنَ عَنِ الْمُنكَرِ وَتُؤْمِنُونَ بِاللَّهِ - "You are the best nation produced [as an example] for mankind. You enjoin what is right and forbid what is wrong and believe in Allah." (Quran 3:110)`,
+    hadees: `عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "مَنْ رَأَى مِنْكُمْ مُنْكَرًا فَلْيُغَيِّرْهُ بِيَدِهِ، فَإِنْ لَمْ يَسْتَطِعْ فَبِلِسَانِهِ، فَإِنْ لَمْ يَسْتَطِعْ فَبِقَلْبِهِ، وَذَلِكَ أَضْعَفُ الْإِيمَانِ" - "Whoever among you sees an evil, let him change it with his hand; if he cannot, then with his tongue; if he cannot, then with his heart, and that is the weakest of faith." (Muslim)`,
     color: 'bg-purple-500',
     icon: <Target className="w-5 h-5" />,
     children: [
@@ -188,6 +228,10 @@ const chartData: ChartItem[] = [
     id: 'establishment',
     title: 'Establishment of Religion',
     urduTitle: 'اقامت دین',
+    description: 'The comprehensive effort to establish Islamic principles and values in society. This includes developing capabilities for religious service, practicing patience and sacrifice, fulfilling obligations of bearing witness, and contributing to the betterment of the community through various forms of service and obedience.',
+    urduDescription: 'اقامت دین - معاشرے میں اسلامی اصولوں اور اقدار کو قائم کرنے کی جامع کوشش، جس میں مذہبی خدمت کی صلاحیتوں کی نشوونما، صبر و قربانی، گواہی کی ذمہ داریوں کی ادائیگی اور مختلف طریقوں سے خدمت شامل ہیں۔',
+    ayah: `وَجَاهِدُوا فِي اللَّهِ حَقَّ جِهَادِهِ ۚ هُوَ اجْتَبَاكُمْ وَمَا جَعَلَ عَلَيْكُمْ فِي الدِّينِ مِنْ حَرَجٍ - "And strive for Allah with the striving due to Him. He has chosen you and has not placed upon you in the religion any difficulty." (Quran 22:78)`,
+    hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "مَنْ جَاهَدَ فِي سَبِيلِ اللَّهِ فَهُوَ حَقٌّ عَلَى اللَّهِ أَنْ يُدْخِلَهُ الْجَنَّةَ أَوْ يُرْجِعَهُ إِلَى مَسْكَنِهِ الَّذِي خَرَجَ مِنْهُ مَعَ مَا نَالَ مِنْ أَجْرٍ أَوْ غَنِيمَةٍ" - "Whoever strives in the cause of Allah, it is incumbent upon Allah to admit him into Paradise or return him to his home from which he came out, with whatever reward or booty he has gained." (Bukhari and Muslim)`,
     color: 'bg-orange-500',
     icon: <Star className="w-5 h-5" />,
     children: [
@@ -864,10 +908,9 @@ export default function AhsanEIslamPage() {
                     <h2 className="text-2xl font-bold font-urdu urdu-title">
                       {selectedItem.urduTitle}
                     </h2>
-                    <p className="text-lg opacity-90">{selectedItem.title}</p>
                     {itemHistory.length > 1 && (
-                      <div className="text-sm opacity-75 mt-1">
-                        Level {itemHistory.length} • {itemHistory.length - 1} levels up
+                      <div className="text-sm opacity-75 mt-1 font-urdu urdu-text">
+                        سطح {itemHistory.length} • {itemHistory.length - 1} سطح اوپر
                       </div>
                     )}
                   </div>
@@ -889,7 +932,7 @@ export default function AhsanEIslamPage() {
               {itemHistory.length > 1 && (
                 <div className="mb-6 p-3 bg-gray-50 rounded-lg border border-gray-200">
                   <div className="flex items-center gap-2 text-sm text-gray-600">
-                    <span>Path:</span>
+                    <span className="font-urdu urdu-text">راستہ:</span>
                     {itemHistory.map((item, index) => (
                       <div key={item.id} className="flex items-center gap-2">
                         {index > 0 && (
@@ -915,17 +958,59 @@ export default function AhsanEIslamPage() {
                 </div>
               )}
 
-              {selectedItem.description && (
+              {selectedItem.urduDescription && (
                 <div className="mb-6">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-3">Description</h3>
-                  <p className="text-gray-600 leading-relaxed">{selectedItem.description}</p>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3">
+                    <span className="font-urdu urdu-text">تفصیل</span>
+                  </h3>
+                  <div className="space-y-3">
+                    <p className="font-urdu text-gray-600 leading-relaxed urdu-text">{selectedItem.urduDescription}</p>
+                  </div>
+                </div>
+              )}
+
+              {selectedItem.ayah && (
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3 flex items-center gap-2">
+                    <span className="text-emerald-600">📖</span>
+                    <span className="font-urdu urdu-text">قرآنی حوالہ</span>
+                  </h3>
+                  <div className="bg-emerald-50 border-r-4 border-emerald-500 p-4 rounded-lg">
+                    <div className="text-right mb-3">
+                      <p className="quranic-ayah">{selectedItem.ayah.split(' - ')[0]}</p>
+                    </div>
+                    <div className="space-y-2">
+                      <p className="font-urdu text-sm text-gray-600 urdu-text leading-relaxed">
+                        {selectedItem.ayahUrdu || 'اللہ تعالیٰ کا فرمان ہے کہ...'}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {selectedItem.hadees && (
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3 flex items-center gap-2">
+                    <span className="text-emerald-600">🕌</span>
+                    <span className="font-urdu urdu-text">حدیث شریف</span>
+                  </h3>
+                  <div className="bg-emerald-50 border-r-4 border-emerald-500 p-4 rounded-lg">
+                    <div className="text-right mb-3">
+                      <p className="quranic-hadith">{selectedItem.hadees.split(' - ')[0]}</p>
+                    </div>
+                    <div className="space-y-2">
+                      <p className="font-urdu text-sm text-gray-600 urdu-text leading-relaxed">
+                        {selectedItem.hadeesUrdu || 'رسول اللہ ﷺ کا ارشاد ہے کہ...'}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               )}
 
               {selectedItem.children && selectedItem.children.length > 0 && (
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800 mb-4">
-                    Sub-categories
+                    <span className="font-urdu urdu-text">ذیلی اقسام</span>
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {selectedItem.children.map((child) => (
@@ -938,11 +1023,10 @@ export default function AhsanEIslamPage() {
                         <div className="font-urdu text-lg font-semibold text-gray-800 mb-2 urdu-text">
                           {child.urduTitle}
                         </div>
-                        <div className="text-sm text-gray-600">{child.title}</div>
                         {child.children && child.children.length > 0 && (
                           <div className="mt-3 pt-3 border-t border-gray-200">
-                            <div className="text-xs text-gray-500 mb-2">
-                              Contains {child.children.length} sub-items
+                            <div className="text-xs text-gray-500 mb-2 font-urdu urdu-text">
+                              {child.children.length} ذیلی اقسام شامل ہیں
                             </div>
                             <div className="space-y-1">
                               {child.children.slice(0, 3).map((subChild) => (
@@ -951,8 +1035,8 @@ export default function AhsanEIslamPage() {
                                 </div>
                               ))}
                               {child.children.length > 3 && (
-                                <div className="text-xs text-emerald-600">
-                                  + {child.children.length - 3} more...
+                                <div className="text-xs text-emerald-600 font-urdu urdu-text">
+                                  + {child.children.length - 3} مزید...
                                 </div>
                               )}
                             </div>
@@ -964,14 +1048,7 @@ export default function AhsanEIslamPage() {
                 </div>
               )}
 
-              {/* Additional Information */}
-              <div className="mt-8 p-4 bg-emerald-50 rounded-lg border border-emerald-200">
-                <h4 className="font-semibold text-emerald-800 mb-2">Related Topics</h4>
-                <div className="text-sm text-emerald-700">
-                  This topic is part of the comprehensive Islamic framework for individual and organizational development.
-                  Click on sub-categories to explore related concepts and practices.
-                </div>
-              </div>
+
             </div>
           </motion.div>
         </motion.div>
