@@ -1368,7 +1368,7 @@ export default function AhsanEIslamPage() {
                     <p className="text-sm text-green-700">Belief in Allah</p>
                   </div>
                   <div className="bg-green-100 border border-green-300 p-4 rounded-lg text-center">
-                    <div className="text-2xl mb-2">👼</div>
+                    <div className="text-2xl mb-2">✨</div>
                     <h3 className="font-bold text-green-800 mb-1 font-urdu urdu-text">فرشتوں پر ایمان</h3>
                     <p className="text-sm text-green-700">Belief in Angels</p>
                   </div>
