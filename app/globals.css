@@ -43,6 +43,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  font-size: 1.25rem; /* Increased from default for better readability */
 }
 
 @layer utilities {
@@ -96,7 +97,7 @@ body {
 /* Quranic text styles for Ayah and Hadith */
 .quranic-ayah {
   font-family: 'KFGQPC Uthman Taha Naskh', 'Scheherazade New', 'Noto Naskh Arabic', serif;
-  font-size: 1.6rem;
+  font-size: 2rem; /* was 1.6rem */
   line-height: 2.5;
   text-align: right;
   direction: rtl;
@@ -108,7 +109,7 @@ body {
 
 .quranic-hadith {
   font-family: 'KFGQPC Uthman Taha Naskh', 'Noto Naskh Arabic', 'Scheherazade New', serif;
-  font-size: 1.4rem;
+  font-size: 1.7rem; /* was 1.4rem */
   line-height: 2.2;
   text-align: right;
   direction: rtl;
@@ -120,7 +121,7 @@ body {
 
 .quranic-translation {
   font-family: 'Amiri', 'Noto Naskh Arabic', serif;
-  font-size: 1.1rem;
+  font-size: 1.3rem; /* was 1.1rem */
   line-height: 1.8;
   color: #374151;
   font-style: italic;
@@ -132,6 +133,7 @@ body {
   font-family: 'Noto Naskh Arabic', 'Scheherazade New', 'Amiri', serif;
   font-weight: 500;
   line-height: 2;
+  font-size: 1.35rem; /* was default, now larger */
 }
 
 /* RTL support */
@@ -203,4 +205,16 @@ body {
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
+} 
+
+.urdu-title {
+  font-size: 1.7rem; /* was default, now larger */
+}
+
+.urdu-text {
+  font-size: 1.25rem; /* was default, now larger */
+}
+
+.urdu-description {
+  font-size: 1.2rem; /* was default, now larger */
 } 
