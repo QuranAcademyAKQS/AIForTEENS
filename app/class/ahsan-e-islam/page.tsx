@@ -709,11 +709,11 @@ export default function AhsanEIslamPage() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between gap-8">
             {/* Left side - Message of Tanzeem-e-Islami */}
-            <div className="text-right text-xs opacity-80 w-48 flex-shrink-0">
-              <div className="font-urdu urdu-text truncate">تنظیم اسلامی کا پیغام</div>
-              <div className="truncate">Message of Tanzeem-e-Islami</div>
-              <div className="font-urdu urdu-text truncate">بانی تنظیم : ڈاکٹر اسرار احمد</div>
-              <div className="truncate">Founder: Dr. Israr Ahmed</div>
+            <div className="text-right text-xs opacity-80 w-56 flex-shrink-0">
+              <div className="font-urdu urdu-text">تنظیم اسلامی کا پیغام</div>
+              <div>Message of Tanzeem-e-Islami</div>
+              <div className="font-urdu urdu-text">بانی تنظیم : ڈاکٹر اسرار احمد</div>
+              <div>Founder: Dr. Israr Ahmed</div>
             </div>
             
             {/* Center - Main title */}
@@ -725,11 +725,11 @@ export default function AhsanEIslamPage() {
             </div>
             
             {/* Right side - System of Khilafat-e-Rashida */}
-            <div className="text-left text-xs opacity-80 w-48 flex-shrink-0">
-              <div className="font-urdu urdu-text truncate">خلافت راشدہ کا نظام</div>
-              <div className="truncate">System of Khilafat-e-Rashida</div>
-              <div className="font-urdu urdu-text truncate">امیر تنظیم : شجاع الدین شیخ</div>
-              <div className="truncate">Ameer: Shujauddin Sheikh</div>
+            <div className="text-left text-xs opacity-80 w-56 flex-shrink-0">
+              <div className="font-urdu urdu-text">خلافت راشدہ کا نظام</div>
+              <div>System of Khilafat-e-Rashida</div>
+              <div className="font-urdu urdu-text">امیر تنظیم : شجاع الدین شیخ</div>
+              <div>Ameer: Shujauddin Sheikh</div>
             </div>
           </div>
         </div>
