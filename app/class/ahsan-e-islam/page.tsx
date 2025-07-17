@@ -725,7 +725,7 @@ export default function AhsanEIslamPage() {
             </div>
             
             {/* Right side - System of Khilafat-e-Rashida */}
-            <div className="text-left text-xs opacity-80 w-52 flex-shrink-0 px-1">
+            <div className="text-left text-xs opacity-80 w-48 flex-shrink-0 px-1">
               <div className="font-urdu urdu-text mb-1">خلافت راشدہ کا نظام</div>
               <div className="mb-1">System of Khilafat-e-Rashida</div>
               <div className="font-urdu urdu-text mb-1">امیر تنظیم : شجاع الدین شیخ</div>
