@@ -28,7 +28,7 @@ const chartData: ChartItem[] = [
     urduDescription: 'شریعت کی پابندی کے لیے مسلسل جدوجہد (جہاد) - یہ اسلامی قانون اور عمل کے تمام پہلوؤں کو شامل کرتا ہے، جس میں عبادات، سماجی تعلقات اور ذاتی رویہ شامل ہیں۔ اس کے لیے مذہبی فرائض کی ادائیگی اور ممنوعہ اعمال سے بچنے کے لیے شعوری کوشش درکار ہے۔',
     ayah: `يَا أَيُّهَا الَّذِينَ آمَنُوا ادْخُلُوا فِي السِّلْمِ كَافَّةً وَلَا تَتَّبِعُوا خُطُوَاتِ الشَّيْطَانِ ۚ إِنَّهُ لَكُمْ عَدُوٌّ مُّبِينٌ - "O you who have believed, enter into Islam completely [and perfectly] and do not follow the footsteps of Satan. Indeed, he is to you a clear enemy." (Quran 2:208)`,
     ayahUrdu: `اے ایمان والو! اسلام میں پورے کے پورے داخل ہو جاؤ اور شیطان کے قدموں کی پیروی نہ کرو۔ بےشک وہ تمہارا کھلا دشمن ہے۔`,
-    hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "مَنْ أَطَاعَنِي فَقَدْ أَطَاعَ اللَّهَ، وَمَنْ عَصَانِي فَقَدْ عَصَى اللَّهَ" - "Whoever obeys me has obeyed Allah, and whoever disobeys me has disobeyed Allah." (Bukhari and Muslim)`,
+    hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "مَنْ أَطَاعَنِي فَقَدْ أَطَاعَ اللَّهَ، وَمَنْ عَصَانِي فَقَدْ عَصَى اللَّهَ" - "Whoever obeys me has obeyed Allah, and whoever disobeys me has disobeyed Allah." (Bukhari: 2957, Muslim: 1840)`,
     hadeesUrdu: `جو میری اطاعت کرے گا اس نے اللہ کی اطاعت کی، اور جو میری نافرمانی کرے گا اس نے اللہ کی نافرمانی کی۔`,
     color: 'bg-blue-500',
     icon: <Shield className="w-5 h-5" />,
@@ -41,7 +41,7 @@ const chartData: ChartItem[] = [
         urduDescription: 'عبادات (حقوق اللہ) - اللہ کے حقوق کی ادائیگی، جس میں فرائض و واجبات کی شعوری پابندی اور حرام و مکروہات سے اجتناب شامل ہے۔',
         ayah: `وَمَا خَلَقْتُ الْجِنَّ وَالْإِنسَ إِلَّا لِيَعْبُدُونِ - "And I did not create the jinn and mankind except to worship Me." (Quran 51:56)`,
         ayahUrdu: 'اور میں نے جنات اور انسانوں کو صرف اپنی عبادت کے لیے پیدا کیا ہے۔',
-        hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّ اللَّهَ قَالَ: مَنْ عَادَى لِي وَلِيًّا فَقَدْ آذَنْتُهُ بِالْحَرْبِ، وَمَا تَقَرَّبَ إِلَيَّ عَبْدِي بِشَيْءٍ أَحَبَّ إِلَيَّ مِمَّا افْتَرَضْتُ عَلَيْهِ" - "Allah said: 'Whoever shows enmity to a friend of Mine, I will declare war against him. My servant does not draw near to Me with anything more beloved to Me than the religious duties I have obligated upon him.'" (Bukhari)`,
+        hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّ اللَّهَ قَالَ: مَنْ عَادَى لِي وَلِيًّا فَقَدْ آذَنْتُهُ بِالْحَرْبِ، وَمَا تَقَرَّبَ إِلَيَّ عَبْدِي بِشَيْءٍ أَحَبَّ إِلَيَّ مِمَّا افْتَرَضْتُ عَلَيْهِ" - "Allah said: 'Whoever shows enmity to a friend of Mine, I will declare war against him. My servant does not draw near to Me with anything more beloved to Me than the religious duties I have obligated upon him.'" (Bukhari: 6502)`,
         hadeesUrdu: 'اللہ تعالیٰ فرماتا ہے: "جس نے میرے کسی دوست سے دشمنی کی، میں اس کے خلاف اعلانِ جنگ کرتا ہوں۔ اور میرا بندہ جن چیزوں کے ذریعے میرا قرب چاہتا ہے، ان میں سب سے زیادہ پسندیدہ وہ ہیں جو میں نے اس پر فرض کی ہیں۔"',
         color: 'bg-blue-400',
         children: [
@@ -52,7 +52,7 @@ const chartData: ChartItem[] = [
             description: 'Conscious observance of performing obligations (Faraiz) and duties (Wajibat) as prescribed by Islamic law. This includes daily prayers, fasting, zakat, and other mandatory religious practices.',
             ayah: `حَافِظُوا عَلَى الصَّلَوَاتِ وَالصَّلَاةِ الْوُسْطَىٰ وَقُومُوا لِلَّهِ قَانِتِينَ - "Maintain with care the [obligatory] prayers and [in particular] the middle prayer and stand before Allah, devoutly obedient." (Quran 2:238)`,
             ayahUrdu: 'نمازوں کی حفاظت کرو اور درمیانی نماز کی بھی اور اللہ کے لیے عاجزی کے ساتھ کھڑے ہو۔',
-            hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّ أَوَّلَ مَا يُحَاسَبُ بِهِ الْعَبْدُ يَوْمَ الْقِيَامَةِ مِنْ عَمَلِهِ صَلَاتُهُ، فَإِنْ صَلُحَتْ فَقَدْ أَفْلَحَ وَأَنْجَحَ، وَإِنْ فَسَدَتْ فَقَدْ خَابَ وَخَسِرَ" - "The first thing for which a person will be brought to account on the Day of Resurrection will be his prayer. If it is complete, he will be successful and prosper, and if it is incomplete, he will fail and lose." (Abu Dawud, Tirmidhi)`,
+            hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّ أَوَّلَ مَا يُحَاسَبُ بِهِ الْعَبْدُ يَوْمَ الْقِيَامَةِ مِنْ عَمَلِهِ صَلَاتُهُ، فَإِنْ صَلُحَتْ فَقَدْ أَفْلَحَ وَأَنْجَحَ، وَإِنْ فَسَدَتْ فَقَدْ خَابَ وَخَسِرَ" - "The first thing for which a person will be brought to account on the Day of Resurrection will be his prayer. If it is complete, he will be successful and prosper, and if it is incomplete, he will fail and lose." (Abu Dawud: 864, Tirmidhi: 413)`,
             hadeesUrdu: 'بےشک قیامت کے دن بندے کے اعمال میں سب سے پہلے اس کی نماز کا حساب لیا جائے گا۔ اگر وہ درست ہوئی تو وہ کامیاب اور کامران ہوگا، اور اگر خراب ہوئی تو وہ ناکام اور خسارے میں رہے گا۔',
             color: 'bg-blue-300'
           },
@@ -63,7 +63,7 @@ const chartData: ChartItem[] = [
             description: 'Conscious abstention from forbidden (Haram) and disliked (Makroohaat) things as defined by Islamic law. This includes avoiding prohibited foods, actions, and behaviors.',
             ayah: `وَلَا تَقْرَبُوا الْفَوَاحِشَ مَا ظَهَرَ مِنْهَا وَمَا بَطَنَ - "And do not approach immoralities - what is apparent of them and what is concealed." (Quran 6:151)`,
             ayahUrdu: 'اور بےحیائی کے کاموں کے قریب نہ جاؤ، خواہ وہ ظاہر ہوں یا پوشیدہ۔',
-            hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّ اللَّهَ حَرَّمَ الْخَمْرَ وَثَمَنَهَا، وَحَرَّمَ الْمَيْتَةَ وَثَمَنَهَا، وَحَرَّمَ الْخِنْزِيرَ وَثَمَنَهُ" - "Allah has forbidden wine and its price, dead meat and its price, and pork and its price." (Abu Dawud)`,
+            hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّ اللَّهَ حَرَّمَ الْخَمْرَ وَثَمَنَهَا، وَحَرَّمَ الْمَيْتَةَ وَثَمَنَهَا، وَحَرَّمَ الْخِنْزِيرَ وَثَمَنَهُ" - "Allah has forbidden wine and its price, dead meat and its price, and pork and its price." (Abu Dawud: 3484)`,
             hadeesUrdu: 'بےشک اللہ نے شراب اور اس کی قیمت کو حرام کیا ہے، اور مردار اور اس کی قیمت کو حرام کیا ہے، اور سور اور اس کی قیمت کو حرام کیا ہے۔',
             color: 'bg-blue-300'
           }
@@ -77,7 +77,7 @@ const chartData: ChartItem[] = [
         urduDescription: 'معاملات (حقوق العباد) - اللہ کی حدود اور بندوں کے حقوق، جس میں سماجی تعلقات، مالی معاملات اور انسانی روابط شامل ہیں۔',
         ayah: `إِنَّ اللَّهَ يَأْمُرُ بِالْعَدْلِ وَالْإِحْسَانِ وَإِيتَاءِ ذِي الْقُرْبَىٰ وَيَنْهَىٰ عَنِ الْفَحْشَاءِ وَالْمُنكَرِ وَالْبَغْيِ ۚ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ - "Indeed, Allah orders justice and good conduct and giving to relatives and forbids immorality and bad conduct and oppression. He admonishes you that perhaps you will be reminded." (Quran 16:90)`,
         ayahUrdu: 'بےشک اللہ عدل اور احسان کا حکم دیتا ہے اور رشتہ داروں کو دینے کا، اور بےحیائی اور برے کام اور سرکشی سے منع کرتا ہے۔ وہ تمہیں نصیحت کرتا ہے تاکہ تم یاد رکھو۔',
-        hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "مَنْ كَانَتْ لَهُ مَظْلَمَةٌ لِأَخِيهِ مِنْ عِرْضِهِ أَوْ شَيْءٍ فَلْيَتَحَلَّلْهُ مِنْهُ الْيَوْمَ قَبْلَ أَنْ لَا يَكُونَ دِينَارٌ وَلَا دِرْهَمٌ" - "Whoever has wronged his brother with regard to his honor or anything else, let him seek his forgiveness today, before there will be no dinar or dirham." (Bukhari)`,
+        hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "مَنْ كَانَتْ لَهُ مَظْلَمَةٌ لِأَخِيهِ مِنْ عِرْضِهِ أَوْ شَيْءٍ فَلْيَتَحَلَّلْهُ مِنْهُ الْيَوْمَ قَبْلَ أَنْ لَا يَكُونَ دِينَارٌ وَلَا دِرْهَمٌ" - "Whoever has wronged his brother with regard to his honor or anything else, let him seek his forgiveness today, before there will be no dinar or dirham." (Bukhari: 2449)`,
         hadeesUrdu: 'جس کے پاس اپنے بھائی کی طرف سے کوئی ظلم ہو، خواہ اس کی عزت کا ہو یا کسی اور چیز کا، تو آج ہی اس سے معافی مانگ لے، اس سے پہلے کہ نہ دینار ہوں گے نہ درہم۔',
         color: 'bg-blue-400',
         children: [
@@ -86,6 +86,7 @@ const chartData: ChartItem[] = [
             title: 'Contentment with Halal and Pure Earnings',
             urduTitle: 'معاش میں حلال و طیب پر اکتفا',
             description: 'Regarding one\'s livelihood, to be content and suffice with what is lawful (Halal) and pure (Tayyib). This ensures that one\'s income and sustenance come from permissible sources.',
+            urduDescription: 'اپنی معاش کے حوالے سے حلال و طیب پر اکتفاء و قناعت کرنا۔',
                     ayah: `يَا أَيُّهَا النَّاسُ كُلُوا مِمَّا فِي الْأَرْضِ حَلَالًا طَيِّبًا وَلَا تَتَّبِعُوا خُطُوَاتِ الشَّيْطَانِ ۚ إِنَّهُ لَكُمْ عَدُوٌّ مُّبِينٌ - "O mankind, eat from whatever is on earth [that is] lawful and good and do not follow the footsteps of Satan. Indeed, he is to you a clear enemy." (Quran 2:168)`,
             ayahUrdu: 'اے لوگو! زمین میں جو حلال اور پاک چیزیں ہیں ان میں سے کھاؤ اور شیطان کے قدموں کی پیروی نہ کرو۔ بےشک وہ تمہارا کھلا دشمن ہے۔',
         hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّ اللَّهَ طَيِّبٌ لَا يَقْبَلُ إِلَّا طَيِّبًا، وَإِنَّ اللَّهَ أَمَرَ الْمُؤْمِنِينَ بِمَا أَمَرَ بِهِ الْمُرْسَلِينَ" - "Allah is pure and accepts only what is pure. Allah has commanded the believers to do what He commanded the messengers." (Muslim)`,
@@ -112,7 +113,7 @@ const chartData: ChartItem[] = [
             urduDescription: 'زندگی میں باہمی معاملات میں حقوق کی ادائیگی، وعدوں کی وفا، امانتوں کی واپسی اور خلق کی خدمت پر خصوصی توجہ دینا۔',
                     ayah: `إِنَّ اللَّهَ يَأْمُرُكُمْ أَن تُؤَدُّوا الْأَمَانَاتِ إِلَىٰ أَهْلِهَا وَإِذَا حَكَمْتُم بَيْنَ النَّاسِ أَن تَحْكُمُوا بِالْعَدْلِ - "Indeed, Allah commands you to render trusts to whom they are due and when you judge between people to judge with justice." (Quran 4:58)`,
             ayahUrdu: 'بےشک اللہ تمہیں حکم دیتا ہے کہ امانتیں ان کے اہل کو پہنچاؤ اور جب تم لوگوں کے درمیان فیصلہ کرو تو عدل کے ساتھ فیصلہ کرو۔',
-        hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "مَنْ كَانَتْ لَهُ مَظْلَمَةٌ لِأَخِيهِ مِنْ عِرْضِهِ أَوْ شَيْءٍ فَلْيَتَحَلَّلْهُ مِنْهُ الْيَوْمَ قَبْلَ أَنْ لَا يَكُونَ دِينَارٌ وَلَا دِرْهَمٌ" - "Whoever has wronged his brother with regard to his honor or anything else, let him seek his forgiveness today, before there will be no dinar or dirham." (Bukhari)`,
+        hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "مَنْ كَانَتْ لَهُ مَظْلَمَةٌ لِأَخِيهِ مِنْ عِرْضِهِ أَوْ شَيْءٍ فَلْيَتَحَلَّلْهُ مِنْهُ الْيَوْمَ قَبْلَ أَنْ لَا يَكُونَ دِينَارٌ وَلَا دِرْهَمٌ" - "Whoever has wronged his brother with regard to his honor or anything else, let him seek his forgiveness today, before there will be no dinar or dirham." (Bukhari: 2449)`,
             hadeesUrdu: 'جس کے پاس اپنے بھائی کی طرف سے کوئی ظلم ہو، خواہ اس کی عزت کا ہو یا کسی اور چیز کا، تو آج ہی اس سے معافی مانگ لے، اس سے پہلے کہ نہ دینار ہوں گے نہ درہم۔',
             color: 'bg-blue-300'
           }
@@ -135,6 +136,12 @@ const chartData: ChartItem[] = [
         id: 'following-prophet',
         title: 'Following the Messenger of Allah ﷺ and Interaction with Companions',
         urduTitle: 'اتباع رسول الله ﷺ و تعامل صحابة',
+        description: 'Following the example of Prophet Muhammad ﷺ in all aspects of life and learning from the companions\' way of life and interactions.',
+        urduDescription: 'رسول اللہ ﷺ کی پیروی اور صحابہ کرام کے ساتھ تعامل اور ان کی زندگی سے سیکھنا۔',
+        ayah: `لَقَدْ كَانَ لَكُمْ فِي رَسُولِ اللَّهِ أُسْوَةٌ حَسَنَةٌ لِّمَن كَانَ يَرْجُو اللَّهَ وَالْيَوْمَ الْآخِرَ وَذَكَرَ اللَّهَ كَثِيرًا - "There has certainly been for you in the Messenger of Allah an excellent pattern for anyone whose hope is in Allah and the Last Day and [who] remembers Allah often." (Quran 33:21)`,
+        ayahUrdu: 'بےشک تمہارے لیے رسول اللہ میں ایک بہترین نمونہ ہے، اس کے لیے جو اللہ اور آخرت کی امید رکھتا ہے اور اللہ کو بہت یاد کرتا ہے۔',
+        hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "أَصْحَابِي كَالنُّجُومِ بِأَيِّهِمُ اقْتَدَيْتُمْ اهْتَدَيْتُمْ" - "My companions are like stars. Whichever of them you follow, you will be guided." (Abu Dawud)`,
+        hadeesUrdu: 'میرے صحابہ ستاروں کی طرح ہیں، تم ان میں سے جس کی پیروی کرو گے ہدایت پاؤ گے۔',
         color: 'bg-green-400',
         children: [
           {
@@ -149,18 +156,36 @@ const chartData: ChartItem[] = [
         id: 'reject-false',
         title: 'Rejection of False Ideologies',
         urduTitle: 'باطل نظریات کا رد',
+        description: 'Rejecting and staying away from false ideologies and beliefs that contradict Islamic teachings.',
+        urduDescription: 'باطل نظریات اور عقائد کا رد کرنا اور ان سے دور رہنا جو اسلامی تعلیمات کے خلاف ہیں۔',
+        ayah: `وَلَا تَرْكَنُوا إِلَى الَّذِينَ ظَلَمُوا فَتَمَسَّكُمُ النَّارُ وَمَا لَكُم مِّن دُونِ اللَّهِ مِنْ أَوْلِيَاءَ ثُمَّ لَا تُنصَرُونَ - "And do not incline toward those who do wrong, lest you be touched by the Fire, and you would not have other than Allah any protectors; then you would not be helped." (Quran 11:113)`,
+        ayahUrdu: 'اور ظالموں کی طرف نہ جھکو ورنہ تمہیں بھی آگ لگ جائے گی، اور تمہارے لیے اللہ کے سوا کوئی مددگار نہیں ہوگا، پھر تم مدد نہیں پاؤ گے۔',
+        hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "مَنْ تَشَبَّهَ بِقَوْمٍ فَهُوَ مِنْهُمْ" - "Whoever imitates a people is one of them." (Abu Dawud)`,
+        hadeesUrdu: 'جو کسی قوم کی مشابہت اختیار کرے گا وہ انہی میں سے ہے۔',
         color: 'bg-green-400'
       },
       {
         id: 'sincerity',
         title: 'Spirit of "Religion is Sincerity"',
         urduTitle: 'الدین النصیحہ کی روح',
+        description: 'Maintaining sincerity and pure intentions in all religious practices and dealings with others.',
+        urduDescription: 'تمام مذہبی اعمال اور دوسروں کے ساتھ معاملات میں خلوص اور پاک نیت کا اہتمام۔',
+        ayah: `إِنَّمَا يَتَقَبَّلُ اللَّهُ مِنَ الْمُتَّقِينَ - "Allah only accepts from the righteous [who fear Him]." (Quran 5:27)`,
+        ayahUrdu: 'بےشک اللہ صرف متقین سے قبول کرتا ہے۔',
+        hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّ اللَّهَ لَا يَنْظُرُ إِلَى صُوَرِكُمْ وَأَمْوَالِكُمْ وَلَكِنْ يَنْظُرُ إِلَى قُلُوبِكُمْ وَأَعْمَالِكُمْ" - "Indeed, Allah does not look at your appearance or wealth, but He looks at your hearts and actions." (Muslim)`,
+        hadeesUrdu: 'بےشک اللہ تمہاری صورتوں اور مالوں کو نہیں دیکھتا، بلکہ تمہارے دلوں اور اعمال کو دیکھتا ہے۔',
         color: 'bg-green-400'
       },
       {
         id: 'prioritization',
         title: 'Prioritization of Nearest to Nearest',
         urduTitle: 'الا قرب فالا قرب کی ترتیب',
+        description: 'Prioritizing relationships and responsibilities based on proximity and closeness, starting with family and extending to the broader community.',
+        urduDescription: 'تعلقات اور ذمہ داریوں کو قربت اور نزدیکی کے مطابق ترتیب دینا، خاندان سے شروع کر کے وسیع تر معاشرے تک۔',
+        ayah: `وَاعْبُدُوا اللَّهَ وَلَا تُشْرِكُوا بِهِ شَيْئًا ۖ وَبِالْوَالِدَيْنِ إِحْسَانًا وَبِذِي الْقُرْبَىٰ وَالْيَتَامَىٰ وَالْمَسَاكِينِ - "Worship Allah and associate nothing with Him, and to parents do good, and to relatives, orphans, the needy." (Quran 4:36)`,
+        ayahUrdu: 'اور اللہ کی عبادت کرو اور اس کے ساتھ کسی کو شریک نہ کرو، اور والدین کے ساتھ احسان کرو، اور رشتہ داروں، یتیموں اور مسکینوں کے ساتھ۔',
+        hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "خَيْرُكُمْ خَيْرُكُمْ لِأَهْلِهِ وَأَنَا خَيْرُكُمْ لِأَهْلِي" - "The best of you is the best to his family, and I am the best to my family." (Tirmidhi)`,
+        hadeesUrdu: 'تم میں سب سے بہتر وہ ہے جو اپنے اہل کے لیے بہتر ہے، اور میں اپنے اہل کے لیے سب سے بہتر ہوں۔',
         color: 'bg-green-400'
       }
     ]
@@ -180,6 +205,12 @@ const chartData: ChartItem[] = [
         id: 'enjoin-good',
         title: 'Enjoining Good',
         urduTitle: 'امر بالمعروف',
+        description: 'Encouraging and promoting good deeds and righteous behavior among people.',
+        urduDescription: 'لوگوں میں نیک کاموں اور اچھے اعمال کی ترغیب اور فروغ۔',
+        ayah: `وَلْتَكُن مِّنكُمْ أُمَّةٌ يَدْعُونَ إِلَى الْخَيْرِ وَيَأْمُرُونَ بِالْمَعْرُوفِ وَيَنْهَوْنَ عَنِ الْمُنكَرِ ۚ وَأُولَٰئِكَ هُمُ الْمُفْلِحُونَ - "And let there be [arising] from you a nation inviting to [all that is] good, enjoining what is right and forbidding what is wrong, and those will be the successful." (Quran 3:104)`,
+        ayahUrdu: 'اور تم میں سے ایک جماعت ایسی ہونی چاہیے جو خیر کی طرف بلائے اور نیکی کا حکم دے اور برائی سے روکے، اور یہی لوگ کامیاب ہیں۔',
+        hadees: `عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "مَنْ رَأَى مِنْكُمْ مُنْكَرًا فَلْيُغَيِّرْهُ بِيَدِهِ، فَإِنْ لَمْ يَسْتَطِعْ فَبِلِسَانِهِ، فَإِنْ لَمْ يَسْتَطِعْ فَبِقَلْبِهِ، وَذَلِكَ أَضْعَفُ الْإِيمَانِ" - "Whoever among you sees an evil, let him change it with his hand; if he cannot, then with his tongue; if he cannot, then with his heart, and that is the weakest of faith." (Muslim)`,
+        hadeesUrdu: 'تم میں سے جو کوئی برائی دیکھے تو اسے اپنے ہاتھ سے بدل دے، اگر نہ کر سکے تو زبان سے، اگر نہ کر سکے تو دل سے، اور یہ ایمان کا کمزور ترین درجہ ہے۔',
         color: 'bg-purple-400',
         children: [
           {
@@ -206,6 +237,12 @@ const chartData: ChartItem[] = [
         id: 'forbid-evil',
         title: 'Forbidding Evil',
         urduTitle: 'نهي عن المنكر',
+        description: 'Preventing and discouraging evil deeds and sinful behavior among people.',
+        urduDescription: 'لوگوں میں برے کاموں اور گناہ کے اعمال کو روکنا اور ان سے منع کرنا۔',
+        ayah: `كُنتُمْ خَيْرَ أُمَّةٍ أُخْرِجَتْ لِلنَّاسِ تَأْمُرُونَ بِالْمَعْرُوفِ وَتَنْهَوْنَ عَنِ الْمُنكَرِ وَتُؤْمِنُونَ بِاللَّهِ - "You are the best nation produced [as an example] for mankind. You enjoin what is right and forbid what is wrong and believe in Allah." (Quran 3:110)`,
+        ayahUrdu: 'تم بہترین امت ہو جو لوگوں کے لیے نکالی گئی ہے، تم نیکی کا حکم دیتے ہو اور برائی سے روکتے ہو اور اللہ پر ایمان رکھتے ہو۔',
+        hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "مَنْ دَعَا إِلَى هُدًى كَانَ لَهُ مِنَ الْأَجْرِ مِثْلُ أُجُورِ مَنْ تَبِعَهُ لَا يَنْقُصُ ذَلِكَ مِنْ أُجُورِهِمْ شَيْئًا" - "Whoever calls to guidance will have a reward similar to those who follow him, without that diminishing anything from their rewards." (Muslim)`,
+        hadeesUrdu: 'جو ہدایت کی طرف بلائے گا اس کے لیے اتنا ہی اجر ہے جتنا اس کے پیروکاروں کا، اس سے ان کے اجر میں کچھ کم نہیں ہوگا۔',
         color: 'bg-purple-400',
         children: [
           {
@@ -1013,6 +1050,27 @@ export default function AhsanEIslamPage() {
                         </div>
                       </div>
                     )}
+                    {selectedItem.id === 'social-veil' && (
+                      <div className="bg-purple-50 border-r-4 border-purple-500 p-4 rounded-lg mb-4">
+                        <div className="text-right">
+                          <span className="text-sm text-purple-600 font-semibold">1.1.2.2</span>
+                          <p className="font-urdu text-purple-800 leading-relaxed urdu-text mt-1">
+                            اپنی معاشرت کے ضمن میں باہر اور گھر میں شرعی پردہ کا اہتمام ، نامحرموں اور مخلوط محافل سے اجتناب ۔
+                          </p>
+                        </div>
+                      </div>
+                    )}
+                    {selectedItem.id === 'service' && (
+                      <div className="bg-indigo-50 border-r-4 border-indigo-500 p-4 rounded-lg mb-4">
+                        <div className="text-right">
+                          <span className="text-sm text-indigo-600 font-semibold">1.1.2.3</span>
+                          <span className="text-indigo-600 ml-2">★</span>
+                          <p className="font-urdu text-indigo-800 leading-relaxed urdu-text mt-1">
+                            اپنی زندگی میں باہمی معاملات کے حوالے سے ادائیگی حقوق، ایفائے عہد، ادائے امانت، خدمت خلق پر خصوصی توجہ دینا۔
+                          </p>
+                        </div>
+                      </div>
+                    )}
                     <p className="font-urdu text-gray-600 leading-relaxed urdu-text">{selectedItem.urduDescription}</p>
                   </div>
                 </div>
@@ -1032,6 +1090,11 @@ export default function AhsanEIslamPage() {
                       <p className="font-urdu text-sm text-gray-600 urdu-text leading-relaxed">
                         {selectedItem.ayahUrdu || 'اللہ تعالیٰ کا فرمان ہے کہ...'}
                       </p>
+                      {selectedItem.ayah.split(' - ')[1] && (
+                        <p className="text-xs italic text-gray-500 mt-2 ltr:text-left rtl:text-right">
+                          {selectedItem.ayah.split(' - ')[1]}
+                        </p>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -1051,6 +1114,11 @@ export default function AhsanEIslamPage() {
                       <p className="font-urdu text-sm text-gray-600 urdu-text leading-relaxed">
                         {selectedItem.hadeesUrdu || 'رسول اللہ ﷺ کا ارشاد ہے کہ...'}
                       </p>
+                      {selectedItem.hadees.split(' - ')[1] && (
+                        <p className="text-xs italic text-gray-500 mt-2 ltr:text-left rtl:text-right">
+                          {selectedItem.hadees.split(' - ')[1]}
+                        </p>
+                      )}
                     </div>
                   </div>
                 </div>
