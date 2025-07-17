@@ -644,6 +644,9 @@ export default function AhsanEIslamPage() {
   const [activeSection, setActiveSection] = useState<'main' | 'daily' | 'avoidance' | 'curricular' | 'dawah' | 'oversight'>('main');
   const [itemHistory, setItemHistory] = useState<ChartItem[]>([]);
   const [showHadithPopup, setShowHadithPopup] = useState(false);
+  const [showIslamPopup, setShowIslamPopup] = useState(false);
+  const [showImanPopup, setShowImanPopup] = useState(false);
+  const [showIhsanPopup, setShowIhsanPopup] = useState(false);
 
   const handleItemClick = (item: ChartItem) => {
     setSelectedItem(item);
@@ -723,12 +726,26 @@ export default function AhsanEIslamPage() {
                 تنظیم اسلامی میں احسان اسلام کے تقاضے
               </h1>
               <p className="text-xl opacity-90 mb-1">Demands of Ehsan-e-Islam in Tanzeem-e-Islami</p>
-              <button 
-                onClick={() => setShowHadithPopup(true)}
-                className="text-lg font-urdu urdu-text opacity-80 hover:opacity-100 hover:text-emerald-200 transition-all duration-300 cursor-pointer bg-transparent border-none p-2 rounded-lg hover:bg-white/10"
-              >
-                اسلام ایمان احسان
-              </button>
+              <div className="flex flex-wrap justify-center gap-4 mt-4">
+                <button 
+                  onClick={() => setShowIhsanPopup(true)}
+                  className="px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white font-urdu urdu-text rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                >
+                  احسان
+                </button>
+                <button 
+                  onClick={() => setShowImanPopup(true)}
+                  className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-urdu urdu-text rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                >
+                  ایمان
+                </button>
+                <button 
+                  onClick={() => setShowIslamPopup(true)}
+                  className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-urdu urdu-text rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                >
+                  اسلام
+                </button>
+              </div>
             </div>
             
             {/* Right side - System of Khilafat-e-Rashida */}
@@ -1178,14 +1195,14 @@ export default function AhsanEIslamPage() {
         </motion.div>
       )}
 
-      {/* Hadith-e-Jibriel Popup */}
-      {showHadithPopup && (
+      {/* Islam Popup */}
+      {showIslamPopup && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-          onClick={() => setShowHadithPopup(false)}
+          onClick={() => setShowIslamPopup(false)}
         >
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
@@ -1195,16 +1212,16 @@ export default function AhsanEIslamPage() {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
-            <div className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white p-6">
+            <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6">
               <div className="flex items-center justify-between">
                 <div className="text-center flex-1">
                   <h2 className="text-2xl font-bold font-urdu urdu-title mb-2">
-                    حدیث جبریل علیہ السلام
+                    اسلام
                   </h2>
-                  <p className="text-lg opacity-90">Hadith-e-Jibriel (عليه السلام)</p>
+                  <p className="text-lg opacity-90">Islam</p>
                 </div>
                 <button
-                  onClick={() => setShowHadithPopup(false)}
+                  onClick={() => setShowIslamPopup(false)}
                   className="p-2 hover:bg-white/20 rounded-full transition-colors"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1218,59 +1235,302 @@ export default function AhsanEIslamPage() {
             <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
               <div className="space-y-6">
                 {/* Hadith Text */}
-                <div className="bg-emerald-50 border-r-4 border-emerald-500 p-4 rounded-lg">
+                <div className="bg-blue-50 border-r-4 border-blue-500 p-4 rounded-lg">
                   <div className="text-right mb-3">
                     <p className="quranic-hadith">
-                      عَنْ عُمَرَ رَضِيَ اللَّهُ عَنْهُ قَالَ: بَيْنَمَا نَحْنُ جُلُوسٌ عِنْدَ رَسُولِ اللَّهِ ﷺ ذَاتَ يَوْمٍ إِذْ طَلَعَ عَلَيْنَا رَجُلٌ شَدِيدُ بَيَاضِ الثِّيَابِ شَدِيدُ سَوَادِ الشَّعَرِ لَا يُرَى عَلَيْهِ أَثَرُ السَّفَرِ وَلَا يَعْرِفُهُ مِنَّا أَحَدٌ حَتَّى جَلَسَ إِلَى النَّبِيِّ ﷺ فَأَسْنَدَ رُكْبَتَيْهِ إِلَى رُكْبَتَيْهِ وَوَضَعَ كَفَّيْهِ عَلَى فَخِذَيْهِ وَقَالَ: يَا مُحَمَّدُ أَخْبِرْنِي عَنِ الْإِسْلَامِ فَقَالَ رَسُولُ اللَّهِ ﷺ: الْإِسْلَامُ أَنْ تَشْهَدَ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَنَّ مُحَمَّدًا رَسُولُ اللَّهِ وَتُقِيمَ الصَّلَاةَ وَتُؤْتِيَ الزَّكَاةَ وَتَصُومَ رَمَضَانَ وَتَحُجَّ الْبَيْتَ إِنِ اسْتَطَعْتَ إِلَيْهِ سَبِيلًا قَالَ: صَدَقْتَ فَعَجِبْنَا لَهُ يَسْأَلُهُ وَيُصَدِّقُهُ ثُمَّ قَالَ: أَخْبِرْنِي عَنِ الْإِيمَانِ قَالَ: الْإِيمَانُ أَنْ تُؤْمِنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ وَالْيَوْمِ الْآخِرِ وَتُؤْمِنَ بِالْقَدَرِ خَيْرِهِ وَشَرِّهِ قَالَ: صَدَقْتَ ثُمَّ قَالَ: أَخْبِرْنِي عَنِ الْإِحْسَانِ قَالَ: الْإِحْسَانُ أَنْ تَعْبُدَ اللَّهَ كَأَنَّكَ تَرَاهُ فَإِنْ لَمْ تَكُنْ تَرَاهُ فَإِنَّهُ يَرَاكَ
+                      الْإِسْلَامُ أَنْ تَشْهَدَ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَنَّ مُحَمَّدًا رَسُولُ اللَّهِ وَتُقِيمَ الصَّلَاةَ وَتُؤْتِيَ الزَّكَاةَ وَتَصُومَ رَمَضَانَ وَتَحُجَّ الْبَيْتَ إِنِ اسْتَطَعْتَ إِلَيْهِ سَبِيلًا
                     </p>
                   </div>
                   <div className="space-y-2">
                     <p className="font-urdu text-sm text-gray-600 urdu-text leading-relaxed">
-                      حضرت عمر رضی اللہ عنہ سے روایت ہے کہ ایک دن ہم رسول اللہ ﷺ کے پاس بیٹھے تھے کہ اچانک ایک شخص ہمارے پاس آیا جس کے کپڑے بہت سفید تھے اور بال بہت سیاہ تھے، سفر کا کوئی نشان اس پر نہیں تھا اور ہم میں سے کوئی اسے نہیں جانتا تھا یہاں تک کہ وہ نبی ﷺ کے پاس بیٹھ گیا اور اپنے گھٹنے آپ کے گھٹنے سے ملا دیے اور اپنے ہاتھ اپنی رانوں پر رکھے اور کہا: اے محمد! مجھے اسلام کے بارے میں بتائیے۔ رسول اللہ ﷺ نے فرمایا: اسلام یہ ہے کہ تم گواہی دو کہ اللہ کے سوا کوئی معبود نہیں اور محمد ﷺ اللہ کے رسول ہیں اور نماز قائم کرو اور زکٰوۃ دو اور رمضان کے روزے رکھو اور بیت اللہ کا حج کرو اگر تمہارے لیے اس کی طاقت ہو۔ اس نے کہا: آپ نے سچ کہا۔ ہمیں تعجب ہوا کہ وہ پوچھتا ہے اور تصدیق بھی کرتا ہے۔ پھر اس نے کہا: مجھے ایمان کے بارے میں بتائیے۔ آپ نے فرمایا: ایمان یہ ہے کہ تم اللہ پر اور اس کے فرشتوں پر اور اس کی کتابوں پر اور اس کے رسولوں پر اور آخرت کے دن پر ایمان لاؤ اور تقدیر پر ایمان لاؤ خیر اور شر کی۔ اس نے کہا: آپ نے سچ کہا۔ پھر اس نے کہا: مجھے احسان کے بارے میں بتائیے۔ آپ نے فرمایا: احسان یہ ہے کہ تم اللہ کی عبادت اس طرح کرو گویا تم اسے دیکھ رہے ہو، اگر تم اسے نہیں دیکھتے تو وہ تمہیں دیکھتا ہے۔
+                      اسلام یہ ہے کہ تم گواہی دو کہ اللہ کے سوا کوئی معبود نہیں اور محمد ﷺ اللہ کے رسول ہیں اور نماز قائم کرو اور زکٰوۃ دو اور رمضان کے روزے رکھو اور بیت اللہ کا حج کرو اگر تمہارے لیے اس کی طاقت ہو۔
+                    </p>
+                    <p className="text-xs italic text-gray-500 mt-2">
+                      Islam is to testify that there is no deity except Allah and that Muhammad is the Messenger of Allah, to establish prayer, to give charity, to fast in Ramadan, and to perform pilgrimage to the House if you are able to do so.
                     </p>
                   </div>
                 </div>
 
-                {/* Three Parts */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {/* Islam */}
-                  <div className="bg-blue-50 border-r-4 border-blue-500 p-4 rounded-lg">
-                    <h3 className="text-lg font-bold text-blue-800 mb-2 font-urdu urdu-text">اسلام</h3>
-                    <p className="text-sm text-blue-700 mb-2">Islam</p>
-                    <ul className="text-xs text-blue-600 space-y-1">
-                      <li>• شہادت (Testimony of Faith)</li>
-                      <li>• نماز (Prayer)</li>
-                      <li>• زکٰوۃ (Charity)</li>
-                      <li>• روزہ (Fasting)</li>
-                      <li>• حج (Pilgrimage)</li>
-                    </ul>
+                {/* Five Pillars */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                  <div className="bg-blue-100 border border-blue-300 p-4 rounded-lg text-center">
+                    <div className="text-2xl mb-2">🕌</div>
+                    <h3 className="font-bold text-blue-800 mb-1 font-urdu urdu-text">شہادت</h3>
+                    <p className="text-sm text-blue-700">Testimony of Faith</p>
                   </div>
+                  <div className="bg-blue-100 border border-blue-300 p-4 rounded-lg text-center">
+                    <div className="text-2xl mb-2">🙏</div>
+                    <h3 className="font-bold text-blue-800 mb-1 font-urdu urdu-text">نماز</h3>
+                    <p className="text-sm text-blue-700">Prayer</p>
+                  </div>
+                  <div className="bg-blue-100 border border-blue-300 p-4 rounded-lg text-center">
+                    <div className="text-2xl mb-2">💝</div>
+                    <h3 className="font-bold text-blue-800 mb-1 font-urdu urdu-text">زکٰوۃ</h3>
+                    <p className="text-sm text-blue-700">Charity</p>
+                  </div>
+                  <div className="bg-blue-100 border border-blue-300 p-4 rounded-lg text-center">
+                    <div className="text-2xl mb-2">🌙</div>
+                    <h3 className="font-bold text-blue-800 mb-1 font-urdu urdu-text">روزہ</h3>
+                    <p className="text-sm text-blue-700">Fasting</p>
+                  </div>
+                  <div className="bg-blue-100 border border-blue-300 p-4 rounded-lg text-center">
+                    <div className="text-2xl mb-2">🕋</div>
+                    <h3 className="font-bold text-blue-800 mb-1 font-urdu urdu-text">حج</h3>
+                    <p className="text-sm text-blue-700">Pilgrimage</p>
+                  </div>
+                </div>
 
-                  {/* Iman */}
-                  <div className="bg-green-50 border-r-4 border-green-500 p-4 rounded-lg">
-                    <h3 className="text-lg font-bold text-green-800 mb-2 font-urdu urdu-text">ایمان</h3>
-                    <p className="text-sm text-green-700 mb-2">Iman (Faith)</p>
-                    <ul className="text-xs text-green-600 space-y-1">
-                      <li>• اللہ پر ایمان (Belief in Allah)</li>
-                      <li>• فرشتوں پر ایمان (Belief in Angels)</li>
-                      <li>• کتابوں پر ایمان (Belief in Books)</li>
-                      <li>• رسولوں پر ایمان (Belief in Messengers)</li>
-                      <li>• آخرت پر ایمان (Belief in Hereafter)</li>
-                      <li>• تقدیر پر ایمان (Belief in Divine Decree)</li>
-                    </ul>
+                {/* Quranic Reference */}
+                <div className="bg-blue-50 border-r-4 border-blue-500 p-4 rounded-lg">
+                  <h3 className="text-lg font-semibold text-blue-800 mb-3 flex items-center gap-2">
+                    <span className="text-blue-600">📖</span>
+                    <span className="font-urdu urdu-text">قرآنی حوالہ</span>
+                  </h3>
+                  <div className="text-right mb-3">
+                    <p className="quranic-ayah">
+                      إِنَّ الدِّينَ عِندَ اللَّهِ الْإِسْلَامُ
+                    </p>
                   </div>
+                  <p className="font-urdu text-sm text-gray-600 urdu-text leading-relaxed">
+                    بےشک اللہ کے نزدیک دین اسلام ہے۔
+                  </p>
+                  <p className="text-xs italic text-gray-500 mt-2">
+                    "Indeed, the religion in the sight of Allah is Islam." (Quran 3:19)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
 
-                  {/* Ihsan */}
-                  <div className="bg-purple-50 border-r-4 border-purple-500 p-4 rounded-lg">
-                    <h3 className="text-lg font-bold text-purple-800 mb-2 font-urdu urdu-text">احسان</h3>
-                    <p className="text-sm text-purple-700 mb-2">Ihsan (Excellence)</p>
-                    <p className="text-xs text-purple-600">
-                      اللہ کی عبادت اس طرح کرو گویا تم اسے دیکھ رہے ہو، اگر تم اسے نہیں دیکھتے تو وہ تمہیں دیکھتا ہے۔
-                    </p>
-                    <p className="text-xs text-purple-600 mt-2">
-                      Worship Allah as if you see Him, and if you do not see Him, then He sees you.
+      {/* Iman Popup */}
+      {showImanPopup && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          onClick={() => setShowImanPopup(false)}
+        >
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.8, opacity: 0 }}
+            className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-6">
+              <div className="flex items-center justify-between">
+                <div className="text-center flex-1">
+                  <h2 className="text-2xl font-bold font-urdu urdu-title mb-2">
+                    ایمان
+                  </h2>
+                  <p className="text-lg opacity-90">Iman (Faith)</p>
+                </div>
+                <button
+                  onClick={() => setShowImanPopup(false)}
+                  className="p-2 hover:bg-white/20 rounded-full transition-colors"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
+              <div className="space-y-6">
+                {/* Hadith Text */}
+                <div className="bg-green-50 border-r-4 border-green-500 p-4 rounded-lg">
+                  <div className="text-right mb-3">
+                    <p className="quranic-hadith">
+                      الْإِيمَانُ أَنْ تُؤْمِنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ وَالْيَوْمِ الْآخِرِ وَتُؤْمِنَ بِالْقَدَرِ خَيْرِهِ وَشَرِّهِ
                     </p>
                   </div>
+                  <div className="space-y-2">
+                    <p className="font-urdu text-sm text-gray-600 urdu-text leading-relaxed">
+                      ایمان یہ ہے کہ تم اللہ پر اور اس کے فرشتوں پر اور اس کی کتابوں پر اور اس کے رسولوں پر اور آخرت کے دن پر ایمان لاؤ اور تقدیر پر ایمان لاؤ خیر اور شر کی۔
+                    </p>
+                    <p className="text-xs italic text-gray-500 mt-2">
+                      Iman is to believe in Allah, His angels, His books, His messengers, the Last Day, and to believe in divine decree, both good and evil.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Six Pillars of Iman */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="bg-green-100 border border-green-300 p-4 rounded-lg text-center">
+                    <div className="text-2xl mb-2">☝️</div>
+                    <h3 className="font-bold text-green-800 mb-1 font-urdu urdu-text">اللہ پر ایمان</h3>
+                    <p className="text-sm text-green-700">Belief in Allah</p>
+                  </div>
+                  <div className="bg-green-100 border border-green-300 p-4 rounded-lg text-center">
+                    <div className="text-2xl mb-2">👼</div>
+                    <h3 className="font-bold text-green-800 mb-1 font-urdu urdu-text">فرشتوں پر ایمان</h3>
+                    <p className="text-sm text-green-700">Belief in Angels</p>
+                  </div>
+                  <div className="bg-green-100 border border-green-300 p-4 rounded-lg text-center">
+                    <div className="text-2xl mb-2">📚</div>
+                    <h3 className="font-bold text-green-800 mb-1 font-urdu urdu-text">کتابوں پر ایمان</h3>
+                    <p className="text-sm text-green-700">Belief in Books</p>
+                  </div>
+                  <div className="bg-green-100 border border-green-300 p-4 rounded-lg text-center">
+                    <div className="text-2xl mb-2">📨</div>
+                    <h3 className="font-bold text-green-800 mb-1 font-urdu urdu-text">رسولوں پر ایمان</h3>
+                    <p className="text-sm text-green-700">Belief in Messengers</p>
+                  </div>
+                  <div className="bg-green-100 border border-green-300 p-4 rounded-lg text-center">
+                    <div className="text-2xl mb-2">⏰</div>
+                    <h3 className="font-bold text-green-800 mb-1 font-urdu urdu-text">آخرت پر ایمان</h3>
+                    <p className="text-sm text-green-700">Belief in Hereafter</p>
+                  </div>
+                  <div className="bg-green-100 border border-green-300 p-4 rounded-lg text-center">
+                    <div className="text-2xl mb-2">📋</div>
+                    <h3 className="font-bold text-green-800 mb-1 font-urdu urdu-text">تقدیر پر ایمان</h3>
+                    <p className="text-sm text-green-700">Belief in Divine Decree</p>
+                  </div>
+                </div>
+
+                {/* Quranic Reference */}
+                <div className="bg-green-50 border-r-4 border-green-500 p-4 rounded-lg">
+                  <h3 className="text-lg font-semibold text-green-800 mb-3 flex items-center gap-2">
+                    <span className="text-green-600">📖</span>
+                    <span className="font-urdu urdu-text">قرآنی حوالہ</span>
+                  </h3>
+                  <div className="text-right mb-3">
+                    <p className="quranic-ayah">
+                      آمَنَ الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ مِن رَّبِّهِ وَالْمُؤْمِنُونَ ۚ كُلٌّ آمَنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ
+                    </p>
+                  </div>
+                  <p className="font-urdu text-sm text-gray-600 urdu-text leading-relaxed">
+                    رسول ایمان لائے اس چیز پر جو ان کی طرف ان کے رب سے نازل ہوئی اور مومن بھی۔ سب نے اللہ پر اور اس کے فرشتوں پر اور اس کی کتابوں پر اور اس کے رسولوں پر ایمان لایا۔
+                  </p>
+                  <p className="text-xs italic text-gray-500 mt-2">
+                    "The Messenger has believed in what was revealed to him from his Lord, and [so have] the believers. All of them have believed in Allah and His angels and His books and His messengers." (Quran 2:285)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+
+      {/* Ihsan Popup */}
+      {showIhsanPopup && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          onClick={() => setShowIhsanPopup(false)}
+        >
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.8, opacity: 0 }}
+            className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="bg-gradient-to-r from-orange-600 to-orange-700 text-white p-6">
+              <div className="flex items-center justify-between">
+                <div className="text-center flex-1">
+                  <h2 className="text-2xl font-bold font-urdu urdu-title mb-2">
+                    احسان
+                  </h2>
+                  <p className="text-lg opacity-90">Ihsan (Excellence)</p>
+                </div>
+                <button
+                  onClick={() => setShowIhsanPopup(false)}
+                  className="p-2 hover:bg-white/20 rounded-full transition-colors"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
+              <div className="space-y-6">
+                {/* Hadith Text */}
+                <div className="bg-orange-50 border-r-4 border-orange-500 p-4 rounded-lg">
+                  <div className="text-right mb-3">
+                    <p className="quranic-hadith">
+                      الْإِحْسَانُ أَنْ تَعْبُدَ اللَّهَ كَأَنَّكَ تَرَاهُ فَإِنْ لَمْ تَكُنْ تَرَاهُ فَإِنَّهُ يَرَاكَ
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <p className="font-urdu text-sm text-gray-600 urdu-text leading-relaxed">
+                      احسان یہ ہے کہ تم اللہ کی عبادت اس طرح کرو گویا تم اسے دیکھ رہے ہو، اگر تم اسے نہیں دیکھتے تو وہ تمہیں دیکھتا ہے۔
+                    </p>
+                    <p className="text-xs italic text-gray-500 mt-2">
+                      Ihsan is to worship Allah as if you see Him, and if you do not see Him, then He sees you.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Ihsan Explanation */}
+                <div className="bg-orange-100 border border-orange-300 p-6 rounded-lg">
+                  <h3 className="text-lg font-bold text-orange-800 mb-4 font-urdu urdu-text text-center">
+                    احسان کی تعریف و تشریح
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-bold text-orange-700 mb-2 font-urdu urdu-text">پہلا درجہ</h4>
+                      <p className="text-sm text-orange-600 font-urdu urdu-text">
+                        اللہ کی عبادت اس طرح کرو گویا تم اسے دیکھ رہے ہو۔ یہ اعلیٰ ترین درجہ ہے جہاں انسان کو اللہ کی حضوری کا احساس ہوتا ہے۔
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-orange-700 mb-2 font-urdu urdu-text">دوسرا درجہ</h4>
+                      <p className="text-sm text-orange-600 font-urdu urdu-text">
+                        اگر تم اسے نہیں دیکھتے تو وہ تمہیں دیکھتا ہے۔ یہ وہ درجہ ہے جہاں انسان کو اللہ کی نگرانی کا احساس ہوتا ہے۔
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Quranic Reference */}
+                <div className="bg-orange-50 border-r-4 border-orange-500 p-4 rounded-lg">
+                  <h3 className="text-lg font-semibold text-orange-800 mb-3 flex items-center gap-2">
+                    <span className="text-orange-600">📖</span>
+                    <span className="font-urdu urdu-text">قرآنی حوالہ</span>
+                  </h3>
+                  <div className="text-right mb-3">
+                    <p className="quranic-ayah">
+                      إِنَّ اللَّهَ مَعَ الصَّابِرِينَ
+                    </p>
+                  </div>
+                  <p className="font-urdu text-sm text-gray-600 urdu-text leading-relaxed">
+                    بےشک اللہ صبر کرنے والوں کے ساتھ ہے۔
+                  </p>
+                  <p className="text-xs italic text-gray-500 mt-2">
+                    "Indeed, Allah is with the patient." (Quran 2:153)
+                  </p>
+                </div>
+
+                {/* Additional Hadith */}
+                <div className="bg-orange-50 border-r-4 border-orange-500 p-4 rounded-lg">
+                  <h3 className="text-lg font-semibold text-orange-800 mb-3 flex items-center gap-2">
+                    <span className="text-orange-600">🕌</span>
+                    <span className="font-urdu urdu-text">حدیث شریف</span>
+                  </h3>
+                  <div className="text-right mb-3">
+                    <p className="quranic-hadith">
+                      إِنَّ اللَّهَ كَتَبَ الْإِحْسَانَ عَلَى كُلِّ شَيْءٍ
+                    </p>
+                  </div>
+                  <p className="font-urdu text-sm text-gray-600 urdu-text leading-relaxed">
+                    بےشک اللہ نے ہر چیز پر احسان لکھ دیا ہے۔
+                  </p>
+                  <p className="text-xs italic text-gray-500 mt-2">
+                    "Indeed, Allah has prescribed excellence (ihsan) in everything." (Muslim)
+                  </p>
                 </div>
               </div>
             </div>
