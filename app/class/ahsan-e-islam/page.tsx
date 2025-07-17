@@ -40,7 +40,9 @@ const chartData: ChartItem[] = [
         description: 'Acts of Worship (Ibadat) which are Rights of Allah (Huqooq Allah), meaning conscious observance of performing obligations (Faraiz) and duties (Wajibat) and abstaining from forbidden (Haram) and disliked (Makroohaat) things.',
         urduDescription: 'عبادات (حقوق اللہ) - اللہ کے حقوق کی ادائیگی، جس میں فرائض و واجبات کی شعوری پابندی اور حرام و مکروہات سے اجتناب شامل ہے۔',
         ayah: `وَمَا خَلَقْتُ الْجِنَّ وَالْإِنسَ إِلَّا لِيَعْبُدُونِ - "And I did not create the jinn and mankind except to worship Me." (Quran 51:56)`,
+        ayahUrdu: 'اور میں نے جنات اور انسانوں کو صرف اپنی عبادت کے لیے پیدا کیا ہے۔',
         hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّ اللَّهَ قَالَ: مَنْ عَادَى لِي وَلِيًّا فَقَدْ آذَنْتُهُ بِالْحَرْبِ، وَمَا تَقَرَّبَ إِلَيَّ عَبْدِي بِشَيْءٍ أَحَبَّ إِلَيَّ مِمَّا افْتَرَضْتُ عَلَيْهِ" - "Allah said: 'Whoever shows enmity to a friend of Mine, I will declare war against him. My servant does not draw near to Me with anything more beloved to Me than the religious duties I have obligated upon him.'" (Bukhari)`,
+        hadeesUrdu: 'اللہ تعالیٰ فرماتا ہے: "جس نے میرے کسی دوست سے دشمنی کی، میں اس کے خلاف اعلانِ جنگ کرتا ہوں۔ اور میرا بندہ جن چیزوں کے ذریعے میرا قرب چاہتا ہے، ان میں سب سے زیادہ پسندیدہ وہ ہیں جو میں نے اس پر فرض کی ہیں۔"',
         color: 'bg-blue-400',
         children: [
           {
@@ -49,7 +51,9 @@ const chartData: ChartItem[] = [
             urduTitle: 'فرائض و واجبات کی ادائیگی',
             description: 'Conscious observance of performing obligations (Faraiz) and duties (Wajibat) as prescribed by Islamic law. This includes daily prayers, fasting, zakat, and other mandatory religious practices.',
             ayah: `حَافِظُوا عَلَى الصَّلَوَاتِ وَالصَّلَاةِ الْوُسْطَىٰ وَقُومُوا لِلَّهِ قَانِتِينَ - "Maintain with care the [obligatory] prayers and [in particular] the middle prayer and stand before Allah, devoutly obedient." (Quran 2:238)`,
+            ayahUrdu: 'نمازوں کی حفاظت کرو اور درمیانی نماز کی بھی اور اللہ کے لیے عاجزی کے ساتھ کھڑے ہو۔',
             hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّ أَوَّلَ مَا يُحَاسَبُ بِهِ الْعَبْدُ يَوْمَ الْقِيَامَةِ مِنْ عَمَلِهِ صَلَاتُهُ، فَإِنْ صَلُحَتْ فَقَدْ أَفْلَحَ وَأَنْجَحَ، وَإِنْ فَسَدَتْ فَقَدْ خَابَ وَخَسِرَ" - "The first thing for which a person will be brought to account on the Day of Resurrection will be his prayer. If it is complete, he will be successful and prosper, and if it is incomplete, he will fail and lose." (Abu Dawud, Tirmidhi)`,
+            hadeesUrdu: 'بےشک قیامت کے دن بندے کے اعمال میں سب سے پہلے اس کی نماز کا حساب لیا جائے گا۔ اگر وہ درست ہوئی تو وہ کامیاب اور کامران ہوگا، اور اگر خراب ہوئی تو وہ ناکام اور خسارے میں رہے گا۔',
             color: 'bg-blue-300'
           },
           {
@@ -58,7 +62,9 @@ const chartData: ChartItem[] = [
             urduTitle: 'حرام و مکروہات سے اجتناب',
             description: 'Conscious abstention from forbidden (Haram) and disliked (Makroohaat) things as defined by Islamic law. This includes avoiding prohibited foods, actions, and behaviors.',
             ayah: `وَلَا تَقْرَبُوا الْفَوَاحِشَ مَا ظَهَرَ مِنْهَا وَمَا بَطَنَ - "And do not approach immoralities - what is apparent of them and what is concealed." (Quran 6:151)`,
+            ayahUrdu: 'اور بےحیائی کے کاموں کے قریب نہ جاؤ، خواہ وہ ظاہر ہوں یا پوشیدہ۔',
             hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّ اللَّهَ حَرَّمَ الْخَمْرَ وَثَمَنَهَا، وَحَرَّمَ الْمَيْتَةَ وَثَمَنَهَا، وَحَرَّمَ الْخِنْزِيرَ وَثَمَنَهُ" - "Allah has forbidden wine and its price, dead meat and its price, and pork and its price." (Abu Dawud)`,
+            hadeesUrdu: 'بےشک اللہ نے شراب اور اس کی قیمت کو حرام کیا ہے، اور مردار اور اس کی قیمت کو حرام کیا ہے، اور سور اور اس کی قیمت کو حرام کیا ہے۔',
             color: 'bg-blue-300'
           }
         ]
@@ -70,7 +76,9 @@ const chartData: ChartItem[] = [
         description: 'Dealings/Transactions (Muamalat) which are simultaneously Limits of Allah (Hudood Allah) and Rights of Servants (Huqooq ul Ibad). This includes proper social conduct, financial dealings, and interpersonal relationships.',
         urduDescription: 'معاملات (حقوق العباد) - اللہ کی حدود اور بندوں کے حقوق، جس میں سماجی تعلقات، مالی معاملات اور انسانی روابط شامل ہیں۔',
         ayah: `إِنَّ اللَّهَ يَأْمُرُ بِالْعَدْلِ وَالْإِحْسَانِ وَإِيتَاءِ ذِي الْقُرْبَىٰ وَيَنْهَىٰ عَنِ الْفَحْشَاءِ وَالْمُنكَرِ وَالْبَغْيِ ۚ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ - "Indeed, Allah orders justice and good conduct and giving to relatives and forbids immorality and bad conduct and oppression. He admonishes you that perhaps you will be reminded." (Quran 16:90)`,
+        ayahUrdu: 'بےشک اللہ عدل اور احسان کا حکم دیتا ہے اور رشتہ داروں کو دینے کا، اور بےحیائی اور برے کام اور سرکشی سے منع کرتا ہے۔ وہ تمہیں نصیحت کرتا ہے تاکہ تم یاد رکھو۔',
         hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "مَنْ كَانَتْ لَهُ مَظْلَمَةٌ لِأَخِيهِ مِنْ عِرْضِهِ أَوْ شَيْءٍ فَلْيَتَحَلَّلْهُ مِنْهُ الْيَوْمَ قَبْلَ أَنْ لَا يَكُونَ دِينَارٌ وَلَا دِرْهَمٌ" - "Whoever has wronged his brother with regard to his honor or anything else, let him seek his forgiveness today, before there will be no dinar or dirham." (Bukhari)`,
+        hadeesUrdu: 'جس کے پاس اپنے بھائی کی طرف سے کوئی ظلم ہو، خواہ اس کی عزت کا ہو یا کسی اور چیز کا، تو آج ہی اس سے معافی مانگ لے، اس سے پہلے کہ نہ دینار ہوں گے نہ درہم۔',
         color: 'bg-blue-400',
         children: [
           {
@@ -79,7 +87,9 @@ const chartData: ChartItem[] = [
             urduTitle: 'معاش میں حلال و طیب پر اکتفا',
             description: 'Regarding one\'s livelihood, to be content and suffice with what is lawful (Halal) and pure (Tayyib). This ensures that one\'s income and sustenance come from permissible sources.',
                     ayah: `يَا أَيُّهَا النَّاسُ كُلُوا مِمَّا فِي الْأَرْضِ حَلَالًا طَيِّبًا وَلَا تَتَّبِعُوا خُطُوَاتِ الشَّيْطَانِ ۚ إِنَّهُ لَكُمْ عَدُوٌّ مُّبِينٌ - "O mankind, eat from whatever is on earth [that is] lawful and good and do not follow the footsteps of Satan. Indeed, he is to you a clear enemy." (Quran 2:168)`,
+            ayahUrdu: 'اے لوگو! زمین میں جو حلال اور پاک چیزیں ہیں ان میں سے کھاؤ اور شیطان کے قدموں کی پیروی نہ کرو۔ بےشک وہ تمہارا کھلا دشمن ہے۔',
         hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّ اللَّهَ طَيِّبٌ لَا يَقْبَلُ إِلَّا طَيِّبًا، وَإِنَّ اللَّهَ أَمَرَ الْمُؤْمِنِينَ بِمَا أَمَرَ بِهِ الْمُرْسَلِينَ" - "Allah is pure and accepts only what is pure. Allah has commanded the believers to do what He commanded the messengers." (Muslim)`,
+            hadeesUrdu: 'بےشک اللہ پاک ہے اور صرف پاک چیز ہی قبول کرتا ہے۔ اور بےشک اللہ نے مومنین کو وہی حکم دیا ہے جو اس نے رسولوں کو دیا ہے۔',
             color: 'bg-blue-300'
           },
           {
@@ -87,6 +97,11 @@ const chartData: ChartItem[] = [
             title: 'Islamic Veil in Social Interaction',
             urduTitle: 'معاشرت میں شرعی پرده',
             description: 'In the context of one\'s social life, observing Islamic veil (Shar\'i Pardah) outside and at home, and abstaining from non-mahram (unrelated individuals) and mixed gatherings.',
+            urduDescription: 'معاشرتی زندگی میں شرعی پردہ کا اہتمام، گھر سے باہر اور گھر کے اندر، اور غیر محرم اور مخلوط محافل سے اجتناب۔',
+            ayah: `يَا أَيُّهَا النَّبِيُّ قُل لِّأَزْوَاجِكَ وَبَنَاتِكَ وَنِسَاءِ الْمُؤْمِنِينَ يُدْنِينَ عَلَيْهِنَّ مِن جَلَابِيبِهِنَّ ۚ ذَٰلِكَ أَدْنَىٰ أَن يُعْرَفْنَ فَلَا يُؤْذَيْنَ ۗ وَكَانَ اللَّهُ غَفُورًا رَّحِيمًا - "O Prophet, tell your wives and your daughters and the women of the believers to bring down over themselves [part] of their outer garments. That is more suitable that they will be known and not be abused. And ever is Allah Forgiving and Merciful." (Quran 33:59)`,
+            ayahUrdu: 'اے نبی! اپنی بیویوں اور اپنی بیٹیوں اور مومنوں کی عورتوں سے کہہ دو کہ وہ اپنی چادروں میں سے اپنے اوپر لٹکا لیا کریں۔ یہ زیادہ مناسب ہے تاکہ وہ پہچانی جائیں اور ستائی نہ جائیں۔ اور اللہ بخشنے والا رحم کرنے والا ہے۔',
+            hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّ الْمَرْأَةَ عَوْرَةٌ، فَإِذَا خَرَجَتِ اسْتَشْرَفَهَا الشَّيْطَانُ" - "Indeed, a woman is a private part. When she goes out, Satan makes her look attractive." (Tirmidhi)`,
+            hadeesUrdu: 'بےشک عورت پردہ ہے، جب وہ باہر نکلتی ہے تو شیطان اسے دیکھتا ہے۔',
             color: 'bg-blue-300'
           },
           {
@@ -94,8 +109,11 @@ const chartData: ChartItem[] = [
             title: 'Service to Creation',
             urduTitle: 'خدمت خلق',
             description: 'In one\'s life, regarding mutual dealings, giving special attention to fulfilling rights (Adaigi Huqooq), fulfilling promises (Eifa-e-Ahad), returning trusts (Ada-e-Amanat), and serving creation (Khidmat-e-Khalq).',
+            urduDescription: 'زندگی میں باہمی معاملات میں حقوق کی ادائیگی، وعدوں کی وفا، امانتوں کی واپسی اور خلق کی خدمت پر خصوصی توجہ دینا۔',
                     ayah: `إِنَّ اللَّهَ يَأْمُرُكُمْ أَن تُؤَدُّوا الْأَمَانَاتِ إِلَىٰ أَهْلِهَا وَإِذَا حَكَمْتُم بَيْنَ النَّاسِ أَن تَحْكُمُوا بِالْعَدْلِ - "Indeed, Allah commands you to render trusts to whom they are due and when you judge between people to judge with justice." (Quran 4:58)`,
+            ayahUrdu: 'بےشک اللہ تمہیں حکم دیتا ہے کہ امانتیں ان کے اہل کو پہنچاؤ اور جب تم لوگوں کے درمیان فیصلہ کرو تو عدل کے ساتھ فیصلہ کرو۔',
         hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "مَنْ كَانَتْ لَهُ مَظْلَمَةٌ لِأَخِيهِ مِنْ عِرْضِهِ أَوْ شَيْءٍ فَلْيَتَحَلَّلْهُ مِنْهُ الْيَوْمَ قَبْلَ أَنْ لَا يَكُونَ دِينَارٌ وَلَا دِرْهَمٌ" - "Whoever has wronged his brother with regard to his honor or anything else, let him seek his forgiveness today, before there will be no dinar or dirham." (Bukhari)`,
+            hadeesUrdu: 'جس کے پاس اپنے بھائی کی طرف سے کوئی ظلم ہو، خواہ اس کی عزت کا ہو یا کسی اور چیز کا، تو آج ہی اس سے معافی مانگ لے، اس سے پہلے کہ نہ دینار ہوں گے نہ درہم۔',
             color: 'bg-blue-300'
           }
         ]
