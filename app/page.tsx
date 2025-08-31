@@ -428,6 +428,51 @@ export default function Home() {
               </Link>
             </motion.div>
 
+            {/* Urdu Comprehensive Duty Class */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.85 }}
+              whileHover={{ scale: 1.05, y: -10 }}
+              className="bg-gradient-to-br from-yellow-700/80 to-emerald-800/80 backdrop-blur-sm rounded-2xl p-6 border border-yellow-500/30 hover:border-yellow-500/60 transition-all duration-300"
+            >
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-500 to-emerald-400 flex items-center justify-center text-white mb-4 mx-auto">
+                <BookOpen className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-white font-urdu" dir="rtl">
+                دینی فرض کا جامع تصور
+              </h3>
+              <p className="mb-4 text-gray-300 font-urdu" dir="rtl">جامع اسلامی فریضہ کورس (اردو)</p>
+              <div className="flex items-center justify-between mb-4">
+                <span className="font-semibold text-yellow-400 font-urdu">خصوصی</span>
+                <ArrowRight className="w-5 h-5 text-yellow-400" />
+              </div>
+              <div className="space-y-3 mb-4 font-urdu" dir="rtl">
+                <div className="flex items-center text-sm text-gray-300">
+                  <div className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></div>
+                  عبادات
+                </div>
+                <div className="flex items-center text-sm text-gray-300">
+                  <div className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></div>
+                  اطاعت
+                </div>
+                <div className="flex items-center text-sm text-gray-300">
+                  <div className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></div>
+                  تقویٰ
+                </div>
+                <div className="flex items-center text-sm text-gray-300">
+                  <div className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></div>
+                  شہادت علی الناس
+                </div>
+              </div>
+              <p className="mb-4 text-gray-300 font-urdu" dir="rtl">اسلامی فریضہ کا مکمل تصور، اردو میں</p>
+              <Link href="/class/comprehensive-duty" className="block">
+                <button className="w-full bg-gradient-to-r from-yellow-500 to-emerald-500 text-black font-bold py-2 px-4 rounded-lg hover:from-yellow-400 hover:to-emerald-400 transition-all text-sm font-urdu">
+                  کلاس شروع کریں
+                </button>
+              </Link>
+            </motion.div>
+
             {/* Coming Soon Special Class */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}

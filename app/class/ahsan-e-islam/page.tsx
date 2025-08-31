@@ -695,17 +695,98 @@ export default function AhsanEIslamPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50" dir="rtl" style={{ direction: 'rtl' }}>
       <style jsx>{`
-        .urdu-text {
-          line-height: 2;
-          margin-bottom: 0.5rem;
+        * {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
         }
-        .urdu-title {
+        
+        .urdu-text {
           line-height: 2.2;
           margin-bottom: 0.75rem;
+          font-size: 1.1rem;
+          font-weight: 500;
+          font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Alvi Nastaleeq', serif;
+        }
+        .urdu-title {
+          line-height: 2.4;
+          margin-bottom: 1rem;
+          font-size: 1.3rem;
+          font-weight: 600;
+          font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Alvi Nastaleeq', serif;
         }
         .urdu-description {
-          line-height: 2.1;
-          margin-bottom: 1rem;
+          line-height: 2.2;
+          margin-bottom: 1.2rem;
+          font-size: 1.05rem;
+          font-weight: 400;
+          font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Alvi Nastaleeq', serif;
+        }
+        
+        .quranic-ayah {
+          font-family: 'Amiri', 'Scheherazade', 'Noto Naskh Arabic', serif;
+          font-size: 1.4rem;
+          line-height: 2.5;
+          font-weight: 500;
+        }
+        
+        .quranic-hadith {
+          font-family: 'Amiri', 'Scheherazade', 'Noto Naskh Arabic', serif;
+          font-size: 1.3rem;
+          line-height: 2.4;
+          font-weight: 500;
+        }
+        
+        .font-urdu {
+          font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Alvi Nastaleeq', serif;
+        }
+        
+        /* Increase base font sizes for better readability */
+        body {
+          font-size: 16px;
+          line-height: 1.6;
+        }
+        
+        h1 {
+          font-size: 2.5rem;
+          line-height: 1.2;
+        }
+        
+        h2 {
+          font-size: 2rem;
+          line-height: 1.3;
+        }
+        
+        h3 {
+          font-size: 1.5rem;
+          line-height: 1.4;
+        }
+        
+        p {
+          font-size: 1.1rem;
+          line-height: 1.6;
+        }
+        
+        .text-sm {
+          font-size: 1rem !important;
+        }
+        
+        .text-base {
+          font-size: 1.1rem !important;
+        }
+        
+        .text-lg {
+          font-size: 1.25rem !important;
+        }
+        
+        .text-xl {
+          font-size: 1.5rem !important;
+        }
+        
+        .text-2xl {
+          font-size: 1.75rem !important;
+        }
+        
+        .text-4xl {
+          font-size: 2.5rem !important;
         }
       `}</style>
       {/* Header */}
