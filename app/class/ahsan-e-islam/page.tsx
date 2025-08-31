@@ -813,7 +813,7 @@ export default function AhsanEIslamPage() {
 
         /* Custom scrollbar for modals */
         .modal-scroll::-webkit-scrollbar {
-          width: 8px;
+          width: 10px;
         }
         
         .modal-scroll::-webkit-scrollbar-track {
@@ -828,6 +828,12 @@ export default function AhsanEIslamPage() {
         
         .modal-scroll::-webkit-scrollbar-thumb:hover {
           background: #94a3b8;
+        }
+
+        /* Ensure modal content is fully scrollable */
+        .modal-content {
+          scroll-behavior: smooth;
+          scroll-padding-bottom: 20px;
         }
       `}</style>
       {/* Header */}
@@ -1086,7 +1092,7 @@ export default function AhsanEIslamPage() {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
-            className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[95vh] overflow-hidden"
+            className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[98vh] overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
@@ -1128,7 +1134,7 @@ export default function AhsanEIslamPage() {
             </div>
 
             {/* Content */}
-            <div className="p-6 overflow-y-auto max-h-[calc(95vh-120px)] modal-scroll">
+            <div className="p-6 pb-8 overflow-y-auto max-h-[calc(98vh-140px)] modal-scroll modal-content">
               {/* Breadcrumb Navigation */}
               {itemHistory.length > 1 && (
                 <div className="mb-6 p-3 bg-gray-50 rounded-lg border border-gray-200">
