@@ -858,12 +858,12 @@ export default function AhsanEIslamPage() {
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap justify-center gap-6 py-6">
             {[
+              { id: 'main', label: 'Individual Goals', urduLabel: 'انفرادی اہداف' },
               { id: 'oversight', label: 'Oversight System', urduLabel: 'نگرانی کا نظام' },
               { id: 'dawah', label: 'Dawah Objectives', urduLabel: 'دعوتی و تحریکی اہداف' },
               { id: 'curricular', label: 'Curricular Objectives', urduLabel: 'نصابی اہداف' },
               { id: 'avoidance', label: 'Avoidance Goals', urduLabel: 'پر ہیز کے اہداف' },
-              { id: 'daily', label: 'Daily Goals', urduLabel: 'روز مرہ کے اہداف' },
-              { id: 'main', label: 'Individual Goals', urduLabel: 'انفرادی اہداف' }
+              { id: 'daily', label: 'Daily Goals', urduLabel: 'روز مرہ کے اہداف' }
             ].map((section) => (
               <button
                 key={section.id}
