@@ -166,70 +166,7 @@ const chartData: ChartItem[] = [
     color: 'bg-purple-500',
     icon: <Target className="w-5 h-5" />,
     children: [
-      {
-        id: 'enjoin-good',
-        title: 'Enjoining Good',
-        urduTitle: 'امر بالمعروف',
-        description: 'Encouraging and promoting good deeds and righteous behavior among people.',
-        urduDescription: 'لوگوں میں نیک کاموں اور اچھے اعمال کی ترغیب اور فروغ۔',
-        ayah: `وَلْتَكُن مِّنكُمْ أُمَّةٌ يَدْعُونَ إِلَى الْخَيْرِ وَيَأْمُرُونَ بِالْمَعْرُوفِ وَيَنْهَوْنَ عَنِ الْمُنكَرِ ۚ وَأُولَٰئِكَ هُمُ الْمُفْلِحُونَ - "And let there be [arising] from you a nation inviting to [all that is] good, enjoining what is right and forbidding what is wrong, and those will be the successful." (Quran 3:104)`,
-        ayahUrdu: 'اور تم میں سے ایک جماعت ایسی ہونی چاہیے جو خیر کی طرف بلائے اور نیکی کا حکم دے اور برائی سے روکے، اور یہی لوگ کامیاب ہیں۔',
-        hadees: `عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "مَنْ رَأَى مِنْكُمْ مُنْكَرًا فَلْيُغَيِّرْهُ بِيَدِهِ، فَإِنْ لَمْ يَسْتَطِعْ فَبِلِسَانِهِ، فَإِنْ لَمْ يَسْتَطِعْ فَبِقَلْبِهِ، وَذَلِكَ أَضْعَفُ الْإِيمَانِ" - "Whoever among you sees an evil, let him change it with his hand; if he cannot, then with his tongue; if he cannot, then with his heart, and that is the weakest of faith." (Muslim)`,
-        hadeesUrdu: 'تم میں سے جو کوئی برائی دیکھے تو اسے اپنے ہاتھ سے بدل دے، اگر نہ کر سکے تو زبان سے، اگر نہ کر سکے تو دل سے، اور یہ ایمان کا کمزور ترین درجہ ہے۔',
-        color: 'bg-purple-400',
-        children: [
-          {
-            id: 'by-hand',
-            title: 'By Hand',
-            urduTitle: 'بالید',
-            color: 'bg-purple-300'
-          },
-          {
-            id: 'by-tongue',
-            title: 'By Tongue',
-            urduTitle: 'بالسان',
-            color: 'bg-purple-300'
-          },
-          {
-            id: 'by-heart',
-            title: 'By Heart',
-            urduTitle: 'بالقلب',
-            color: 'bg-purple-300'
-          }
-        ]
-      },
-      {
-        id: 'forbid-evil',
-        title: 'Forbidding Evil',
-        urduTitle: 'نهي عن المنكر',
-        description: 'Preventing and discouraging evil deeds and sinful behavior among people.',
-        urduDescription: 'لوگوں میں برے کاموں اور گناہ کے اعمال کو روکنا اور ان سے منع کرنا۔',
-        ayah: `كُنتُمْ خَيْرَ أُمَّةٍ أُخْرِجَتْ لِلنَّاسِ تَأْمُرُونَ بِالْمَعْرُوفِ وَتَنْهَوْنَ عَنِ الْمُنكَرِ وَتُؤْمِنُونَ بِاللَّهِ - "You are the best nation produced [as an example] for mankind. You enjoin what is right and forbid what is wrong and believe in Allah." (Quran 3:110)`,
-        ayahUrdu: 'تم بہترین امت ہو جو لوگوں کے لیے نکالی گئی ہے، تم نیکی کا حکم دیتے ہو اور برائی سے روکتے ہو اور اللہ پر ایمان رکھتے ہو۔',
-        hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "مَنْ دَعَا إِلَى هُدًى كَانَ لَهُ مِنَ الْأَجْرِ مِثْلُ أُجُورِ مَنْ تَبِعَهُ لَا يَنْقُصُ ذَلِكَ مِنْ أُجُورِهِمْ شَيْئًا" - "Whoever calls to guidance will have a reward similar to those who follow him, without that diminishing anything from their rewards." (Muslim)`,
-        hadeesUrdu: 'جو ہدایت کی طرف بلائے گا اس کے لیے اتنا ہی اجر ہے جتنا اس کے پیروکاروں کا، اس سے ان کے اجر میں کچھ کم نہیں ہوگا۔',
-        color: 'bg-purple-400',
-        children: [
-          {
-            id: 'forbid-by-hand',
-            title: 'By Hand',
-            urduTitle: 'بالید',
-            color: 'bg-purple-300'
-          },
-          {
-            id: 'forbid-by-tongue',
-            title: 'By Tongue',
-            urduTitle: 'بالسان',
-            color: 'bg-purple-300'
-          },
-          {
-            id: 'forbid-by-heart',
-            title: 'By Heart',
-            urduTitle: 'بالقلب',
-            color: 'bg-purple-300'
-          }
-        ]
-      },
+
 
       {
         id: 'reject-false',
@@ -267,7 +204,73 @@ const chartData: ChartItem[] = [
         ayahUrdu: 'بےشک اللہ صرف متقین سے قبول کرتا ہے۔',
         hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّ اللَّهَ لَا يَنْظُرُ إِلَى صُوَرِكُمْ وَأَمْوَالِكُمْ وَلَكِنْ يَنْظُرُ إِلَى قُلُوبِكُمْ وَأَعْمَالِكُمْ" - "Indeed, Allah does not look at your appearance or wealth, but He looks at your hearts and actions." (Muslim)`,
         hadeesUrdu: 'بےشک اللہ تمہاری صورتوں اور مالوں کو نہیں دیکھتا، بلکہ تمہارے دلوں اور اعمال کو دیکھتا ہے۔',
-        color: 'bg-purple-400'
+        color: 'bg-purple-400',
+        children: [
+          {
+            id: 'enjoin-good',
+            title: 'Enjoining Good',
+            urduTitle: 'امر بالمعروف',
+            description: 'Encouraging and promoting good deeds and righteous behavior among people.',
+            urduDescription: 'لوگوں میں نیک کاموں اور اچھے اعمال کی ترغیب اور فروغ۔',
+            ayah: `وَلْتَكُن مِّنكُمْ أُمَّةٌ يَدْعُونَ إِلَى الْخَيْرِ وَيَأْمُرُونَ بِالْمَعْرُوفِ وَيَنْهَوْنَ عَنِ الْمُنكَرِ ۚ وَأُولَٰئِكَ هُمُ الْمُفْلِحُونَ - "And let there be [arising] from you a nation inviting to [all that is] good, enjoining what is right and forbidding what is wrong, and those will be the successful." (Quran 3:104)`,
+            ayahUrdu: 'اور تم میں سے ایک جماعت ایسی ہونی چاہیے جو خیر کی طرف بلائے اور نیکی کا حکم دے اور برائی سے روکے، اور یہی لوگ کامیاب ہیں۔',
+            hadees: `عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "مَنْ رَأَى مِنْكُمْ مُنْكَرًا فَلْيُغَيِّرْهُ بِيَدِهِ، فَإِنْ لَمْ يَسْتَطِعْ فَبِلِسَانِهِ، فَإِنْ لَمْ يَسْتَطِعْ فَبِقَلْبِهِ، وَذَلِكَ أَضْعَفُ الْإِيمَانِ" - "Whoever among you sees an evil, let him change it with his hand; if he cannot, then with his tongue; if he cannot, then with his heart, and that is the weakest of faith." (Muslim)`,
+            hadeesUrdu: 'تم میں سے جو کوئی برائی دیکھے تو اسے اپنے ہاتھ سے بدل دے، اگر نہ کر سکے تو زبان سے، اگر نہ کر سکے تو دل سے، اور یہ ایمان کا کمزور ترین درجہ ہے۔',
+            color: 'bg-purple-300',
+            children: [
+              {
+                id: 'by-hand',
+                title: 'By Hand',
+                urduTitle: 'بالید',
+                color: 'bg-purple-200'
+              },
+              {
+                id: 'by-tongue',
+                title: 'By Tongue',
+                urduTitle: 'بالسان',
+                color: 'bg-purple-200'
+              },
+              {
+                id: 'by-heart',
+                title: 'By Heart',
+                urduTitle: 'بالقلب',
+                color: 'bg-purple-200'
+              }
+            ]
+          },
+          {
+            id: 'forbid-evil',
+            title: 'Forbidding Evil',
+            urduTitle: 'نهي عن المنكر',
+            description: 'Preventing and discouraging evil deeds and sinful behavior among people.',
+            urduDescription: 'لوگوں میں برے کاموں اور گناہ کے اعمال کو روکنا اور ان سے منع کرنا۔',
+            ayah: `كُنتُمْ خَيْرَ أُمَّةٍ أُخْرِجَتْ لِلنَّاسِ تَأْمُرُونَ بِالْمَعْرُوفِ وَتَنْهَوْنَ عَنِ الْمُنكَرِ وَتُؤْمِنُونَ بِاللَّهِ - "You are the best nation produced [as an example] for mankind. You enjoin what is right and forbid what is wrong and believe in Allah." (Quran 3:110)`,
+            ayahUrdu: 'تم بہترین امت ہو جو لوگوں کے لیے نکالی گئی ہے، تم نیکی کا حکم دیتے ہو اور برائی سے روکتے ہو اور اللہ پر ایمان رکھتے ہو۔',
+            hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "مَنْ دَعَا إِلَى هُدًى كَانَ لَهُ مِنَ الْأَجْرِ مِثْلُ أُجُورِ مَنْ تَبِعَهُ لَا يَنْقُصُ ذَلِكَ مِنْ أُجُورِهِمْ شَيْئًا" - "Whoever calls to guidance will have a reward similar to those who follow him, without that diminishing anything from their rewards." (Muslim)`,
+            hadeesUrdu: 'جو ہدایت کی طرف بلائے گا اس کے لیے اتنا ہی اجر ہے جتنا اس کے پیروکاروں کا، اس سے ان کے اجر میں کچھ کم نہیں ہوگا۔',
+            color: 'bg-purple-300',
+            children: [
+              {
+                id: 'forbid-by-hand',
+                title: 'By Hand',
+                urduTitle: 'بالید',
+                color: 'bg-purple-200'
+              },
+              {
+                id: 'forbid-by-tongue',
+                title: 'By Tongue',
+                urduTitle: 'بالسان',
+                color: 'bg-purple-200'
+              },
+              {
+                id: 'forbid-by-heart',
+                title: 'By Heart',
+                urduTitle: 'بالقلب',
+                color: 'bg-purple-200'
+              }
+            ]
+          }
+        ]
       },
       {
         id: 'prioritization',
