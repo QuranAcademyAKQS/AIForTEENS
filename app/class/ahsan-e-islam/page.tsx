@@ -810,6 +810,25 @@ export default function AhsanEIslamPage() {
         .text-4xl {
           font-size: 3.5rem !important;
         }
+
+        /* Custom scrollbar for modals */
+        .modal-scroll::-webkit-scrollbar {
+          width: 8px;
+        }
+        
+        .modal-scroll::-webkit-scrollbar-track {
+          background: #f1f5f9;
+          border-radius: 4px;
+        }
+        
+        .modal-scroll::-webkit-scrollbar-thumb {
+          background: #cbd5e1;
+          border-radius: 4px;
+        }
+        
+        .modal-scroll::-webkit-scrollbar-thumb:hover {
+          background: #94a3b8;
+        }
       `}</style>
       {/* Header */}
       <div className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-12">
@@ -1067,7 +1086,7 @@ export default function AhsanEIslamPage() {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
-            className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden"
+            className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[95vh] overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
@@ -1101,7 +1120,7 @@ export default function AhsanEIslamPage() {
                   onClick={closePopup}
                   className="p-2 hover:bg-white/20 rounded-full transition-colors"
                 >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
@@ -1109,7 +1128,7 @@ export default function AhsanEIslamPage() {
             </div>
 
             {/* Content */}
-            <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
+            <div className="p-6 overflow-y-auto max-h-[calc(95vh-120px)] modal-scroll">
               {/* Breadcrumb Navigation */}
               {itemHistory.length > 1 && (
                 <div className="mb-6 p-3 bg-gray-50 rounded-lg border border-gray-200">
