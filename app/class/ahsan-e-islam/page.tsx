@@ -206,7 +206,8 @@ const chartData: ChartItem[] = [
                   'Dress modestly and appropriately for the occasion',
                   'Use gentle hand gestures when speaking',
                   'Maintain eye contact while listening to others',
-                  'Keep your voice at a moderate level'
+                  'Keep your voice at a moderate level',
+                  'Maintain a well-groomed beard as per Sunnah'
                 ],
                 urduPracticalExamples: [
                   'وقار اور مقصد کے ساتھ چلیں، جلدی میں نہیں',
@@ -216,7 +217,8 @@ const chartData: ChartItem[] = [
                   'موقع کے مطابق معقول اور مناسب لباس پہنیں',
                   'بات کرتے وقت نرم ہاتھ کے اشارے استعمال کریں',
                   'دوسروں کی بات سنتے وقت آنکھوں کا رابطہ برقرار رکھیں',
-                  'اپنی آواز کو معتدل سطح پر رکھیں'
+                  'اپنی آواز کو معتدل سطح پر رکھیں',
+                  'سنت کے مطابق داڑھی کو اچھی طرح سے سنوار کر رکھیں'
                 ],
                 practicalExamplesReferences: [
                   'Bukhari: 3561 - Prophet\'s dignified walk',
@@ -226,7 +228,8 @@ const chartData: ChartItem[] = [
                   'Abu Dawud: 4012 - Modest dressing',
                   'Muslim: 2165 - Gentle gestures',
                   'Bukhari: 1241 - Eye contact etiquette',
-                  'Abu Dawud: 5027 - Voice moderation'
+                  'Abu Dawud: 5027 - Voice moderation',
+                  'Bukhari: 5892 - Maintaining beard as per Sunnah'
                 ],
                 urduPracticalExamplesReferences: [
                   'بخاری: 3561 - رسول اللہ ﷺ کی وقار والی چال',
@@ -236,7 +239,8 @@ const chartData: ChartItem[] = [
                   'ابو داؤد: 4012 - معقول لباس',
                   'مسلم: 2165 - نرم اشارے',
                   'بخاری: 1241 - آنکھوں کا رابطہ',
-                  'ابو داؤد: 5027 - آواز کی اعتدال'
+                  'ابو داؤد: 5027 - آواز کی اعتدال',
+                  'بخاری: 5892 - سنت کے مطابق داڑھی کا اہتمام'
                 ]
               },
               {
