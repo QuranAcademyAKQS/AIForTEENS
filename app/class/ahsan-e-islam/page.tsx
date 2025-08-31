@@ -712,35 +712,35 @@ export default function AhsanEIslamPage() {
         .urdu-text {
           line-height: 2.2;
           margin-bottom: 0.75rem;
-          font-size: 1.1rem;
+          font-size: 1.4rem;
           font-weight: 500;
           font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Alvi Nastaleeq', serif;
         }
         .urdu-title {
           line-height: 2.4;
           margin-bottom: 1rem;
-          font-size: 1.3rem;
+          font-size: 1.8rem;
           font-weight: 600;
           font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Alvi Nastaleeq', serif;
         }
         .urdu-description {
           line-height: 2.2;
           margin-bottom: 1.2rem;
-          font-size: 1.05rem;
+          font-size: 1.3rem;
           font-weight: 400;
           font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Alvi Nastaleeq', serif;
         }
         
         .quranic-ayah {
           font-family: 'Amiri', 'Scheherazade', 'Noto Naskh Arabic', serif;
-          font-size: 1.4rem;
+          font-size: 1.8rem;
           line-height: 2.5;
           font-weight: 500;
         }
         
         .quranic-hadith {
           font-family: 'Amiri', 'Scheherazade', 'Noto Naskh Arabic', serif;
-          font-size: 1.4rem;
+          font-size: 1.8rem;
           line-height: 2.5;
           font-weight: 500;
         }
@@ -749,90 +749,90 @@ export default function AhsanEIslamPage() {
           font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Alvi Nastaleeq', serif;
         }
         
-        /* Increase base font sizes for better readability */
+        /* Increase base font sizes for better projector visibility */
         body {
-          font-size: 16px;
+          font-size: 18px;
           line-height: 1.6;
         }
         
         h1 {
-          font-size: 2.5rem;
+          font-size: 3.5rem;
           line-height: 1.2;
         }
         
         h2 {
-          font-size: 2rem;
+          font-size: 2.8rem;
           line-height: 1.3;
         }
         
         h3 {
-          font-size: 1.5rem;
+          font-size: 2.2rem;
           line-height: 1.4;
         }
         
         p {
-          font-size: 1.1rem;
+          font-size: 1.4rem;
           line-height: 1.6;
         }
         
         .text-sm {
-          font-size: 1rem !important;
+          font-size: 1.2rem !important;
         }
         
         .text-base {
-          font-size: 1.1rem !important;
+          font-size: 1.4rem !important;
         }
         
         .text-lg {
-          font-size: 1.25rem !important;
+          font-size: 1.6rem !important;
         }
         
         .text-xl {
-          font-size: 1.5rem !important;
+          font-size: 1.8rem !important;
         }
         
         .text-2xl {
-          font-size: 1.75rem !important;
+          font-size: 2.2rem !important;
         }
         
         .text-4xl {
-          font-size: 2.5rem !important;
+          font-size: 3.5rem !important;
         }
       `}</style>
       {/* Header */}
-      <div className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-8">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between gap-8">
+      <div className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-12">
+        <div className="container mx-auto px-6">
+          <div className="flex items-center justify-between gap-12">
             {/* Left side - Message of Tanzeem-e-Islami */}
-            <div className="text-right text-xs opacity-80 w-56 flex-shrink-0">
-              <div className="font-urdu urdu-text mb-1">تنظیم اسلامی کا پیغام</div>
-              <div className="mb-1">Message of Tanzeem-e-Islami</div>
-              <div className="font-urdu urdu-text mb-1">بانی تنظیم : ڈاکٹر اسرار احمد</div>
+            <div className="text-right text-sm opacity-80 w-64 flex-shrink-0">
+              <div className="font-urdu urdu-text mb-2">تنظیم اسلامی کا پیغام</div>
+              <div className="mb-2">Message of Tanzeem-e-Islami</div>
+              <div className="font-urdu urdu-text mb-2">بانی تنظیم : ڈاکٹر اسرار احمد</div>
               <div>Founder: Dr. Israr Ahmed</div>
             </div>
             
             {/* Center - Main title */}
-            <div className="text-center flex-1 px-4">
-              <h1 className="text-4xl font-bold mb-2 font-urdu urdu-title">
+            <div className="text-center flex-1 px-6">
+              <h1 className="text-5xl font-bold mb-4 font-urdu urdu-title">
                 تنظیم اسلامی میں احسان اسلام کے تقاضے
               </h1>
-              <p className="text-xl opacity-90 mb-1">Demands of Ehsan-e-Islam in Tanzeem-e-Islami</p>
-              <div className="flex flex-wrap justify-center gap-4 mt-4">
+              <p className="text-2xl opacity-90 mb-3">Demands of Ehsan-e-Islam in Tanzeem-e-Islami</p>
+              <div className="flex flex-wrap justify-center gap-6 mt-6">
                 <button 
                   onClick={() => setShowIhsanPopup(true)}
-                  className="px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white font-urdu urdu-text rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className="px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-urdu urdu-text rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-lg"
                 >
                   احسان
                 </button>
                 <button 
                   onClick={() => setShowImanPopup(true)}
-                  className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-urdu urdu-text rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-urdu urdu-text rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-lg"
                 >
                   ایمان
                 </button>
                 <button 
                   onClick={() => setShowIslamPopup(true)}
-                  className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-urdu urdu-text rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-urdu urdu-text rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-lg"
                 >
                   اسلام
                 </button>
@@ -852,8 +852,8 @@ export default function AhsanEIslamPage() {
 
       {/* Navigation */}
       <div className="bg-white shadow-lg">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-4 py-4">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-wrap justify-center gap-6 py-6">
             {[
               { id: 'oversight', label: 'Oversight System', urduLabel: 'نگرانی کا نظام' },
               { id: 'dawah', label: 'Dawah Objectives', urduLabel: 'دعوتی و تحریکی اہداف' },
@@ -866,17 +866,17 @@ export default function AhsanEIslamPage() {
                 key={section.id}
                 onClick={() => setActiveSection(section.id as any)}
                 className={`
-                  px-6 py-3 rounded-lg font-semibold transition-all duration-300
+                  px-8 py-4 rounded-lg font-semibold transition-all duration-300
                   ${activeSection === section.id
                     ? 'bg-emerald-600 text-white shadow-lg'
                     : 'bg-gray-100 text-gray-700 hover:bg-emerald-100 hover:text-emerald-700'
                   }
                 `}
               >
-                <div className="font-urdu text-sm urdu-text">
+                <div className="font-urdu text-base urdu-text">
                   {section.urduLabel}
                 </div>
-                <div className="text-xs">{section.label}</div>
+                <div className="text-sm">{section.label}</div>
               </button>
             ))}
           </div>
@@ -886,13 +886,13 @@ export default function AhsanEIslamPage() {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-6xl mx-auto">
+      <div className="container mx-auto px-6 py-12">
+        <div className="max-w-7xl mx-auto">
           {/* Main Chart */}
           <div>
             {activeSection === 'main' && (
-              <div className="space-y-6">
-                <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+              <div className="space-y-8">
+                <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
                   <span className="font-urdu urdu-title">انفرادی اہداف</span>
                   <br />
                   <span>Individual Goals</span>
