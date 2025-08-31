@@ -27,6 +27,8 @@ interface ChartItem {
   urduPracticalExamples?: string[];
   practicalExamplesReferences?: string[];
   urduPracticalExamplesReferences?: string[];
+  ayahReferences?: string[];
+  ayahReferencesUrdu?: string[];
 }
 
 const chartData: ChartItem[] = [
@@ -139,6 +141,20 @@ const chartData: ChartItem[] = [
     urduDescription: 'اخلاقیات و اہداف - فرد کے رویہ اور کردار کی نشوونما کا اخلاقی فریم ورک، جس میں رسول اللہ ﷺ کی پیروی، باطل نظریات کا رد، مذہبی عمل میں خلوص اور اسلامی اصولوں پر مبنی تعلقات شامل ہیں۔',
     ayah: `لَقَدْ كَانَ لَكُمْ فِي رَسُولِ اللَّهِ أُسْوَةٌ حَسَنَةٌ لِّمَن كَانَ يَرْجُو اللَّهَ وَالْيَوْمَ الْآخِرَ وَذَكَرَ اللَّهَ كَثِيرًا - "There has certainly been for you in the Messenger of Allah an excellent pattern for anyone whose hope is in Allah and the Last Day and [who] remembers Allah often." (Quran 33:21)`,
     ayahUrdu: 'بےشک تمہارے لیے رسول اللہ میں بہترین نمونہ ہے، اس شخص کے لیے جو اللہ اور آخرت کی امید رکھتا ہے اور اللہ کو کثرت سے یاد کرتا ہے۔',
+    ayahReferences: [
+      'Tafsir Ibn Kathir: Emphasizes following Prophet\'s example in all aspects of life',
+      'Tafsir Al-Tabari: Highlights the comprehensive nature of the Prophet\'s guidance',
+      'Tafsir Al-Qurtubi: Explains the verse in context of the Battle of Ahzab',
+      'Tafsir Al-Baghawi: Focuses on the Prophet as a role model for character and conduct',
+      'Tafsir Al-Mawardi: Emphasizes the Prophet\'s leadership qualities and moral excellence'
+    ],
+    ayahReferencesUrdu: [
+      'تفسیر ابن کثیر: زندگی کے تمام پہلوؤں میں رسول اللہ کی پیروی پر زور',
+      'تفسیر طبری: رسول اللہ کی ہدایت کی جامعیت کو اجاگر کرتا ہے',
+      'تفسیر قرطبی: غزوہ احزاب کے تناظر میں آیت کی وضاحت',
+      'تفسیر بغوی: رسول اللہ کو کردار اور رویے کا نمونہ قرار دیتا ہے',
+      'تفسیر ماوردی: رسول اللہ کی قیادت کی خصوصیات اور اخلاقی فضیلت پر زور'
+    ],
     hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّمَا بُعِثْتُ لِأُتَمِّمَ مَكَارِمَ الْأَخْلَاقِ" - "I was sent to perfect good character." (Ahmad, Al-Hakim)`,
     hadeesUrdu: 'میں اخلاق کے اعلیٰ درجات کو مکمل کرنے کے لیے بھیجا گیا ہوں۔',
     color: 'bg-green-500',
@@ -1424,6 +1440,31 @@ export default function AhsanEIslamPage() {
                       )}
                     </div>
                   </div>
+                  
+                  {/* Additional Tafsir References */}
+                  {selectedItem.ayahReferences && selectedItem.ayahReferences.length > 0 && (
+                    <div className="mt-4 bg-blue-50 border border-blue-200 p-4 rounded-lg">
+                      <h4 className="text-sm font-semibold text-blue-800 mb-3 flex items-center gap-2">
+                        <span className="text-blue-600">📚</span>
+                        <span className="font-urdu urdu-text">تفسیری حوالے</span>
+                      </h4>
+                      <div className="space-y-2">
+                        {selectedItem.ayahReferences.map((reference, index) => (
+                          <div key={index} className="flex items-start gap-2">
+                            <span className="text-xs text-blue-600 font-semibold">•</span>
+                            <div className="flex-1">
+                              <p className="text-xs text-blue-700 mb-1">{reference}</p>
+                              {selectedItem.ayahReferencesUrdu && selectedItem.ayahReferencesUrdu[index] && (
+                                <p className="text-xs text-blue-600 font-urdu urdu-text leading-relaxed">
+                                  {selectedItem.ayahReferencesUrdu[index]}
+                                </p>
+                              )}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               )}
 
