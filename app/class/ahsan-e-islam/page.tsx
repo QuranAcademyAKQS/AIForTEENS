@@ -581,10 +581,10 @@ const ChartBox = ({ item, level = 0, onItemClick }: {
           {/* Right side - Text for all items */}
           <div className="flex items-center gap-2 text-right flex-1 min-w-0">
             <div className="flex-1 min-w-0">
-              <div className="font-urdu urdu-text truncate">
+              <div className="font-urdu urdu-text truncate text-lg">
                 {item.urduTitle}
               </div>
-              <div className="text-sm opacity-90 truncate">{item.title}</div>
+              <div className="text-sm opacity-75 truncate">{item.title}</div>
             </div>
             {item.icon && <span className="flex-shrink-0">{item.icon}</span>}
           </div>
