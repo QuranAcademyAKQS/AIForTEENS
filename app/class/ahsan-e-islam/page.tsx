@@ -16,6 +16,8 @@ interface ChartItem {
   hadeesUrdu?: string;
   detailedTitle?: string;
   detailedUrduTitle?: string;
+  detailedDescription?: string;
+  detailedUrduDescription?: string;
   children?: ChartItem[];
   color: string;
   icon?: React.ReactNode;
@@ -187,7 +189,15 @@ const chartData: ChartItem[] = [
                   'معقول اور مناسب لباس',
                   'نرم چہرے کے تاثرات',
                   'احترام آمیز جسمانی زبان'
-                ]
+                ],
+                detailedTitle: 'Shama\'il (شمائل): Following the Prophet\'s Physical Appearance and Mannerisms',
+                detailedUrduTitle: 'شمائل: رسول اللہ ﷺ کی ظاہری شکل و صورت کی پیروی',
+                detailedDescription: 'Shama\'il refers to the Prophet\'s physical appearance, mannerisms, and behavioral patterns. This includes his way of walking, sitting, eating, drinking, sleeping, and general conduct. The Prophet ﷺ was known for his neat appearance, clean clothing, and dignified mannerisms that reflected inner purity and respect for others.',
+                detailedUrduDescription: 'شمائل سے مراد رسول اللہ ﷺ کی ظاہری شکل و صورت، آداب اور رویے ہیں۔ اس میں آپ کی چال، بیٹھنے کا طریقہ، کھانے پینے کا انداز، سونے کا طریقہ اور عمومی رویہ شامل ہے۔ رسول اللہ ﷺ اپنی منظم ظاہری شکل، صاف ستھرے لباس اور وقار والے آداب کے لیے مشہور تھے جو اندرونی پاکیزگی اور دوسروں کے لیے احترام کی عکاسی کرتے تھے۔',
+                ayah: `لَقَدْ كَانَ لَكُمْ فِي رَسُولِ اللَّهِ أُسْوَةٌ حَسَنَةٌ لِّمَن كَانَ يَرْجُو اللَّهَ وَالْيَوْمَ الْآخِرَ وَذَكَرَ اللَّهَ كَثِيرًا - "There has certainly been for you in the Messenger of Allah an excellent pattern for anyone whose hope is in Allah and the Last Day and [who] remembers Allah often." (Quran 33:21)`,
+                ayahUrdu: 'بےشک تمہارے لیے رسول اللہ میں بہترین نمونہ ہے، اس شخص کے لیے جو اللہ اور آخرت کی امید رکھتا ہے اور اللہ کو کثرت سے یاد کرتا ہے۔',
+                hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّ اللَّهَ جَمِيلٌ يُحِبُّ الْجَمَالَ، كَرِيمٌ يُحِبُّ الْكَرَمَ، نَظِيفٌ يُحِبُّ النَّظَافَةَ" - "Indeed, Allah is beautiful and loves beauty, generous and loves generosity, clean and loves cleanliness." (Tirmidhi)`,
+                hadeesUrdu: 'بےشک اللہ خوبصورت ہے اور خوبصورتی کو پسند کرتا ہے، کریم ہے اور کرم کو پسند کرتا ہے، پاکیزہ ہے اور پاکیزگی کو پسند کرتا ہے۔'
               },
               {
                 id: 'khasaail-examples',
@@ -211,7 +221,15 @@ const chartData: ChartItem[] = [
                   'عاجزی اور تواضع',
                   'مہربانی اور رحم دلی',
                   'درگزر اور رحمت'
-                ]
+                ],
+                detailedTitle: 'Khasa\'il (خصائل): Following the Prophet\'s Character Traits and Virtues',
+                detailedUrduTitle: 'خصائل: رسول اللہ ﷺ کے اخلاقی اوصاف کی پیروی',
+                detailedDescription: 'Khasa\'il refers to the Prophet\'s moral qualities, virtues, and character attributes. These include his honesty, generosity, patience, humility, kindness, and forgiveness. The Prophet ﷺ was known as "Al-Amin" (the trustworthy) and embodied all the highest moral standards. His character was a perfect example of how to treat others with respect, compassion, and fairness.',
+                detailedUrduDescription: 'خصائل سے مراد رسول اللہ ﷺ کے اخلاقی اوصاف، فضائل اور کردار کی خصوصیات ہیں۔ ان میں آپ کی ایمانداری، سخاوت، صبر، عاجزی، مہربانی اور درگزر شامل ہیں۔ رسول اللہ ﷺ "الامین" (قابل اعتماد) کے نام سے مشہور تھے اور تمام اعلیٰ اخلاقی معیارات کی تجسیم تھے۔ آپ کا کردار دوسروں کے ساتھ احترام، رحمت اور انصاف کے ساتھ پیش آنے کا بہترین نمونہ تھا۔',
+                ayah: `وَإِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍ - "And indeed, you are of a great moral character." (Quran 68:4)`,
+                ayahUrdu: 'اور بےشک آپ بہترین اخلاق پر ہیں۔',
+                hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّمَا بُعِثْتُ لِأُتَمِّمَ مَكَارِمَ الْأَخْلَاقِ" - "I was sent to perfect good character." (Ahmad, Al-Hakim)`,
+                hadeesUrdu: 'میں اخلاق کے اعلیٰ درجات کو مکمل کرنے کے لیے بھیجا گیا ہوں۔'
               },
               {
                 id: 'daily-routines-examples',
