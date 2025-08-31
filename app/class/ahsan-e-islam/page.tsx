@@ -133,26 +133,33 @@ const chartData: ChartItem[] = [
     icon: <Heart className="w-5 h-5" />,
     children: [
       {
-        id: 'following-prophet',
-        title: 'Following the Messenger of Allah ﷺ and Interaction with Companions',
-        urduTitle: 'اتباع رسول الله ﷺ و تعامل صحابة',
-        description: 'Following the example of Prophet Muhammad ﷺ in all aspects of life and learning from the companions\' way of life and interactions.',
-        urduDescription: 'رسول اللہ ﷺ کی پیروی اور صحابہ کرام کے ساتھ تعامل اور ان کی زندگی سے سیکھنا۔',
-        ayah: `لَقَدْ كَانَ لَكُمْ فِي رَسُولِ اللَّهِ أُسْوَةٌ حَسَنَةٌ لِّمَن كَانَ يَرْجُو اللَّهَ وَالْيَوْمَ الْآخِرَ وَذَكَرَ اللَّهَ كَثِيرًا - "There has certainly been for you in the Messenger of Allah an excellent pattern for anyone whose hope is in Allah and the Last Day and [who] remembers Allah often." (Quran 33:21)`,
-        ayahUrdu: 'بےشک تمہارے لیے رسول اللہ میں ایک بہترین نمونہ ہے، اس کے لیے جو اللہ اور آخرت کی امید رکھتا ہے اور اللہ کو بہت یاد کرتا ہے۔',
-        hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "أَصْحَابِي كَالنُّجُومِ بِأَيِّهِمُ اقْتَدَيْتُمْ اهْتَدَيْتُمْ" - "My companions are like stars. Whichever of them you follow, you will be guided." (Abu Dawud)`,
-        hadeesUrdu: 'میرے صحابہ ستاروں کی طرح ہیں، تم ان میں سے جس کی پیروی کرو گے ہدایت پاؤ گے۔',
+        id: 'continuous-jihad',
+        title: '1.2 Ethics and Manners: For the attainment of the highest ranks, continuous struggle (Jihad) against one\'s self',
+        urduTitle: '1.2 اخلاقیات و آداب کے اعلیٰ ترین درجات کے حصول کے لیے اپنے نفس سے مسلسل جہاد',
+        description: 'Continuous struggle (Jihad) against one\'s self for attaining the highest ranks of ethics and manners.',
+        urduDescription: 'اخلاقیات و آداب کے اعلیٰ ترین درجات کے حصول کے لیے اپنے نفس سے مسلسل جہاد۔',
         color: 'bg-green-400',
         children: [
           {
-            id: 'prophet-example',
-            title: 'Following the example of Muhammad ﷺ in manners, characteristics, and daily life',
-            urduTitle: 'شمائل، خصائل اور شب و روز میں اسوہ محمد ی ﷺ کی اتباع',
-            color: 'bg-green-300'
+            id: 'following-prophet-companions',
+            title: '1.2.1 Following the Messenger of Allah ﷺ and adopting the practice of the Companions',
+            urduTitle: '1.2.1 اتباع رسول الله ﷺ و تعامل صحابہ کی پیروی کا اہتمام',
+            description: 'Following the example of Prophet Muhammad ﷺ in all aspects of life and learning from the companions\' way of life and interactions.',
+            urduDescription: 'رسول اللہ ﷺ کی پیروی اور صحابہ کرام کے ساتھ تعامل اور ان کی زندگی سے سیکھنا۔',
+            color: 'bg-green-300',
+            children: [
+              {
+                id: 'prophet-example-daily-life',
+                title: '1.2.1.1 Following the example of Muhammad ﷺ in characteristics and traits, and in daily life, and completely avoiding evil morals',
+                urduTitle: '1.2.1.1 شمائل و خصائل اور شب و روز میں اسوہ محمدی اللہ السلام کی پیروی اور رذائل اخلاق سے مکمل اجتناب کرنا',
+                description: 'Following the example of Prophet Muhammad ﷺ in manners, characteristics, and daily life, and completely avoiding evil morals.',
+                urduDescription: 'شمائل، خصائل اور شب و روز میں اسوہ محمد ی ﷺ کی اتباع اور رذائل اخلاق سے مکمل اجتناب۔',
+                color: 'bg-green-200'
+              }
+            ]
           }
         ]
-      },
-
+      }
     ]
   },
   {
