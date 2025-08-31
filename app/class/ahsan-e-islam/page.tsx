@@ -131,6 +131,7 @@ const chartData: ChartItem[] = [
     urduDescription: 'اخلاقیات و اہداف - فرد کے رویہ اور کردار کی نشوونما کا اخلاقی فریم ورک، جس میں رسول اللہ ﷺ کی پیروی، باطل نظریات کا رد، مذہبی عمل میں خلوص اور اسلامی اصولوں پر مبنی تعلقات شامل ہیں۔',
     ayah: `لَقَدْ كَانَ لَكُمْ فِي رَسُولِ اللَّهِ أُسْوَةٌ حَسَنَةٌ لِّمَن كَانَ يَرْجُو اللَّهَ وَالْيَوْمَ الْآخِرَ وَذَكَرَ اللَّهَ كَثِيرًا - "There has certainly been for you in the Messenger of Allah an excellent pattern for anyone whose hope is in Allah and the Last Day and [who] remembers Allah often." (Quran 33:21)`,
     hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّمَا بُعِثْتُ لِأُتَمِّمَ مَكَارِمَ الْأَخْلَاقِ" - "I was sent to perfect good character." (Ahmad, Al-Hakim)`,
+    hadeesUrdu: 'میں اخلاق کے اعلیٰ درجات کو مکمل کرنے کے لیے بھیجا گیا ہوں۔',
     color: 'bg-green-500',
     icon: <Heart className="w-5 h-5" />,
     children: [
