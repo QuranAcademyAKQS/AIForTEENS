@@ -152,50 +152,7 @@ const chartData: ChartItem[] = [
           }
         ]
       },
-      {
-        id: 'reject-false',
-        title: 'Rejection of False Ideologies',
-        urduTitle: 'باطل نظریات کا رد',
-        description: 'Rejecting and staying away from false ideologies and beliefs that contradict Islamic teachings.',
-        urduDescription: 'باطل نظریات اور عقائد کا رد کرنا اور ان سے دور رہنا جو اسلامی تعلیمات کے خلاف ہیں۔',
-        ayah: `وَلَا تَرْكَنُوا إِلَى الَّذِينَ ظَلَمُوا فَتَمَسَّكُمُ النَّارُ وَمَا لَكُم مِّن دُونِ اللَّهِ مِنْ أَوْلِيَاءَ ثُمَّ لَا تُنصَرُونَ - "And do not incline toward those who do wrong, lest you be touched by the Fire, and you would not have other than Allah any protectors; then you would not be helped." (Quran 11:113)`,
-        ayahUrdu: 'اور ظالموں کی طرف نہ جھکو ورنہ تمہیں بھی آگ لگ جائے گی، اور تمہارے لیے اللہ کے سوا کوئی مددگار نہیں ہوگا، پھر تم مدد نہیں پاؤ گے۔',
-        hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "مَنْ تَشَبَّهَ بِقَوْمٍ فَهُوَ مِنْهُمْ" - "Whoever imitates a people is one of them." (Abu Dawud)`,
-        hadeesUrdu: 'جو کسی قوم کی مشابہت اختیار کرے گا وہ انہی میں سے ہے۔',
-        color: 'bg-green-400'
-      },
-      {
-        id: 'sincerity',
-        title: 'Spirit of "Religion is Sincerity"',
-        urduTitle: 'الدین النصیحہ کی روح',
-        description: 'Maintaining sincerity and pure intentions in all religious practices and dealings with others.',
-        urduDescription: 'تمام مذہبی اعمال اور دوسروں کے ساتھ معاملات میں خلوص اور پاک نیت کا اہتمام۔',
-        ayah: `إِنَّمَا يَتَقَبَّلُ اللَّهُ مِنَ الْمُتَّقِينَ - "Allah only accepts from the righteous [who fear Him]." (Quran 5:27)`,
-        ayahUrdu: 'بےشک اللہ صرف متقین سے قبول کرتا ہے۔',
-        hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّ اللَّهَ لَا يَنْظُرُ إِلَى صُوَرِكُمْ وَأَمْوَالِكُمْ وَلَكِنْ يَنْظُرُ إِلَى قُلُوبِكُمْ وَأَعْمَالِكُمْ" - "Indeed, Allah does not look at your appearance or wealth, but He looks at your hearts and actions." (Muslim)`,
-        hadeesUrdu: 'بےشک اللہ تمہاری صورتوں اور مالوں کو نہیں دیکھتا، بلکہ تمہارے دلوں اور اعمال کو دیکھتا ہے۔',
-        color: 'bg-green-400'
-      },
-      {
-        id: 'prioritization',
-        title: 'Prioritization of Nearest to Nearest',
-        urduTitle: 'الا قرب فالا قرب کی ترتیب',
-        description: 'Prioritizing relationships and responsibilities based on proximity and closeness, starting with family and extending to the broader community.',
-        urduDescription: 'تعلقات اور ذمہ داریوں کو قربت اور نزدیکی کے مطابق ترتیب دینا، خاندان سے شروع کر کے وسیع تر معاشرے تک۔',
-        ayah: `وَاعْبُدُوا اللَّهَ وَلَا تُشْرِكُوا بِهِ شَيْئًا ۖ وَبِالْوَالِدَيْنِ إِحْسَانًا وَبِذِي الْقُرْبَىٰ وَالْيَتَامَىٰ وَالْمَسَاكِينِ - "Worship Allah and associate nothing with Him, and to parents do good, and to relatives, orphans, the needy." (Quran 4:36)`,
-        ayahUrdu: 'اور اللہ کی عبادت کرو اور اس کے ساتھ کسی کو شریک نہ کرو، اور والدین کے ساتھ احسان کرو، اور رشتہ داروں، یتیموں اور مسکینوں کے ساتھ۔',
-        hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "خَيْرُكُمْ خَيْرُكُمْ لِأَهْلِهِ وَأَنَا خَيْرُكُمْ لِأَهْلِي" - "The best of you is the best to his family, and I am the best to my family." (Tirmidhi)`,
-        hadeesUrdu: 'تم میں سب سے بہتر وہ ہے جو اپنے اہل کے لیے بہتر ہے، اور میں اپنے اہل کے لیے سب سے بہتر ہوں۔',
-        color: 'bg-purple-400',
-        children: [
-          {
-            id: 'witness',
-            title: 'Obligation of Bearing Witness to People',
-            urduTitle: 'فریضہ شہادت علی الناس',
-            color: 'bg-purple-300'
-          }
-        ]
-      }
+
     ]
   },
   {
@@ -284,6 +241,50 @@ const chartData: ChartItem[] = [
         title: 'Collective Sphere and Connection',
         urduTitle: 'اجتماعی دائره و تعلق',
         color: 'bg-purple-400'
+      },
+      {
+        id: 'reject-false',
+        title: 'Rejection of False Ideologies',
+        urduTitle: 'باطل نظریات کا رد',
+        description: 'Rejecting and staying away from false ideologies and beliefs that contradict Islamic teachings.',
+        urduDescription: 'باطل نظریات اور عقائد کا رد کرنا اور ان سے دور رہنا جو اسلامی تعلیمات کے خلاف ہیں۔',
+        ayah: `وَلَا تَرْكَنُوا إِلَى الَّذِينَ ظَلَمُوا فَتَمَسَّكُمُ النَّارُ وَمَا لَكُم مِّن دُونِ اللَّهِ مِنْ أَوْلِيَاءَ ثُمَّ لَا تُنصَرُونَ - "And do not incline toward those who do wrong, lest you be touched by the Fire, and you would not have other than Allah any protectors; then you would not be helped." (Quran 11:113)`,
+        ayahUrdu: 'اور ظالموں کی طرف نہ جھکو ورنہ تمہیں بھی آگ لگ جائے گی، اور تمہارے لیے اللہ کے سوا کوئی مددگار نہیں ہوگا، پھر تم مدد نہیں پاؤ گے۔',
+        hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "مَنْ تَشَبَّهَ بِقَوْمٍ فَهُوَ مِنْهُمْ" - "Whoever imitates a people is one of them." (Abu Dawud)`,
+        hadeesUrdu: 'جو کسی قوم کی مشابہت اختیار کرے گا وہ انہی میں سے ہے۔',
+        color: 'bg-purple-400'
+      },
+      {
+        id: 'sincerity',
+        title: 'Spirit of "Religion is Sincerity"',
+        urduTitle: 'الدین النصیحہ کی روح',
+        description: 'Maintaining sincerity and pure intentions in all religious practices and dealings with others.',
+        urduDescription: 'تمام مذہبی اعمال اور دوسروں کے ساتھ معاملات میں خلوص اور پاک نیت کا اہتمام۔',
+        ayah: `إِنَّمَا يَتَقَبَّلُ اللَّهُ مِنَ الْمُتَّقِينَ - "Allah only accepts from the righteous [who fear Him]." (Quran 5:27)`,
+        ayahUrdu: 'بےشک اللہ صرف متقین سے قبول کرتا ہے۔',
+        hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّ اللَّهَ لَا يَنْظُرُ إِلَى صُوَرِكُمْ وَأَمْوَالِكُمْ وَلَكِنْ يَنْظُرُ إِلَى قُلُوبِكُمْ وَأَعْمَالِكُمْ" - "Indeed, Allah does not look at your appearance or wealth, but He looks at your hearts and actions." (Muslim)`,
+        hadeesUrdu: 'بےشک اللہ تمہاری صورتوں اور مالوں کو نہیں دیکھتا، بلکہ تمہارے دلوں اور اعمال کو دیکھتا ہے۔',
+        color: 'bg-purple-400'
+      },
+      {
+        id: 'prioritization',
+        title: 'Prioritization of Nearest to Nearest',
+        urduTitle: 'الا قرب فالا قرب کی ترتیب',
+        description: 'Prioritizing relationships and responsibilities based on proximity and closeness, starting with family and extending to the broader community.',
+        urduDescription: 'تعلقات اور ذمہ داریوں کو قربت اور نزدیکی کے مطابق ترتیب دینا، خاندان سے شروع کر کے وسیع تر معاشرے تک۔',
+        ayah: `وَاعْبُدُوا اللَّهَ وَلَا تُشْرِكُوا بِهِ شَيْئًا ۖ وَبِالْوَالِدَيْنِ إِحْسَانًا وَبِذِي الْقُرْبَىٰ وَالْيَتَامَىٰ وَالْمَسَاكِينِ - "Worship Allah and associate nothing with Him, and to parents do good, and to relatives, orphans, the needy." (Quran 4:36)`,
+        ayahUrdu: 'اور اللہ کی عبادت کرو اور اس کے ساتھ کسی کو شریک نہ کرو، اور والدین کے ساتھ احسان کرو، اور رشتہ داروں، یتیموں اور مسکینوں کے ساتھ۔',
+        hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "خَيْرُكُمْ خَيْرُكُمْ لِأَهْلِهِ وَأَنَا خَيْرُكُمْ لِأَهْلِي" - "The best of you is the best to his family, and I am the best to my family." (Tirmidhi)`,
+        hadeesUrdu: 'تم میں سب سے بہتر وہ ہے جو اپنے اہل کے لیے بہتر ہے، اور میں اپنے اہل کے لیے سب سے بہتر ہوں۔',
+        color: 'bg-purple-400',
+        children: [
+          {
+            id: 'witness',
+            title: 'Obligation of Bearing Witness to People',
+            urduTitle: 'فریضہ شہادت علی الناس',
+            color: 'bg-purple-300'
+          }
+        ]
       }
     ]
   },
