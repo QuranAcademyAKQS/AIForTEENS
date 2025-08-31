@@ -19,6 +19,8 @@ interface ChartItem {
   children?: ChartItem[];
   color: string;
   icon?: React.ReactNode;
+  examples?: string[];
+  urduExamples?: string[];
 }
 
 const chartData: ChartItem[] = [
@@ -153,15 +155,89 @@ const chartData: ChartItem[] = [
             id: 'prophet-example-daily-life',
             title: 'Following the Prophet\'s Example in Daily Life',
             urduTitle: 'شمائل و خصائل اور شب و روز میں اسوہ محمدی ﷺ کی اتباع',
-            description: 'Following the example of Prophet Muhammad ﷺ in manners, characteristics, and daily life, and completely avoiding evil morals. This includes emulating his physical appearance (شمائل), character traits (خصائل), and daily routines (شب و روز). Examples: شمائل - Clean appearance, proper dress, good posture; خصائل - Honesty, kindness, patience, humility; شب و روز - Early rising, regular prayers, reading Quran, helping others.',
-            urduDescription: 'شمائل، خصائل اور شب و روز میں اسوہ محمد ی ﷺ کی اتباع اور رذائل اخلاق سے مکمل اجتناب۔ شمائل سے مراد رسول اللہ ﷺ کی ظاہری شکل و صورت، خصائل سے مراد آپ کے اخلاقی اوصاف، اور شب و روز سے مراد آپ کی روزمرہ کی زندگی کے طریقے۔ مثالیں: شمائل - صاف ستھری ظاہری شکل، مناسب لباس، اچھی وضع، خصائل - ایمانداری، مہربانی، صبر، عاجزی، شب و روز - صبح جلدی اٹھنا، نمازوں کی پابندی، قرآن پڑھنا، دوسروں کی مدد۔',
+            description: 'Following the example of Prophet Muhammad ﷺ in manners, characteristics, and daily life, and completely avoiding evil morals.',
+            urduDescription: 'شمائل، خصائل اور شب و روز میں اسوہ محمد ی ﷺ کی اتباع اور رذائل اخلاق سے مکمل اجتناب۔',
             ayah: `قُلْ إِن كُنتُمْ تُحِبُّونَ اللَّهَ فَاتَّبِعُونِي يُحْبِبْكُمُ اللَّهُ وَيَغْفِرْ لَكُمْ ذُنُوبَكُمْ ۗ وَاللَّهُ غَفُورٌ رَّحِيمٌ - "Say, [O Muhammad], 'If you should love Allah, then follow me, [so] Allah will love you and forgive you your sins. And Allah is Forgiving and Merciful.'" (Quran 3:31)`,
             ayahUrdu: 'کہہ دیجیے: اگر تم اللہ سے محبت رکھتے ہو تو میری پیروی کرو، اللہ تم سے محبت کرے گا اور تمہارے گناہ معاف کر دے گا، اور اللہ بخشنے والا مہربان ہے۔',
             hadees: `عَنْ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا قَالَتْ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّ اللَّهَ جَمِيلٌ يُحِبُّ الْجَمَالَ، كَرِيمٌ يُحِبُّ الْكَرَمَ، نَظِيفٌ يُحِبُّ النَّظَافَةَ" - "Indeed, Allah is beautiful and loves beauty, generous and loves generosity, clean and loves cleanliness." (Tirmidhi)`,
             hadeesUrdu: 'بےشک اللہ خوبصورت ہے اور خوبصورتی کو پسند کرتا ہے، کریم ہے اور کرم کو پسند کرتا ہے، پاکیزہ ہے اور پاکیزگی کو پسند کرتا ہے۔',
             detailedTitle: '1.2.1.1 Following the example of Muhammad ﷺ in characteristics and traits, and in daily life, and completely avoiding evil morals. This encompasses: 1) Shama\'il (شمائل) - Physical appearance and mannerisms: Clean dress, good posture, neat appearance, proper grooming; 2) Khasa\'il (خصائل) - Character traits and virtues: Truthfulness, generosity, patience, humility, kindness, forgiveness; 3) Daily routines (شب و روز) - Day and night practices: Early rising, regular prayers, Quran recitation, helping neighbors, visiting the sick, maintaining family ties',
             detailedUrduTitle: '1.2.1.1 شمائل و خصائل اور شب و روز میں اسوہ محمدی اللہ السلام کی پیروی اور رذائل اخلاق سے مکمل اجتناب کرنا۔ اس میں شامل ہیں: ۱) شمائل - ظاہری شکل و صورت اور آداب: صاف ستھرا لباس، اچھی وضع، منظم ظاہری شکل، مناسب صفائی، ۲) خصائل - اخلاقی اوصاف اور فضائل: سچائی، سخاوت، صبر، عاجزی، مہربانی، درگزر، ۳) شب و روز - دن رات کے معمولات: صبح جلدی اٹھنا، نمازوں کی پابندی، قرآن کی تلاوت، پڑوسیوں کی مدد، مریضوں کی عیادت، رشتہ داروں سے تعلقات',
-            color: 'bg-green-300'
+            color: 'bg-green-300',
+            children: [
+              {
+                id: 'shamail-examples',
+                title: 'Shama\'il (شمائل) - Physical Appearance',
+                urduTitle: 'شمائل - ظاہری شکل و صورت',
+                description: 'Examples of following the Prophet\'s physical appearance and mannerisms',
+                urduDescription: 'رسول اللہ ﷺ کی ظاہری شکل و صورت کی پیروی کی مثالیں',
+                color: 'bg-green-200',
+                examples: [
+                  'Clean dress and neat appearance',
+                  'Good posture and dignified walk',
+                  'Proper grooming and hygiene',
+                  'Modest and appropriate clothing',
+                  'Gentle facial expressions',
+                  'Respectful body language'
+                ],
+                urduExamples: [
+                  'صاف ستھرا لباس اور منظم ظاہری شکل',
+                  'اچھی وضع اور وقار والی چال',
+                  'مناسب صفائی اور آراستگی',
+                  'معقول اور مناسب لباس',
+                  'نرم چہرے کے تاثرات',
+                  'احترام آمیز جسمانی زبان'
+                ]
+              },
+              {
+                id: 'khasaail-examples',
+                title: 'Khasa\'il (خصائل) - Character Traits',
+                urduTitle: 'خصائل - اخلاقی اوصاف',
+                description: 'Examples of following the Prophet\'s character traits and virtues',
+                urduDescription: 'رسول اللہ ﷺ کے اخلاقی اوصاف کی پیروی کی مثالیں',
+                color: 'bg-green-200',
+                examples: [
+                  'Truthfulness and honesty',
+                  'Generosity and charity',
+                  'Patience and perseverance',
+                  'Humility and modesty',
+                  'Kindness and compassion',
+                  'Forgiveness and mercy'
+                ],
+                urduExamples: [
+                  'سچائی اور ایمانداری',
+                  'سخاوت اور خیرات',
+                  'صبر اور استقامت',
+                  'عاجزی اور تواضع',
+                  'مہربانی اور رحم دلی',
+                  'درگزر اور رحمت'
+                ]
+              },
+              {
+                id: 'daily-routines-examples',
+                title: 'Daily Routines (شب و روز)',
+                urduTitle: 'شب و روز - دن رات کے معمولات',
+                description: 'Examples of following the Prophet\'s daily routines and practices',
+                urduDescription: 'رسول اللہ ﷺ کے روزمرہ کے معمولات کی پیروی کی مثالیں',
+                color: 'bg-green-200',
+                examples: [
+                  'Early rising for Fajr prayer',
+                  'Regular prayer times',
+                  'Daily Quran recitation',
+                  'Helping neighbors',
+                  'Visiting the sick',
+                  'Maintaining family ties'
+                ],
+                urduExamples: [
+                  'فجر کی نماز کے لیے صبح جلدی اٹھنا',
+                  'نمازوں کے اوقات کی پابندی',
+                  'روزانہ قرآن کی تلاوت',
+                  'پڑوسیوں کی مدد',
+                  'مریضوں کی عیادت',
+                  'رشتہ داروں سے تعلقات برقرار رکھنا'
+                ]
+              }
+            ]
           }
         ]
       }
