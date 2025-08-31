@@ -230,18 +230,7 @@ const chartData: ChartItem[] = [
           }
         ]
       },
-      {
-        id: 'individual-sphere',
-        title: 'Individual Sphere and Connection',
-        urduTitle: 'انفرادی دائره وتعلق',
-        color: 'bg-purple-400'
-      },
-      {
-        id: 'collective-sphere',
-        title: 'Collective Sphere and Connection',
-        urduTitle: 'اجتماعی دائره و تعلق',
-        color: 'bg-purple-400'
-      },
+
       {
         id: 'reject-false',
         title: 'Rejection of False Ideologies',
@@ -252,7 +241,21 @@ const chartData: ChartItem[] = [
         ayahUrdu: 'اور ظالموں کی طرف نہ جھکو ورنہ تمہیں بھی آگ لگ جائے گی، اور تمہارے لیے اللہ کے سوا کوئی مددگار نہیں ہوگا، پھر تم مدد نہیں پاؤ گے۔',
         hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "مَنْ تَشَبَّهَ بِقَوْمٍ فَهُوَ مِنْهُمْ" - "Whoever imitates a people is one of them." (Abu Dawud)`,
         hadeesUrdu: 'جو کسی قوم کی مشابہت اختیار کرے گا وہ انہی میں سے ہے۔',
-        color: 'bg-purple-400'
+        color: 'bg-purple-400',
+        children: [
+          {
+            id: 'individual-sphere',
+            title: 'Individual Sphere and Connection',
+            urduTitle: 'انفرادی دائره وتعلق',
+            color: 'bg-purple-300'
+          },
+          {
+            id: 'collective-sphere',
+            title: 'Collective Sphere and Connection',
+            urduTitle: 'اجتماعی دائره و تعلق',
+            color: 'bg-purple-300'
+          }
+        ]
       },
       {
         id: 'sincerity',
