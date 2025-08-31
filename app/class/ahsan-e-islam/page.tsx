@@ -153,14 +153,14 @@ const chartData: ChartItem[] = [
             id: 'prophet-example-daily-life',
             title: 'Following the Prophet\'s Example in Daily Life',
             urduTitle: 'شمائل و خصائل اور شب و روز میں اسوہ محمدی ﷺ کی اتباع',
-            description: 'Following the example of Prophet Muhammad ﷺ in manners, characteristics, and daily life, and completely avoiding evil morals.',
-            urduDescription: 'شمائل، خصائل اور شب و روز میں اسوہ محمد ی ﷺ کی اتباع اور رذائل اخلاق سے مکمل اجتناب۔',
+            description: 'Following the example of Prophet Muhammad ﷺ in manners, characteristics, and daily life, and completely avoiding evil morals. This includes emulating his physical appearance (شمائل), character traits (خصائل), and daily routines (شب و روز).',
+            urduDescription: 'شمائل، خصائل اور شب و روز میں اسوہ محمد ی ﷺ کی اتباع اور رذائل اخلاق سے مکمل اجتناب۔ شمائل سے مراد رسول اللہ ﷺ کی ظاہری شکل و صورت، خصائل سے مراد آپ کے اخلاقی اوصاف، اور شب و روز سے مراد آپ کی روزمرہ کی زندگی کے طریقے۔',
             ayah: `قُلْ إِن كُنتُمْ تُحِبُّونَ اللَّهَ فَاتَّبِعُونِي يُحْبِبْكُمُ اللَّهُ وَيَغْفِرْ لَكُمْ ذُنُوبَكُمْ ۗ وَاللَّهُ غَفُورٌ رَّحِيمٌ - "Say, [O Muhammad], 'If you should love Allah, then follow me, [so] Allah will love you and forgive you your sins. And Allah is Forgiving and Merciful.'" (Quran 3:31)`,
             ayahUrdu: 'کہہ دیجیے: اگر تم اللہ سے محبت رکھتے ہو تو میری پیروی کرو، اللہ تم سے محبت کرے گا اور تمہارے گناہ معاف کر دے گا، اور اللہ بخشنے والا مہربان ہے۔',
             hadees: `عَنْ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا قَالَتْ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّ اللَّهَ جَمِيلٌ يُحِبُّ الْجَمَالَ، كَرِيمٌ يُحِبُّ الْكَرَمَ، نَظِيفٌ يُحِبُّ النَّظَافَةَ" - "Indeed, Allah is beautiful and loves beauty, generous and loves generosity, clean and loves cleanliness." (Tirmidhi)`,
             hadeesUrdu: 'بےشک اللہ خوبصورت ہے اور خوبصورتی کو پسند کرتا ہے، کریم ہے اور کرم کو پسند کرتا ہے، پاکیزہ ہے اور پاکیزگی کو پسند کرتا ہے۔',
-            detailedTitle: '1.2.1.1 Following the example of Muhammad ﷺ in characteristics and traits, and in daily life, and completely avoiding evil morals',
-            detailedUrduTitle: '1.2.1.1 شمائل و خصائل اور شب و روز میں اسوہ محمدی اللہ السلام کی پیروی اور رذائل اخلاق سے مکمل اجتناب کرنا',
+            detailedTitle: '1.2.1.1 Following the example of Muhammad ﷺ in characteristics and traits, and in daily life, and completely avoiding evil morals. This encompasses: 1) Shama\'il (شمائل) - Physical appearance and mannerisms, 2) Khasa\'il (خصائل) - Character traits and virtues, 3) Daily routines (شب و روز) - Day and night practices',
+            detailedUrduTitle: '1.2.1.1 شمائل و خصائل اور شب و روز میں اسوہ محمدی اللہ السلام کی پیروی اور رذائل اخلاق سے مکمل اجتناب کرنا۔ اس میں شامل ہیں: ۱) شمائل - ظاہری شکل و صورت اور آداب، ۲) خصائل - اخلاقی اوصاف اور فضائل، ۳) شب و روز - دن رات کے معمولات',
             color: 'bg-green-300'
           }
         ]
