@@ -1404,6 +1404,35 @@ export default function AhsanEIslamPage() {
                 </div>
               )}
 
+              {/* Practical Examples */}
+              {selectedItem.practicalExamples && selectedItem.practicalExamples.length > 0 && (
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3 flex items-center gap-2">
+                    <span className="text-emerald-600">💡</span>
+                    <span className="font-urdu urdu-text">عملی مثالیں</span>
+                  </h3>
+                  <div className="bg-emerald-50 border border-emerald-200 p-4 rounded-lg">
+                    <div className="space-y-3">
+                      {selectedItem.practicalExamples.map((example, index) => (
+                        <div key={index} className="flex items-start gap-3">
+                          <div className="flex-shrink-0 w-6 h-6 bg-emerald-500 text-white rounded-full flex items-center justify-center text-xs font-bold">
+                            {index + 1}
+                          </div>
+                          <div className="flex-1">
+                            <p className="text-sm text-gray-700 mb-1">{example}</p>
+                            {selectedItem.urduPracticalExamples && selectedItem.urduPracticalExamples[index] && (
+                              <p className="text-sm text-gray-600 font-urdu urdu-text leading-relaxed">
+                                {selectedItem.urduPracticalExamples[index]}
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {selectedItem.children && selectedItem.children.length > 0 && (
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800 mb-4">
