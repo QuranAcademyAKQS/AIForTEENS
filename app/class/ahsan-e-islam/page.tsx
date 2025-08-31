@@ -186,7 +186,15 @@ const chartData: ChartItem[] = [
         ayahUrdu: 'اور اللہ کی عبادت کرو اور اس کے ساتھ کسی کو شریک نہ کرو، اور والدین کے ساتھ احسان کرو، اور رشتہ داروں، یتیموں اور مسکینوں کے ساتھ۔',
         hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "خَيْرُكُمْ خَيْرُكُمْ لِأَهْلِهِ وَأَنَا خَيْرُكُمْ لِأَهْلِي" - "The best of you is the best to his family, and I am the best to my family." (Tirmidhi)`,
         hadeesUrdu: 'تم میں سب سے بہتر وہ ہے جو اپنے اہل کے لیے بہتر ہے، اور میں اپنے اہل کے لیے سب سے بہتر ہوں۔',
-        color: 'bg-orange-400'
+        color: 'bg-purple-400',
+        children: [
+          {
+            id: 'witness',
+            title: 'Obligation of Bearing Witness to People',
+            urduTitle: 'فریضہ شہادت علی الناس',
+            color: 'bg-purple-300'
+          }
+        ]
       }
     ]
   },
@@ -340,12 +348,7 @@ const chartData: ChartItem[] = [
         urduTitle: 'بذل نفس',
         color: 'bg-orange-400'
       },
-      {
-        id: 'witness',
-        title: 'Obligation of Bearing Witness to People',
-        urduTitle: 'فریضہ شہادت علی الناس',
-        color: 'bg-orange-400'
-      },
+
       {
         id: 'own-duties',
         title: 'One\'s Own Duties',
