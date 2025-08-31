@@ -135,36 +135,24 @@ const chartData: ChartItem[] = [
     icon: <Heart className="w-5 h-5" />,
     children: [
       {
-        id: 'continuous-jihad',
-        title: 'Ethics and Manners',
-        urduTitle: 'اخلاقیات و آداب',
-        description: 'Continuous struggle (Jihad) against one\'s self for attaining the highest ranks of ethics and manners.',
-        urduDescription: 'اخلاقیات و آداب کے اعلیٰ ترین درجات کے حصول کے لیے اپنے نفس سے مسلسل جہاد۔',
-        detailedTitle: '1.2 Ethics and Manners: For the attainment of the highest ranks, continuous struggle (Jihad) against one\'s self',
-        detailedUrduTitle: '1.2 اخلاقیات و آداب کے اعلیٰ ترین درجات کے حصول کے لیے اپنے نفس سے مسلسل جہاد',
+        id: 'following-prophet-companions',
+        title: 'Following the Messenger of Allah ﷺ and Companions',
+        urduTitle: 'اتباع رسول الله ﷺ و تعامل صحابہ',
+        description: 'Following the example of Prophet Muhammad ﷺ in all aspects of life and learning from the companions\' way of life and interactions.',
+        urduDescription: 'رسول اللہ ﷺ کی پیروی اور صحابہ کرام کے ساتھ تعامل اور ان کی زندگی سے سیکھنا۔',
+        detailedTitle: '1.2.1 Following the Messenger of Allah ﷺ and adopting the practice of the Companions',
+        detailedUrduTitle: '1.2.1 اتباع رسول الله ﷺ و تعامل صحابہ کی پیروی کا اہتمام',
         color: 'bg-green-400',
         children: [
           {
-            id: 'following-prophet-companions',
-            title: 'Following the Messenger of Allah ﷺ and Companions',
-            urduTitle: 'اتباع رسول الله ﷺ و تعامل صحابہ',
-            description: 'Following the example of Prophet Muhammad ﷺ in all aspects of life and learning from the companions\' way of life and interactions.',
-            urduDescription: 'رسول اللہ ﷺ کی پیروی اور صحابہ کرام کے ساتھ تعامل اور ان کی زندگی سے سیکھنا۔',
-            detailedTitle: '1.2.1 Following the Messenger of Allah ﷺ and adopting the practice of the Companions',
-            detailedUrduTitle: '1.2.1 اتباع رسول الله ﷺ و تعامل صحابہ کی پیروی کا اہتمام',
-            color: 'bg-green-300',
-            children: [
-              {
-                id: 'prophet-example-daily-life',
-                title: 'Following the Prophet\'s Example in Daily Life',
-                urduTitle: 'شمائل و خصائل اور شب و روز میں اسوہ محمدی ﷺ کی اتباع',
-                description: 'Following the example of Prophet Muhammad ﷺ in manners, characteristics, and daily life, and completely avoiding evil morals.',
-                urduDescription: 'شمائل، خصائل اور شب و روز میں اسوہ محمد ی ﷺ کی اتباع اور رذائل اخلاق سے مکمل اجتناب۔',
-                detailedTitle: '1.2.1.1 Following the example of Muhammad ﷺ in characteristics and traits, and in daily life, and completely avoiding evil morals',
-                detailedUrduTitle: '1.2.1.1 شمائل و خصائل اور شب و روز میں اسوہ محمدی اللہ السلام کی پیروی اور رذائل اخلاق سے مکمل اجتناب کرنا',
-                color: 'bg-green-200'
-              }
-            ]
+            id: 'prophet-example-daily-life',
+            title: 'Following the Prophet\'s Example in Daily Life',
+            urduTitle: 'شمائل و خصائل اور شب و روز میں اسوہ محمدی ﷺ کی اتباع',
+            description: 'Following the example of Prophet Muhammad ﷺ in manners, characteristics, and daily life, and completely avoiding evil morals.',
+            urduDescription: 'شمائل، خصائل اور شب و روز میں اسوہ محمد ی ﷺ کی اتباع اور رذائل اخلاق سے مکمل اجتناب۔',
+            detailedTitle: '1.2.1.1 Following the example of Muhammad ﷺ in characteristics and traits, and in daily life, and completely avoiding evil morals',
+            detailedUrduTitle: '1.2.1.1 شمائل و خصائل اور شب و روز میں اسوہ محمدی اللہ السلام کی پیروی اور رذائل اخلاق سے مکمل اجتناب کرنا',
+            color: 'bg-green-300'
           }
         ]
       }
