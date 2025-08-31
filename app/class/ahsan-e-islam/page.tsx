@@ -25,6 +25,8 @@ interface ChartItem {
   urduExamples?: string[];
   practicalExamples?: string[];
   urduPracticalExamples?: string[];
+  practicalExamplesReferences?: string[];
+  urduPracticalExamplesReferences?: string[];
 }
 
 const chartData: ChartItem[] = [
@@ -215,6 +217,26 @@ const chartData: ChartItem[] = [
                   'بات کرتے وقت نرم ہاتھ کے اشارے استعمال کریں',
                   'دوسروں کی بات سنتے وقت آنکھوں کا رابطہ برقرار رکھیں',
                   'اپنی آواز کو معتدل سطح پر رکھیں'
+                ],
+                practicalExamplesReferences: [
+                  'Bukhari: 3561 - Prophet\'s dignified walk',
+                  'Abu Dawud: 3770 - Proper sitting posture',
+                  'Bukhari: 5376 - Eating with right hand',
+                  'Tirmidhi: 2799 - Clean appearance',
+                  'Abu Dawud: 4012 - Modest dressing',
+                  'Muslim: 2165 - Gentle gestures',
+                  'Bukhari: 1241 - Eye contact etiquette',
+                  'Abu Dawud: 5027 - Voice moderation'
+                ],
+                urduPracticalExamplesReferences: [
+                  'بخاری: 3561 - رسول اللہ ﷺ کی وقار والی چال',
+                  'ابو داؤد: 3770 - بیٹھنے کی اچھی وضع',
+                  'بخاری: 5376 - دائیں ہاتھ سے کھانا',
+                  'ترمذی: 2799 - صاف ظاہری شکل',
+                  'ابو داؤد: 4012 - معقول لباس',
+                  'مسلم: 2165 - نرم اشارے',
+                  'بخاری: 1241 - آنکھوں کا رابطہ',
+                  'ابو داؤد: 5027 - آواز کی اعتدال'
                 ]
               },
               {
@@ -263,6 +285,26 @@ const chartData: ChartItem[] = [
                   'دوسروں کو آسانی سے معاف کریں اور رنجش نہ رکھیں',
                   'کامیابی میں عاجز رہیں اور نعمتوں کے لیے شکرگزار ہوں',
                   'انصاف کے لیے کھڑے ہوں اور کمزوروں کی حفاظت کریں'
+                ],
+                practicalExamplesReferences: [
+                  'Bukhari: 6094 - Truthfulness in all circumstances',
+                  'Muslim: 1017 - Regular charity even small amounts',
+                  'Bukhari: 5645 - Patience in hardships',
+                  'Muslim: 2564 - Respect for all people',
+                  'Bukhari: 6009 - Kindness to animals',
+                  'Muslim: 2599 - Easy forgiveness',
+                  'Tirmidhi: 2510 - Humility in success',
+                  'Abu Dawud: 5126 - Standing for justice'
+                ],
+                urduPracticalExamplesReferences: [
+                  'بخاری: 6094 - ہر حال میں سچائی',
+                  'مسلم: 1017 - چھوٹی خیرات بھی باقاعدہ',
+                  'بخاری: 5645 - مصیبتوں میں صبر',
+                  'مسلم: 2564 - سب لوگوں کا احترام',
+                  'بخاری: 6009 - جانوروں کے ساتھ مہربانی',
+                  'مسلم: 2599 - آسانی سے معافی',
+                  'ترمذی: 2510 - کامیابی میں عاجزی',
+                  'ابو داؤد: 5126 - انصاف کے لیے کھڑے ہونا'
                 ]
               },
               {
@@ -1421,9 +1463,25 @@ export default function AhsanEIslamPage() {
                           <div className="flex-1">
                             <p className="text-sm text-gray-700 mb-1">{example}</p>
                             {selectedItem.urduPracticalExamples && selectedItem.urduPracticalExamples[index] && (
-                              <p className="text-sm text-gray-600 font-urdu urdu-text leading-relaxed">
+                              <p className="text-sm text-gray-600 font-urdu urdu-text leading-relaxed mb-2">
                                 {selectedItem.urduPracticalExamples[index]}
                               </p>
+                            )}
+                            {selectedItem.practicalExamplesReferences && selectedItem.practicalExamplesReferences[index] && (
+                              <div className="flex items-center gap-2">
+                                <span className="text-xs text-emerald-600 font-semibold">📚</span>
+                                <p className="text-xs text-emerald-700 font-medium">
+                                  {selectedItem.practicalExamplesReferences[index]}
+                                </p>
+                              </div>
+                            )}
+                            {selectedItem.urduPracticalExamplesReferences && selectedItem.urduPracticalExamplesReferences[index] && (
+                              <div className="flex items-center gap-2 mt-1">
+                                <span className="text-xs text-emerald-600 font-semibold">📖</span>
+                                <p className="text-xs text-emerald-700 font-medium font-urdu urdu-text">
+                                  {selectedItem.urduPracticalExamplesReferences[index]}
+                                </p>
+                              </div>
                             )}
                           </div>
                         </div>
