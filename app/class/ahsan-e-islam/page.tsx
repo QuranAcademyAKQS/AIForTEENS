@@ -730,8 +730,8 @@ export default function AhsanEIslamPage() {
         
         .quranic-hadith {
           font-family: 'Amiri', 'Scheherazade', 'Noto Naskh Arabic', serif;
-          font-size: 1.3rem;
-          line-height: 2.4;
+          font-size: 1.4rem;
+          line-height: 2.5;
           font-weight: 500;
         }
         
