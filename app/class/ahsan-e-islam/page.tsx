@@ -23,6 +23,8 @@ interface ChartItem {
   icon?: React.ReactNode;
   examples?: string[];
   urduExamples?: string[];
+  practicalExamples?: string[];
+  urduPracticalExamples?: string[];
 }
 
 const chartData: ChartItem[] = [
@@ -194,10 +196,26 @@ const chartData: ChartItem[] = [
                 detailedUrduTitle: 'شمائل: رسول اللہ ﷺ کی ظاہری شکل و صورت کی پیروی',
                 detailedDescription: 'Shama\'il refers to the Prophet\'s physical appearance, mannerisms, and behavioral patterns. This includes his way of walking, sitting, eating, drinking, sleeping, and general conduct. The Prophet ﷺ was known for his neat appearance, clean clothing, and dignified mannerisms that reflected inner purity and respect for others.',
                 detailedUrduDescription: 'شمائل سے مراد رسول اللہ ﷺ کی ظاہری شکل و صورت، آداب اور رویے ہیں۔ اس میں آپ کی چال، بیٹھنے کا طریقہ، کھانے پینے کا انداز، سونے کا طریقہ اور عمومی رویہ شامل ہے۔ رسول اللہ ﷺ اپنی منظم ظاہری شکل، صاف ستھرے لباس اور وقار والے آداب کے لیے مشہور تھے جو اندرونی پاکیزگی اور دوسروں کے لیے احترام کی عکاسی کرتے تھے۔',
-                ayah: `لَقَدْ كَانَ لَكُمْ فِي رَسُولِ اللَّهِ أُسْوَةٌ حَسَنَةٌ لِّمَن كَانَ يَرْجُو اللَّهَ وَالْيَوْمَ الْآخِرَ وَذَكَرَ اللَّهَ كَثِيرًا - "There has certainly been for you in the Messenger of Allah an excellent pattern for anyone whose hope is in Allah and the Last Day and [who] remembers Allah often." (Quran 33:21)`,
-                ayahUrdu: 'بےشک تمہارے لیے رسول اللہ میں بہترین نمونہ ہے، اس شخص کے لیے جو اللہ اور آخرت کی امید رکھتا ہے اور اللہ کو کثرت سے یاد کرتا ہے۔',
-                hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّ اللَّهَ جَمِيلٌ يُحِبُّ الْجَمَالَ، كَرِيمٌ يُحِبُّ الْكَرَمَ، نَظِيفٌ يُحِبُّ النَّظَافَةَ" - "Indeed, Allah is beautiful and loves beauty, generous and loves generosity, clean and loves cleanliness." (Tirmidhi)`,
-                hadeesUrdu: 'بےشک اللہ خوبصورت ہے اور خوبصورتی کو پسند کرتا ہے، کریم ہے اور کرم کو پسند کرتا ہے، پاکیزہ ہے اور پاکیزگی کو پسند کرتا ہے۔'
+                practicalExamples: [
+                  'Walk with dignity and purpose, not hurriedly',
+                  'Sit with proper posture, avoiding slouching',
+                  'Eat with your right hand and take small bites',
+                  'Always maintain clean and neat appearance',
+                  'Dress modestly and appropriately for the occasion',
+                  'Use gentle hand gestures when speaking',
+                  'Maintain eye contact while listening to others',
+                  'Keep your voice at a moderate level'
+                ],
+                urduPracticalExamples: [
+                  'وقار اور مقصد کے ساتھ چلیں، جلدی میں نہیں',
+                  'اچھی وضع کے ساتھ بیٹھیں، جھک کر نہیں',
+                  'دائیں ہاتھ سے کھائیں اور چھوٹے نوالے لیں',
+                  'ہمیشہ صاف ستھری اور منظم ظاہری شکل برقرار رکھیں',
+                  'موقع کے مطابق معقول اور مناسب لباس پہنیں',
+                  'بات کرتے وقت نرم ہاتھ کے اشارے استعمال کریں',
+                  'دوسروں کی بات سنتے وقت آنکھوں کا رابطہ برقرار رکھیں',
+                  'اپنی آواز کو معتدل سطح پر رکھیں'
+                ]
               },
               {
                 id: 'khasaail-examples',
@@ -226,10 +244,26 @@ const chartData: ChartItem[] = [
                 detailedUrduTitle: 'خصائل: رسول اللہ ﷺ کے اخلاقی اوصاف کی پیروی',
                 detailedDescription: 'Khasa\'il refers to the Prophet\'s moral qualities, virtues, and character attributes. These include his honesty, generosity, patience, humility, kindness, and forgiveness. The Prophet ﷺ was known as "Al-Amin" (the trustworthy) and embodied all the highest moral standards. His character was a perfect example of how to treat others with respect, compassion, and fairness.',
                 detailedUrduDescription: 'خصائل سے مراد رسول اللہ ﷺ کے اخلاقی اوصاف، فضائل اور کردار کی خصوصیات ہیں۔ ان میں آپ کی ایمانداری، سخاوت، صبر، عاجزی، مہربانی اور درگزر شامل ہیں۔ رسول اللہ ﷺ "الامین" (قابل اعتماد) کے نام سے مشہور تھے اور تمام اعلیٰ اخلاقی معیارات کی تجسیم تھے۔ آپ کا کردار دوسروں کے ساتھ احترام، رحمت اور انصاف کے ساتھ پیش آنے کا بہترین نمونہ تھا۔',
-                ayah: `وَإِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍ - "And indeed, you are of a great moral character." (Quran 68:4)`,
-                ayahUrdu: 'اور بےشک آپ بہترین اخلاق پر ہیں۔',
-                hadees: `عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ: "إِنَّمَا بُعِثْتُ لِأُتَمِّمَ مَكَارِمَ الْأَخْلَاقِ" - "I was sent to perfect good character." (Ahmad, Al-Hakim)`,
-                hadeesUrdu: 'میں اخلاق کے اعلیٰ درجات کو مکمل کرنے کے لیے بھیجا گیا ہوں۔'
+                practicalExamples: [
+                  'Always speak the truth, even when it\'s difficult',
+                  'Give charity regularly, even if it\'s a small amount',
+                  'Stay patient during difficult times and hardships',
+                  'Treat everyone with respect, regardless of their status',
+                  'Show kindness to animals and help those in need',
+                  'Forgive others easily and don\'t hold grudges',
+                  'Be humble in success and grateful for blessings',
+                  'Stand up for justice and protect the weak'
+                ],
+                urduPracticalExamples: [
+                  'ہمیشہ سچ بولیں، چاہے مشکل ہی کیوں نہ ہو',
+                  'روزانہ خیرات دیں، چاہے تھوڑی سی ہی کیوں نہ ہو',
+                  'مشکل وقت اور مصیبتوں میں صبر کریں',
+                  'سب کے ساتھ احترام سے پیش آئیں، ان کی حیثیت سے قطع نظر',
+                  'جانوروں کے ساتھ مہربانی کریں اور ضرورت مندوں کی مدد کریں',
+                  'دوسروں کو آسانی سے معاف کریں اور رنجش نہ رکھیں',
+                  'کامیابی میں عاجز رہیں اور نعمتوں کے لیے شکرگزار ہوں',
+                  'انصاف کے لیے کھڑے ہوں اور کمزوروں کی حفاظت کریں'
+                ]
               },
               {
                 id: 'daily-routines-examples',
